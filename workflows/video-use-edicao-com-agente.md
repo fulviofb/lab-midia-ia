@@ -25,6 +25,21 @@ Atenção: `render.py --build-subtitles` gerou `master.srt`, mas falhou no Windo
 
 Relatório: `docs/testes/video-use-primeiro-teste.md`.
 
+Workaround específico: `docs/workarounds/video-use-subtitles-windows.md`.
+
+### Comando de workaround para Windows
+
+Se `render.py --build-subtitles` gerar `master.srt`, mas falhar na composição por path Windows, entre na pasta `edit/` e aplique o SRT com caminho relativo:
+
+```bash
+cd "$HOME/ai-media-tests/video-use-sample/edit"
+
+ffmpeg -y -i base_preview.mp4 \
+  -vf "subtitles=master.srt:force_style='FontName=Arial,FontSize=18,Bold=1,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=2,Alignment=2,MarginV=90'" \
+  -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p \
+  -c:a copy -movflags +faststart final_subtitled_manual.mp4
+```
+
 ## Pré-requisitos a validar
 
 - Python;
