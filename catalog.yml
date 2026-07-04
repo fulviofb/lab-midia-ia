@@ -61,16 +61,16 @@ repositories:
     category: video_programatico
     subcategory: remotion
     priority: essential
-    status: practical
+    status: tested_recommended_windows
     language: TypeScript
     license: custom-remotion-license
     install_hint: "npx skills add remotion-dev/skills"
     agent_fit: high
     copy_policy: link_only_review_terms_before_commercial_use
-    notes: "Remotion usa licença especial: indivíduos e pequenas empresas podem usar gratuitamente, mas empresas maiores/for-profit podem precisar de licença comercial. Ver https://remotion.dev/license."
+    notes: "Teste local no Windows validou skill remotion-best-practices, scaffold create-video@4.0.484, npm run lint, remotion still e remotion render de MP4 H.264 1920x1080 30fps. Remotion usa licença especial: indivíduos e pequenas empresas podem usar gratuitamente, mas empresas maiores/for-profit podem precisar de licença comercial. Ver docs/testes/remotion-agent-skills-primeiro-teste.md e https://remotion.dev/license."
     use_cases:
-      - "Ensinar agentes a usar Remotion corretamente."
-      - "Criar vídeos programáticos com React."
+      - "Vídeo programático com React."
+      - "Composições reutilizáveis e parametrizadas."
 
   - name: OpenCut
     full_name: OpenCut-app/OpenCut
