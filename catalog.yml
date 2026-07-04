@@ -1,23 +1,24 @@
+# catalog.yml — atualizado por update_github_metadata.py em 2026-07-04 18:30:22
 metadata:
   name: lab-midia-ia
-  description: "Curadoria prática de ferramentas, skills, prompts e workflows para criar vídeo, voz, imagem, design e edição com IA."
+  description: Curadoria prática de ferramentas, skills, prompts e workflows para criar vídeo, voz, imagem, design e edição
+    com IA.
   language: pt-BR
   status: draft
   curation_principles:
-    - "Priorizar ferramentas reproduzíveis, agent-friendly e com licença clara."
-    - "Separar geração, edição, voz, imagem, design e prompt engineering."
-    - "Linkar fontes sem licença clara; copiar/adaptar apenas material compatível."
-    - "Documentar custos, dependências, riscos de privacidade e uso ético."
-
+    - Priorizar ferramentas reproduzíveis, agent-friendly e com licença clara.
+    - Separar geração, edição, voz, imagem, design e prompt engineering.
+    - Linkar fontes sem licença clara; copiar/adaptar apenas material compatível.
+    - Documentar custos, dependências, riscos de privacidade e uso ético.
 categories:
-  video_programatico: "Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes."
-  edicao_video: "Editar, cortar, legendar, colorir, renderizar e pós-produzir vídeos."
-  video_automatico_social: "Gerar reels, shorts, anúncios e vídeos sociais com pipeline automatizado."
-  video_generativo_cinematico: "Modelos, prompts e direção para geração de vídeo em Seedance, Higgsfield, Kling, Sora, Veo e similares."
-  voz_tts_clonagem: "TTS, clonagem de voz, voice conversion, narração e ditado."
-  imagem_design_prompts: "Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visual."
-  modelos_referencia: "Modelos e projetos técnicos relevantes para estudo."
-
+  video_programatico: Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
+  edicao_video: Editar, cortar, legendar, colorir, renderizar e pós-produzir vídeos.
+  video_automatico_social: Gerar reels, shorts, anúncios e vídeos sociais com pipeline automatizado.
+  video_generativo_cinematico: Modelos, prompts e direção para geração de vídeo em Seedance, Higgsfield, Kling, Sora, Veo
+    e similares.
+  voz_tts_clonagem: TTS, clonagem de voz, voice conversion, narração e ditado.
+  imagem_design_prompts: Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visual.
+  modelos_referencia: Modelos e projetos técnicos relevantes para estudo.
 repositories:
   - name: video-use
     full_name: browser-use/video-use
@@ -28,15 +29,19 @@ repositories:
     status: partially_tested_windows
     language: Python
     license: MIT
-    stars_observed: 14603
+    stars_observed: 14656
     agent_fit: high
     copy_policy: can_reference_and_test
-    notes: "Teste local no Windows validou uv sync, timeline_view.py, render.py com EDL manual, transcript fake e takes_packed.md. Subtitles funcionaram via workaround manual; render.py --build-subtitles falhou por escape de path Windows. Falta testar transcrição ElevenLabs e fluxo real com fala. Ver docs/testes/video-use-primeiro-teste.md."
+    notes: Teste local no Windows validou uv sync, timeline_view.py, render.py com EDL manual, transcript fake e takes_packed.md.
+      Subtitles funcionaram via workaround manual; render.py --build-subtitles falhou por escape de path Windows. Falta testar
+      transcrição ElevenLabs e fluxo real com fala. Ver docs/testes/video-use-primeiro-teste.md.
     use_cases:
-      - "Editar vídeos brutos com agentes de código."
-      - "Cortar silêncios, filler words e falsos começos."
-      - "Gerar legendas, color grading, fades e overlays."
-
+      - Editar vídeos brutos com agentes de código.
+      - Cortar silêncios, filler words e falsos começos.
+      - Gerar legendas, color grading, fades e overlays.
+    forks_observed: 1750
+    open_issues_observed: 53
+    github_updated_at: '2026-07-01T00:33:52Z'
   - name: hyperframes
     full_name: heygen-com/hyperframes
     url: https://github.com/heygen-com/hyperframes
@@ -46,15 +51,31 @@ repositories:
     status: tested_recommended_windows
     language: TypeScript
     license: Apache-2.0
-    stars_observed: 32957
-    install_hint: "npx skills add heygen-com/hyperframes"
+    stars_observed: 33103
+    install_hint: npx skills add heygen-com/hyperframes
     agent_fit: high
     copy_policy: can_reference_and_test
-    notes: "Teste local no Windows validou skills/init, lint, validate, inspect, snapshot e render --strict de composição HTML/CSS/GSAP. Foi necessário configurar HYPERFRAMES_BROWSER_PATH e PRODUCER_HEADLESS_SHELL_PATH para Chrome do sistema porque browser ensure encontrou cache headless quebrado. Ver docs/testes/hyperframes-primeiro-teste.md."
+    notes: Teste local no Windows validou skills/init, lint, validate, inspect, snapshot e render --strict de composição HTML/CSS/GSAP.
+      Foi necessário configurar HYPERFRAMES_BROWSER_PATH e PRODUCER_HEADLESS_SHELL_PATH para Chrome do sistema porque browser
+      ensure encontrou cache headless quebrado. Ver docs/testes/hyperframes-primeiro-teste.md.
     use_cases:
-      - "Renderizar HTML/CSS/animações seekable como MP4."
-      - "Criar vídeos com agentes a partir de HTML."
-
+      - Renderizar HTML/CSS/animações seekable como MP4.
+      - Criar vídeos com agentes a partir de HTML.
+    forks_observed: 3078
+    open_issues_observed: 88
+    github_updated_at: '2026-07-04T21:29:39Z'
+    topics:
+      - ai
+      - animation
+      - ffmpeg
+      - framework
+      - gsap
+      - html
+      - mcp
+      - puppeteer
+      - rendering
+      - typescript
+      - video
   - name: remotion-agent-skills
     full_name: remotion-dev/remotion/packages/skills
     url: https://www.remotion.dev/docs/ai/skills
@@ -64,14 +85,16 @@ repositories:
     status: tested_recommended_windows
     language: TypeScript
     license: custom-remotion-license
-    install_hint: "npx skills add remotion-dev/skills"
+    install_hint: npx skills add remotion-dev/skills
     agent_fit: high
     copy_policy: link_only_review_terms_before_commercial_use
-    notes: "Teste local no Windows validou skill remotion-best-practices, scaffold create-video@4.0.484, npm run lint, remotion still e remotion render de MP4 H.264 1920x1080 30fps. Remotion usa licença especial: indivíduos e pequenas empresas podem usar gratuitamente, mas empresas maiores/for-profit podem precisar de licença comercial. Ver docs/testes/remotion-agent-skills-primeiro-teste.md e https://remotion.dev/license."
+    notes: 'Teste local no Windows validou skill remotion-best-practices, scaffold create-video@4.0.484, npm run lint, remotion
+      still e remotion render de MP4 H.264 1920x1080 30fps. Remotion usa licença especial: indivíduos e pequenas empresas
+      podem usar gratuitamente, mas empresas maiores/for-profit podem precisar de licença comercial. Ver docs/testes/remotion-agent-skills-primeiro-teste.md
+      e https://remotion.dev/license.'
     use_cases:
-      - "Vídeo programático com React."
-      - "Composições reutilizáveis e parametrizadas."
-
+      - Vídeo programático com React.
+      - Composições reutilizáveis e parametrizadas.
   - name: OpenCut
     full_name: OpenCut-app/OpenCut
     url: https://github.com/OpenCut-app/OpenCut
@@ -81,11 +104,17 @@ repositories:
     status: watch_and_test
     language: TypeScript
     license: MIT
-    stars_observed: 61477
+    stars_observed: 61534
     agent_fit: medium
     copy_policy: can_reference_and_test
-    notes: "README indica reescrita em andamento; versão classic pode ser melhor para uso imediato."
-
+    notes: README indica reescrita em andamento; versão classic pode ser melhor para uso imediato.
+    forks_observed: 6623
+    open_issues_observed: 332
+    github_updated_at: '2026-06-21T13:15:27Z'
+    topics:
+      - editor
+      - oss
+      - videoeditor
   - name: MoneyPrinterTurbo
     full_name: harry0703/MoneyPrinterTurbo
     url: https://github.com/harry0703/MoneyPrinterTurbo
@@ -95,13 +124,23 @@ repositories:
     status: practical
     language: Python
     license: MIT
-    stars_observed: 95490
+    stars_observed: 95666
     agent_fit: medium
     copy_policy: can_reference_and_test
     use_cases:
-      - "Gerar short videos automaticamente a partir de tema ou palavra-chave."
-      - "Criar roteiro, materiais, legenda, música e vídeo final."
-
+      - Gerar short videos automaticamente a partir de tema ou palavra-chave.
+      - Criar roteiro, materiais, legenda, música e vídeo final.
+    forks_observed: 13934
+    open_issues_observed: 52
+    github_updated_at: '2026-07-03T02:20:27Z'
+    topics:
+      - ai
+      - automation
+      - chatgpt
+      - moviepy
+      - python
+      - shortvideo
+      - tiktok
   - name: voicebox
     full_name: jamiepine/voicebox
     url: https://github.com/jamiepine/voicebox
@@ -111,14 +150,28 @@ repositories:
     status: documented_not_installed
     language: TypeScript
     license: MIT
-    stars_observed: 37661
+    stars_observed: 37662
     agent_fit: high
     copy_policy: can_reference_and_test
-    notes: "App desktop (Tauri/Rust + Python FastAPI). 7 motores TTS, 23 idiomas, clonagem zero-shot, Whisper STT, MCP server (voicebox.speak/transcribe/list_captures/list_profiles), dictation global, local LLM (Qwen3), efeitos de áudio (pedalboard), stories editor multi-track. Release v0.5.0. MSI Windows ~517MB. Não é CLI — precisa instalar app desktop. Ver docs/testes/voicebox-primeiro-teste.md e workflows/voicebox-narracao-local.md."
+    notes: App desktop (Tauri/Rust + Python FastAPI). 7 motores TTS, 23 idiomas, clonagem zero-shot, Whisper STT, MCP server
+      (voicebox.speak/transcribe/list_captures/list_profiles), dictation global, local LLM (Qwen3), efeitos de áudio (pedalboard),
+      stories editor multi-track. Release v0.5.0. MSI Windows ~517MB. Não é CLI — precisa instalar app desktop. Ver docs/testes/voicebox-primeiro-teste.md
+      e workflows/voicebox-narracao-local.md.
     use_cases:
-      - "Estúdio local-first de voz."
-      - "Clonar vozes, gerar fala, ditar em apps e dar voz a agentes via MCP."
-
+      - Estúdio local-first de voz.
+      - Clonar vozes, gerar fala, ditar em apps e dar voz a agentes via MCP.
+    forks_observed: 4521
+    open_issues_observed: 518
+    github_updated_at: '2026-07-02T23:12:35Z'
+    topics:
+      - ai
+      - cuda
+      - mlx
+      - qwen3-tts
+      - qwen3-tts-ui
+      - voice-ai
+      - voice-clone
+      - whisper
   - name: GPT-SoVITS
     full_name: RVC-Boss/GPT-SoVITS
     url: https://github.com/RVC-Boss/GPT-SoVITS
@@ -128,13 +181,22 @@ repositories:
     status: mature_practical
     language: Python
     license: MIT
-    stars_observed: 59444
+    stars_observed: 59448
     agent_fit: medium
     copy_policy: can_reference_and_test
     use_cases:
-      - "Zero-shot e few-shot TTS."
-      - "Clonagem de voz com 5 segundos a 1 minuto de dados."
-
+      - Zero-shot e few-shot TTS.
+      - Clonagem de voz com 5 segundos a 1 minuto de dados.
+    forks_observed: 6490
+    open_issues_observed: 871
+    github_updated_at: '2026-06-20T07:45:00Z'
+    topics:
+      - text-to-speech
+      - tts
+      - vits
+      - voice-clone
+      - voice-cloneai
+      - voice-cloning
   - name: seedance-2.0-skill-os
     full_name: Emily2040/seedance-2.0
     url: https://github.com/Emily2040/seedance-2.0
@@ -144,13 +206,15 @@ repositories:
     status: advanced_reference
     language: Python
     license: MIT
-    stars_observed: 1986
+    stars_observed: 2078
     agent_fit: high
     copy_policy: can_reference_and_study
     use_cases:
-      - "Direção cinematográfica para Seedance 2.0."
-      - "Transformar intenção dramática em câmera, luz, blocking, performance e som."
-
+      - Direção cinematográfica para Seedance 2.0.
+      - Transformar intenção dramática em câmera, luz, blocking, performance e som.
+    forks_observed: 319
+    open_issues_observed: 2
+    github_updated_at: '2026-07-04T17:21:44Z'
   - name: higgsfield-ai-prompt-skill
     full_name: OSideMedia/higgsfield-ai-prompt-skill
     url: https://github.com/OSideMedia/higgsfield-ai-prompt-skill
@@ -164,9 +228,32 @@ repositories:
     agent_fit: high
     copy_policy: can_reference_and_study
     use_cases:
-      - "Prompts cinematográficos para Higgsfield, Seedance, Kling, Sora, Veo, Wan e similares."
-      - "Usar fórmula MCSLA: Model, Camera, Subject, Look, Action."
-
+      - Prompts cinematográficos para Higgsfield, Seedance, Kling, Sora, Veo, Wan e similares.
+      - 'Usar fórmula MCSLA: Model, Camera, Subject, Look, Action.'
+    forks_observed: 40
+    open_issues_observed: 0
+    github_updated_at: '2026-07-01T03:12:34Z'
+    topics:
+      - ai-cinema
+      - ai-filmmaking
+      - ai-video
+      - cinema-studio
+      - cinematic-cameras
+      - claude-code
+      - claude-cowork
+      - claude-skill
+      - higgsfield
+      - kling
+      - mcsla
+      - motion-control
+      - prompt-engineering
+      - seedance
+      - sora
+      - soul-cinema
+      - soul-id
+      - veo
+      - video-generation
+      - wan
   - name: awesome-seedance
     full_name: ZeroLu/awesome-seedance
     url: https://github.com/ZeroLu/awesome-seedance
@@ -176,10 +263,23 @@ repositories:
     status: reference
     language: Shell
     license: MIT
-    stars_observed: 2039
+    stars_observed: 2043
     agent_fit: medium
     copy_policy: can_reference_and_study
-
+    forks_observed: 232
+    open_issues_observed: 3
+    github_updated_at: '2026-07-04T13:35:36Z'
+    topics:
+      - ai
+      - how-to-use
+      - prompt-engineering
+      - prompts
+      - seedance
+      - seedance-2
+      - seedance-2-api
+      - seedance-api
+      - seedance2
+      - video
   - name: LongCat-Video
     full_name: meituan-longcat/LongCat-Video
     url: https://github.com/meituan-longcat/LongCat-Video
@@ -189,10 +289,12 @@ repositories:
     status: technical_reference
     language: Python
     license: MIT
-    stars_observed: 4611
+    stars_observed: 4621
     agent_fit: low
     copy_policy: can_reference_and_study
-
+    forks_observed: 743
+    open_issues_observed: 70
+    github_updated_at: '2026-05-27T02:51:41Z'
   - name: Open-Generative-AI
     full_name: Anil-matcha/Open-Generative-AI
     url: https://github.com/Anil-matcha/Open-Generative-AI
@@ -202,11 +304,34 @@ repositories:
     status: test_before_recommending
     language: JavaScript
     license: MIT
-    stars_observed: 22349
+    stars_observed: 22372
     agent_fit: medium
     copy_policy: can_reference_and_test
-    notes: "Provavelmente depende de APIs/provedores como MuAPI; documentar custos e privacidade antes de recomendar."
-
+    notes: Provavelmente depende de APIs/provedores como MuAPI; documentar custos e privacidade antes de recomendar.
+    forks_observed: 3800
+    open_issues_observed: 29
+    github_updated_at: '2026-07-03T17:20:57Z'
+    topics:
+      - ai-art-generator
+      - ai-image-generation
+      - ai-video-generation
+      - creative-tools
+      - flux
+      - flux-1
+      - generative-ai
+      - image-to-video
+      - javascript
+      - kling-ai
+      - lipsync
+      - midjourney-alternative
+      - muapi
+      - open-source
+      - seedance2
+      - sora-alternative
+      - text-to-image
+      - text-to-video
+      - uncensored
+      - wan-video
   - name: MisoTTS
     full_name: MisoLabsAI/MisoTTS
     url: https://github.com/MisoLabsAI/MisoTTS
@@ -219,8 +344,11 @@ repositories:
     stars_observed: 3066
     agent_fit: low
     copy_policy: review_modified_mit_before_reuse
-    notes: "Licença detectada como Modified MIT no arquivo LICENSE. Inglês apenas segundo README; modelo grande; revisar termos modificados antes de adaptação comercial."
-
+    notes: Licença detectada como Modified MIT no arquivo LICENSE. Inglês apenas segundo README; modelo grande; revisar termos
+      modificados antes de adaptação comercial.
+    forks_observed: 312
+    open_issues_observed: 18
+    github_updated_at: '2026-06-09T20:41:00Z'
   - name: fish-speech
     full_name: fishaudio/fish-speech
     url: https://github.com/fishaudio/fish-speech
@@ -228,12 +356,24 @@ repositories:
     subcategory: tts_model
     priority: high
     status: reference
-    language: unknown
+    language: Python
     license: Fish-Audio-Research-License
     agent_fit: medium
     copy_policy: link_only_review_custom_license
-    notes: "Licença customizada FISH AUDIO RESEARCH LICENSE; usar como referência e revisar termos antes de qualquer uso com pesos/modelos."
-
+    notes: Licença customizada FISH AUDIO RESEARCH LICENSE; usar como referência e revisar termos antes de qualquer uso com
+      pesos/modelos.
+    stars_observed: 31111
+    forks_observed: 2660
+    open_issues_observed: 14
+    github_updated_at: '2026-06-09T10:04:07Z'
+    topics:
+      - llama
+      - transformer
+      - tts
+      - valle
+      - vits
+      - vqgan
+      - vqvae
   - name: voice-pro
     full_name: abus-aikorea/voice-pro
     url: https://github.com/abus-aikorea/voice-pro
@@ -241,12 +381,36 @@ repositories:
     subcategory: voice_webui
     priority: medium
     status: reference
-    language: unknown
+    language: Python
     license: GPL-3.0
     agent_fit: low
     copy_policy: can_test_copyleft_caution
-    notes: "GitHub detecta GPL-3.0 no LICENSE. README menciona LGPL em metadados; tratar como GPL-3.0 até revisão manual mais profunda."
-
+    notes: GitHub detecta GPL-3.0 no LICENSE. README menciona LGPL em metadados; tratar como GPL-3.0 até revisão manual mais
+      profunda.
+    stars_observed: 11109
+    forks_observed: 1619
+    open_issues_observed: 47
+    github_updated_at: '2025-12-05T17:00:08Z'
+    topics:
+      - audiobook
+      - faster-whisper
+      - gradio
+      - karaoke
+      - podcasts
+      - speech-recognition
+      - speech-synthesis
+      - speech-to-text
+      - subtitles
+      - text-to-speech
+      - transcription
+      - translator
+      - tts
+      - voice-cloning
+      - voice-conversion
+      - webui
+      - whisper
+      - whisperx
+      - yt-dlp
   - name: ui-ux-pro-max-skill
     full_name: nextlevelbuilder/ui-ux-pro-max-skill
     url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
@@ -256,10 +420,32 @@ repositories:
     status: practical_reference
     language: Python
     license: MIT
-    stars_observed: 100405
+    stars_observed: 100760
     agent_fit: high
     copy_policy: can_reference_and_study
-
+    forks_observed: 10619
+    open_issues_observed: 123
+    github_updated_at: '2026-07-04T02:25:13Z'
+    topics:
+      - ai-skills
+      - antigravity
+      - claude
+      - claude-code
+      - codex
+      - command-line
+      - copilot
+      - cursor-ai
+      - html5
+      - kiro
+      - landing-page
+      - mobile-ui
+      - qoder
+      - react
+      - tailwindcss
+      - trae
+      - ui-design
+      - uikit
+      - windsurf-ai
   - name: awesome-gpt-image-2
     full_name: YouMind-OpenLab/awesome-gpt-image-2
     url: https://github.com/YouMind-OpenLab/awesome-gpt-image-2
@@ -269,11 +455,31 @@ repositories:
     status: reference
     language: TypeScript
     license: CC-BY-4.0
-    stars_observed: 8010
+    stars_observed: 8032
     agent_fit: medium
     copy_policy: can_adapt_with_attribution
-    notes: "LICENSE e README indicam Creative Commons Attribution 4.0. Atribuição é obrigatória; atenção a direitos de terceiros nos prompts/imagens coletados da comunidade."
-
+    notes: LICENSE e README indicam Creative Commons Attribution 4.0. Atribuição é obrigatória; atenção a direitos de terceiros
+      nos prompts/imagens coletados da comunidade.
+    forks_observed: 729
+    open_issues_observed: 2
+    github_updated_at: '2026-07-04T12:58:17Z'
+    topics:
+      - ai-image-generation
+      - ai-prompts
+      - awesome
+      - awesome-list
+      - commercial-illustration
+      - duct-tape
+      - gpt
+      - gpt-image
+      - gpt-image-2
+      - image-generation
+      - multilingual
+      - openai
+      - openai-image
+      - prompt-engineering
+      - prompts
+      - text-rendering
   - name: awesome-nano-banana-pro-prompts
     full_name: YouMind-OpenLab/awesome-nano-banana-pro-prompts
     url: https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts
@@ -283,11 +489,31 @@ repositories:
     status: reference
     language: TypeScript
     license: CC-BY-4.0
-    stars_observed: 12743
+    stars_observed: 12747
     agent_fit: medium
     copy_policy: can_adapt_with_attribution
-    notes: "LICENSE e README indicam Creative Commons Attribution 4.0. Atribuição é obrigatória; atenção a direitos de terceiros nos prompts/imagens coletados da comunidade."
-
+    notes: LICENSE e README indicam Creative Commons Attribution 4.0. Atribuição é obrigatória; atenção a direitos de terceiros
+      nos prompts/imagens coletados da comunidade.
+    forks_observed: 1385
+    open_issues_observed: 0
+    github_updated_at: '2026-07-04T20:19:07Z'
+    topics:
+      - ai-image-generation
+      - ai-prompts
+      - awesome
+      - awesome-list
+      - gemini
+      - gemini-ai
+      - google-gemini
+      - image-generation
+      - multilingual
+      - nano-banana
+      - nano-banana-2
+      - nano-banana-pro
+      - nanobanana
+      - nanobanana-pro
+      - prompt-engineering
+      - prompts
 recommended_mvp:
   - browser-use/video-use
   - heygen-com/hyperframes
@@ -301,10 +527,9 @@ recommended_mvp:
   - ZeroLu/awesome-seedance
   - nextlevelbuilder/ui-ux-pro-max-skill
   - YouMind-OpenLab/awesome-gpt-image-2
-
 next_actions:
-  - "Revisar manualmente termos customizados: Remotion, Fish Audio Research License e Modified MIT do MisoTTS."
-  - "Escolher 3 workflows para testar primeiro: video-use, hyperframes/remotion e voicebox."
-  - "Criar docs em português com matriz de escolha por necessidade."
-  - "Criar templates de prompt para vídeo explicativo, anúncio, UGC, thumbnail e narração."
-  - "Publicar no GitHub após revisar se o repo será público ou privado."
+  - 'Revisar manualmente termos customizados: Remotion, Fish Audio Research License e Modified MIT do MisoTTS.'
+  - 'Escolher 3 workflows para testar primeiro: video-use, hyperframes/remotion e voicebox.'
+  - Criar docs em português com matriz de escolha por necessidade.
+  - Criar templates de prompt para vídeo explicativo, anúncio, UGC, thumbnail e narração.
+  - Publicar no GitHub após revisar se o repo será público ou privado.
