@@ -1,0 +1,302 @@
+metadata:
+  name: lab-midia-ia
+  description: "Curadoria prática de ferramentas, skills, prompts e workflows para criar vídeo, voz, imagem, design e edição com IA."
+  language: pt-BR
+  status: draft
+  curation_principles:
+    - "Priorizar ferramentas reproduzíveis, agent-friendly e com licença clara."
+    - "Separar geração, edição, voz, imagem, design e prompt engineering."
+    - "Linkar fontes sem licença clara; copiar/adaptar apenas material compatível."
+    - "Documentar custos, dependências, riscos de privacidade e uso ético."
+
+categories:
+  video_programatico: "Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes."
+  edicao_video: "Editar, cortar, legendar, colorir, renderizar e pós-produzir vídeos."
+  video_automatico_social: "Gerar reels, shorts, anúncios e vídeos sociais com pipeline automatizado."
+  video_generativo_cinematico: "Modelos, prompts e direção para geração de vídeo em Seedance, Higgsfield, Kling, Sora, Veo e similares."
+  voz_tts_clonagem: "TTS, clonagem de voz, voice conversion, narração e ditado."
+  imagem_design_prompts: "Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visual."
+  modelos_referencia: "Modelos e projetos técnicos relevantes para estudo."
+
+repositories:
+  - name: video-use
+    full_name: browser-use/video-use
+    url: https://github.com/browser-use/video-use
+    category: edicao_video
+    subcategory: agent_video_editing
+    priority: essential
+    status: practical
+    language: Python
+    license: MIT
+    stars_observed: 14603
+    agent_fit: high
+    copy_policy: can_reference_and_test
+    use_cases:
+      - "Editar vídeos brutos com agentes de código."
+      - "Cortar silêncios, filler words e falsos começos."
+      - "Gerar legendas, color grading, fades e overlays."
+
+  - name: hyperframes
+    full_name: heygen-com/hyperframes
+    url: https://github.com/heygen-com/hyperframes
+    category: video_programatico
+    subcategory: html_to_video
+    priority: essential
+    status: practical
+    language: TypeScript
+    license: Apache-2.0
+    stars_observed: 32957
+    install_hint: "npx skills add heygen-com/hyperframes"
+    agent_fit: high
+    copy_policy: can_reference_and_test
+    use_cases:
+      - "Renderizar HTML/CSS/animações seekable como MP4."
+      - "Criar vídeos com agentes a partir de HTML."
+
+  - name: remotion-agent-skills
+    full_name: remotion-dev/remotion/packages/skills
+    url: https://www.remotion.dev/docs/ai/skills
+    category: video_programatico
+    subcategory: remotion
+    priority: essential
+    status: practical
+    language: TypeScript
+    license: unknown
+    install_hint: "npx skills add remotion-dev/skills"
+    agent_fit: high
+    copy_policy: link_only_until_license_checked
+    use_cases:
+      - "Ensinar agentes a usar Remotion corretamente."
+      - "Criar vídeos programáticos com React."
+
+  - name: OpenCut
+    full_name: OpenCut-app/OpenCut
+    url: https://github.com/OpenCut-app/OpenCut
+    category: edicao_video
+    subcategory: video_editor
+    priority: high
+    status: watch_and_test
+    language: TypeScript
+    license: MIT
+    stars_observed: 61477
+    agent_fit: medium
+    copy_policy: can_reference_and_test
+    notes: "README indica reescrita em andamento; versão classic pode ser melhor para uso imediato."
+
+  - name: MoneyPrinterTurbo
+    full_name: harry0703/MoneyPrinterTurbo
+    url: https://github.com/harry0703/MoneyPrinterTurbo
+    category: video_automatico_social
+    subcategory: short_video_automation
+    priority: high
+    status: practical
+    language: Python
+    license: MIT
+    stars_observed: 95490
+    agent_fit: medium
+    copy_policy: can_reference_and_test
+    use_cases:
+      - "Gerar short videos automaticamente a partir de tema ou palavra-chave."
+      - "Criar roteiro, materiais, legenda, música e vídeo final."
+
+  - name: voicebox
+    full_name: jamiepine/voicebox
+    url: https://github.com/jamiepine/voicebox
+    category: voz_tts_clonagem
+    subcategory: local_voice_studio
+    priority: essential
+    status: practical
+    language: TypeScript
+    license: MIT
+    stars_observed: 37609
+    agent_fit: high
+    copy_policy: can_reference_and_test
+    use_cases:
+      - "Estúdio local-first de voz."
+      - "Clonar vozes, gerar fala, ditar em apps e dar voz a agentes via MCP."
+
+  - name: GPT-SoVITS
+    full_name: RVC-Boss/GPT-SoVITS
+    url: https://github.com/RVC-Boss/GPT-SoVITS
+    category: voz_tts_clonagem
+    subcategory: few_shot_voice_cloning
+    priority: high
+    status: mature_practical
+    language: Python
+    license: MIT
+    stars_observed: 59444
+    agent_fit: medium
+    copy_policy: can_reference_and_test
+    use_cases:
+      - "Zero-shot e few-shot TTS."
+      - "Clonagem de voz com 5 segundos a 1 minuto de dados."
+
+  - name: seedance-2.0-skill-os
+    full_name: Emily2040/seedance-2.0
+    url: https://github.com/Emily2040/seedance-2.0
+    category: video_generativo_cinematico
+    subcategory: seedance_directing_engine
+    priority: high
+    status: advanced_reference
+    language: Python
+    license: MIT
+    stars_observed: 1986
+    agent_fit: high
+    copy_policy: can_reference_and_study
+    use_cases:
+      - "Direção cinematográfica para Seedance 2.0."
+      - "Transformar intenção dramática em câmera, luz, blocking, performance e som."
+
+  - name: higgsfield-ai-prompt-skill
+    full_name: OSideMedia/higgsfield-ai-prompt-skill
+    url: https://github.com/OSideMedia/higgsfield-ai-prompt-skill
+    category: video_generativo_cinematico
+    subcategory: higgsfield_prompt_engineering
+    priority: high
+    status: practical_reference
+    language: Python
+    license: MIT
+    stars_observed: 181
+    agent_fit: high
+    copy_policy: can_reference_and_study
+    use_cases:
+      - "Prompts cinematográficos para Higgsfield, Seedance, Kling, Sora, Veo, Wan e similares."
+      - "Usar fórmula MCSLA: Model, Camera, Subject, Look, Action."
+
+  - name: awesome-seedance
+    full_name: ZeroLu/awesome-seedance
+    url: https://github.com/ZeroLu/awesome-seedance
+    category: video_generativo_cinematico
+    subcategory: seedance_prompt_library
+    priority: high
+    status: reference
+    language: Shell
+    license: MIT
+    stars_observed: 2039
+    agent_fit: medium
+    copy_policy: can_reference_and_study
+
+  - name: LongCat-Video
+    full_name: meituan-longcat/LongCat-Video
+    url: https://github.com/meituan-longcat/LongCat-Video
+    category: modelos_referencia
+    subcategory: video_generation_model
+    priority: medium
+    status: technical_reference
+    language: Python
+    license: MIT
+    stars_observed: 4611
+    agent_fit: low
+    copy_policy: can_reference_and_study
+
+  - name: Open-Generative-AI
+    full_name: Anil-matcha/Open-Generative-AI
+    url: https://github.com/Anil-matcha/Open-Generative-AI
+    category: video_generativo_cinematico
+    subcategory: generative_studio
+    priority: medium
+    status: test_before_recommending
+    language: JavaScript
+    license: MIT
+    stars_observed: 22349
+    agent_fit: medium
+    copy_policy: can_reference_and_test
+    notes: "Provavelmente depende de APIs/provedores como MuAPI; documentar custos e privacidade antes de recomendar."
+
+  - name: MisoTTS
+    full_name: MisoLabsAI/MisoTTS
+    url: https://github.com/MisoLabsAI/MisoTTS
+    category: voz_tts_clonagem
+    subcategory: expressive_tts_model
+    priority: medium
+    status: experimental_reference
+    language: Python
+    license: NOASSERTION
+    stars_observed: 3066
+    agent_fit: low
+    copy_policy: link_only_until_license_checked
+    notes: "Inglês apenas segundo README; modelo grande; verificar licença antes de qualquer adaptação."
+
+  - name: fish-speech
+    full_name: fishaudio/fish-speech
+    url: https://github.com/fishaudio/fish-speech
+    category: voz_tts_clonagem
+    subcategory: tts_model
+    priority: high
+    status: reference
+    language: unknown
+    license: unknown
+    agent_fit: medium
+    copy_policy: link_only_until_license_checked
+
+  - name: voice-pro
+    full_name: abus-aikorea/voice-pro
+    url: https://github.com/abus-aikorea/voice-pro
+    category: voz_tts_clonagem
+    subcategory: voice_webui
+    priority: medium
+    status: reference
+    language: unknown
+    license: unknown
+    agent_fit: low
+    copy_policy: link_only_until_license_checked
+
+  - name: ui-ux-pro-max-skill
+    full_name: nextlevelbuilder/ui-ux-pro-max-skill
+    url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+    category: imagem_design_prompts
+    subcategory: design_skill
+    priority: high
+    status: practical_reference
+    language: Python
+    license: MIT
+    stars_observed: 100405
+    agent_fit: high
+    copy_policy: can_reference_and_study
+
+  - name: awesome-gpt-image-2
+    full_name: YouMind-OpenLab/awesome-gpt-image-2
+    url: https://github.com/YouMind-OpenLab/awesome-gpt-image-2
+    category: imagem_design_prompts
+    subcategory: image_prompt_library
+    priority: high
+    status: reference
+    language: TypeScript
+    license: NOASSERTION
+    stars_observed: 8010
+    agent_fit: medium
+    copy_policy: link_only_or_quote_minimally
+
+  - name: awesome-nano-banana-pro-prompts
+    full_name: YouMind-OpenLab/awesome-nano-banana-pro-prompts
+    url: https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts
+    category: imagem_design_prompts
+    subcategory: image_prompt_library
+    priority: medium
+    status: reference
+    language: TypeScript
+    license: NOASSERTION
+    stars_observed: 12743
+    agent_fit: medium
+    copy_policy: link_only_or_quote_minimally
+
+recommended_mvp:
+  - browser-use/video-use
+  - heygen-com/hyperframes
+  - remotion-dev/remotion/packages/skills
+  - OpenCut-app/OpenCut
+  - harry0703/MoneyPrinterTurbo
+  - jamiepine/voicebox
+  - RVC-Boss/GPT-SoVITS
+  - Emily2040/seedance-2.0
+  - OSideMedia/higgsfield-ai-prompt-skill
+  - ZeroLu/awesome-seedance
+  - nextlevelbuilder/ui-ux-pro-max-skill
+  - YouMind-OpenLab/awesome-gpt-image-2
+
+next_actions:
+  - "Validar licenças dos repositórios marcados como unknown ou NOASSERTION."
+  - "Escolher 3 workflows para testar primeiro: video-use, hyperframes/remotion e voicebox."
+  - "Criar docs em português com matriz de escolha por necessidade."
+  - "Criar templates de prompt para vídeo explicativo, anúncio, UGC, thumbnail e narração."
+  - "Publicar no GitHub após revisar se o repo será público ou privado."
