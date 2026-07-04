@@ -17,6 +17,12 @@ Exemplos: aula gravada, entrevista, depoimento, vídeo de lançamento, tutorial,
 - overlays/animations quando fizer sentido;
 - arquivo final em `edit/final.mp4`.
 
+## Status do teste local
+
+Primeiro teste parcial realizado no Windows: `uv sync`, `timeline_view.py` e `render.py` com EDL manual funcionaram. A transcrição real com ElevenLabs Scribe ainda não foi testada.
+
+Relatório: `docs/testes/video-use-primeiro-teste.md`.
+
 ## Pré-requisitos a validar
 
 - Python;
