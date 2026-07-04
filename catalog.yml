@@ -108,12 +108,13 @@ repositories:
     category: voz_tts_clonagem
     subcategory: local_voice_studio
     priority: essential
-    status: practical
+    status: documented_not_installed
     language: TypeScript
     license: MIT
-    stars_observed: 37609
+    stars_observed: 37661
     agent_fit: high
     copy_policy: can_reference_and_test
+    notes: "App desktop (Tauri/Rust + Python FastAPI). 7 motores TTS, 23 idiomas, clonagem zero-shot, Whisper STT, MCP server (voicebox.speak/transcribe/list_captures/list_profiles), dictation global, local LLM (Qwen3), efeitos de áudio (pedalboard), stories editor multi-track. Release v0.5.0. MSI Windows ~517MB. Não é CLI — precisa instalar app desktop. Ver docs/testes/voicebox-primeiro-teste.md e workflows/voicebox-narracao-local.md."
     use_cases:
       - "Estúdio local-first de voz."
       - "Clonar vozes, gerar fala, ditar em apps e dar voz a agentes via MCP."
