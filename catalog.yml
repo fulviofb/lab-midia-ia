@@ -61,10 +61,11 @@ repositories:
     priority: essential
     status: practical
     language: TypeScript
-    license: unknown
+    license: custom-remotion-license
     install_hint: "npx skills add remotion-dev/skills"
     agent_fit: high
-    copy_policy: link_only_until_license_checked
+    copy_policy: link_only_review_terms_before_commercial_use
+    notes: "Remotion usa licença especial: indivíduos e pequenas empresas podem usar gratuitamente, mas empresas maiores/for-profit podem precisar de licença comercial. Ver https://remotion.dev/license."
     use_cases:
       - "Ensinar agentes a usar Remotion corretamente."
       - "Criar vídeos programáticos com React."
@@ -211,11 +212,11 @@ repositories:
     priority: medium
     status: experimental_reference
     language: Python
-    license: NOASSERTION
+    license: Modified-MIT
     stars_observed: 3066
     agent_fit: low
-    copy_policy: link_only_until_license_checked
-    notes: "Inglês apenas segundo README; modelo grande; verificar licença antes de qualquer adaptação."
+    copy_policy: review_modified_mit_before_reuse
+    notes: "Licença detectada como Modified MIT no arquivo LICENSE. Inglês apenas segundo README; modelo grande; revisar termos modificados antes de adaptação comercial."
 
   - name: fish-speech
     full_name: fishaudio/fish-speech
@@ -225,9 +226,10 @@ repositories:
     priority: high
     status: reference
     language: unknown
-    license: unknown
+    license: Fish-Audio-Research-License
     agent_fit: medium
-    copy_policy: link_only_until_license_checked
+    copy_policy: link_only_review_custom_license
+    notes: "Licença customizada FISH AUDIO RESEARCH LICENSE; usar como referência e revisar termos antes de qualquer uso com pesos/modelos."
 
   - name: voice-pro
     full_name: abus-aikorea/voice-pro
@@ -237,9 +239,10 @@ repositories:
     priority: medium
     status: reference
     language: unknown
-    license: unknown
+    license: GPL-3.0
     agent_fit: low
-    copy_policy: link_only_until_license_checked
+    copy_policy: can_test_copyleft_caution
+    notes: "GitHub detecta GPL-3.0 no LICENSE. README menciona LGPL em metadados; tratar como GPL-3.0 até revisão manual mais profunda."
 
   - name: ui-ux-pro-max-skill
     full_name: nextlevelbuilder/ui-ux-pro-max-skill
@@ -262,10 +265,11 @@ repositories:
     priority: high
     status: reference
     language: TypeScript
-    license: NOASSERTION
+    license: CC-BY-4.0
     stars_observed: 8010
     agent_fit: medium
-    copy_policy: link_only_or_quote_minimally
+    copy_policy: can_adapt_with_attribution
+    notes: "LICENSE e README indicam Creative Commons Attribution 4.0. Atribuição é obrigatória; atenção a direitos de terceiros nos prompts/imagens coletados da comunidade."
 
   - name: awesome-nano-banana-pro-prompts
     full_name: YouMind-OpenLab/awesome-nano-banana-pro-prompts
@@ -275,10 +279,11 @@ repositories:
     priority: medium
     status: reference
     language: TypeScript
-    license: NOASSERTION
+    license: CC-BY-4.0
     stars_observed: 12743
     agent_fit: medium
-    copy_policy: link_only_or_quote_minimally
+    copy_policy: can_adapt_with_attribution
+    notes: "LICENSE e README indicam Creative Commons Attribution 4.0. Atribuição é obrigatória; atenção a direitos de terceiros nos prompts/imagens coletados da comunidade."
 
 recommended_mvp:
   - browser-use/video-use
@@ -295,7 +300,7 @@ recommended_mvp:
   - YouMind-OpenLab/awesome-gpt-image-2
 
 next_actions:
-  - "Validar licenças dos repositórios marcados como unknown ou NOASSERTION."
+  - "Revisar manualmente termos customizados: Remotion, Fish Audio Research License e Modified MIT do MisoTTS."
   - "Escolher 3 workflows para testar primeiro: video-use, hyperframes/remotion e voicebox."
   - "Criar docs em português com matriz de escolha por necessidade."
   - "Criar templates de prompt para vídeo explicativo, anúncio, UGC, thumbnail e narração."
