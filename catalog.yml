@@ -43,13 +43,14 @@ repositories:
     category: video_programatico
     subcategory: html_to_video
     priority: essential
-    status: practical
+    status: tested_recommended_windows
     language: TypeScript
     license: Apache-2.0
     stars_observed: 32957
     install_hint: "npx skills add heygen-com/hyperframes"
     agent_fit: high
     copy_policy: can_reference_and_test
+    notes: "Teste local no Windows validou skills/init, lint, validate, inspect, snapshot e render --strict de composição HTML/CSS/GSAP. Foi necessário configurar HYPERFRAMES_BROWSER_PATH e PRODUCER_HEADLESS_SHELL_PATH para Chrome do sistema porque browser ensure encontrou cache headless quebrado. Ver docs/testes/hyperframes-primeiro-teste.md."
     use_cases:
       - "Renderizar HTML/CSS/animações seekable como MP4."
       - "Criar vídeos com agentes a partir de HTML."
