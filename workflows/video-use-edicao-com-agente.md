@@ -19,7 +19,9 @@ Exemplos: aula gravada, entrevista, depoimento, vídeo de lançamento, tutorial,
 
 ## Status do teste local
 
-Primeiro teste parcial realizado no Windows: `uv sync`, `timeline_view.py` e `render.py` com EDL manual funcionaram. A transcrição real com ElevenLabs Scribe ainda não foi testada.
+Primeiro teste parcial realizado no Windows: `uv sync`, `timeline_view.py`, `render.py` com EDL manual, transcript fake e `pack_transcripts.py` funcionaram. A transcrição real com ElevenLabs Scribe ainda não foi testada.
+
+Atenção: `render.py --build-subtitles` gerou `master.srt`, mas falhou no Windows por escape de caminho absoluto no filtro FFmpeg `subtitles`. O mesmo SRT funcionou com workaround manual usando caminho relativo.
 
 Relatório: `docs/testes/video-use-primeiro-teste.md`.
 

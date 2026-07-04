@@ -25,13 +25,13 @@ repositories:
     category: edicao_video
     subcategory: agent_video_editing
     priority: essential
-    status: partially_tested
+    status: partially_tested_windows
     language: Python
     license: MIT
     stars_observed: 14603
     agent_fit: high
     copy_policy: can_reference_and_test
-    notes: "Teste local no Windows validou uv sync, timeline_view.py e render.py com EDL manual. Falta testar transcrição ElevenLabs e fluxo real com fala. Ver docs/testes/video-use-primeiro-teste.md."
+    notes: "Teste local no Windows validou uv sync, timeline_view.py, render.py com EDL manual, transcript fake e takes_packed.md. Subtitles funcionaram via workaround manual; render.py --build-subtitles falhou por escape de path Windows. Falta testar transcrição ElevenLabs e fluxo real com fala. Ver docs/testes/video-use-primeiro-teste.md."
     use_cases:
       - "Editar vídeos brutos com agentes de código."
       - "Cortar silêncios, filler words e falsos começos."

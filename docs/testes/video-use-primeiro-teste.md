@@ -141,21 +141,116 @@ O teste local foi bem-sucedido para:
 - rodar `render.py` com EDL manual;
 - validar `final.mp4` com `ffprobe`.
 
+## Teste adicional sem API: transcript fake e legendas
+
+Para evitar consumo de créditos ElevenLabs, foi criado um transcript fake compatível com o formato esperado pelo Scribe:
+
+```txt
+edit/transcripts/sample.json
+```
+
+O transcript contém entradas `word` com `start`, `end`, `speaker_id` e entradas `spacing` para simular pausas.
+
+### `pack_transcripts.py`
+
+Comando:
+
+```bash
+uv run --project "$HOME/ai-media-tests/video-use" \
+  python "$HOME/ai-media-tests/video-use/helpers/pack_transcripts.py" \
+  --edit-dir edit
+```
+
+Resultado:
+
+```txt
+edit/takes_packed.md
+```
+
+Saída confirmada:
+
+```txt
+packed 1 transcripts → .../edit/takes_packed.md
+4 phrases, 8.9s total runtime
+```
+
+Conteúdo gerado:
+
+```txt
+## sample  (duration: 8.9s, 4 phrases)
+  [001.10-002.80] S0 Teste do Lab Mídia IA.
+  [003.45-004.00] S0 Render validado.
+  [007.10-008.72] S0 Segundo trecho com legendas.
+  [009.30-010.00] S0 Fim do teste.
+```
+
+### `render.py --build-subtitles`
+
+Comando tentado:
+
+```bash
+uv run --project "$HOME/ai-media-tests/video-use" \
+  python "$HOME/ai-media-tests/video-use/helpers/render.py" \
+  edit/edl.json -o edit/final_subtitled.mp4 --preview --build-subtitles
+```
+
+Resultado parcial:
+
+- `master.srt` foi gerado corretamente com 8 cues;
+- a composição com subtitles falhou no Windows ao usar caminho absoluto no filtro `subtitles` do FFmpeg.
+
+Erro observado:
+
+```txt
+subprocess.CalledProcessError ... filter_complex "[0:v]subtitles='C\\:\\Users\\...\\master.srt'..."
+```
+
+Hipótese: bug de escape de path Windows em `render.py` ao passar `subtitles_path.resolve()` para o filtro `subtitles`. O FFmpeg funcionou quando o mesmo SRT foi aplicado com caminho relativo a partir do diretório `edit/`.
+
+### Workaround validado
+
+A partir de `edit/`, este comando funcionou:
+
+```bash
+ffmpeg -y -i base_preview.mp4 \
+  -vf "subtitles=master.srt:force_style='FontName=Arial,FontSize=18,Bold=1,PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=2,Alignment=2,MarginV=90'" \
+  -c:v libx264 -preset fast -crf 18 -pix_fmt yuv420p \
+  -c:a copy -movflags +faststart final_subtitled_manual.mp4
+```
+
+`ffprobe` confirmou:
+
+- duração: 6.04s;
+- vídeo H.264 1920×1080 24fps;
+- áudio AAC;
+- tamanho: ~3.85 MB.
+
+Também foi gerado um PNG de verificação:
+
+```txt
+edit/verify_final_subtitled_manual_0-5_8.png
+```
+
+Observação: `timeline_view.py` falhou quando solicitado exatamente até `end=6.0`, mas funcionou com `end=5.8`. Possível fragilidade ao extrair frame no limite final do vídeo no Windows/FFmpeg.
+
 ## Limitações ainda não testadas
 
 - Transcrição real com ElevenLabs Scribe.
-- Geração de `takes_packed.md` a partir de transcrição.
-- Seleção automática de cortes por agente baseada em transcript.
-- Subtitles via `--build-subtitles`.
+- Seleção automática de cortes por agente baseada em transcript real.
 - Overlays via HyperFrames/Remotion/Manim.
 - Registro como skill nativa no Hermes.
+
+## Bugs/fragilidades encontrados no Windows
+
+1. `render.py --build-subtitles` gera `master.srt`, mas falha na composição por escape de caminho absoluto Windows no filtro FFmpeg `subtitles`.
+2. `timeline_view.py` pode falhar ao extrair frame exatamente no limite final do vídeo; usar margem, ex. `end=duration-0.2`, funcionou.
 
 ## Veredito parcial
 
 Status recomendado no catálogo:
 
 ```yaml
-status: partially_tested
+status: partially_tested_windows
 ```
 
-O projeto é promissor e os helpers locais funcionaram no Windows. Para marcar como `tested_recommended`, ainda falta validar a transcrição ElevenLabs e um fluxo real com material falado.
+O projeto é promissor e os helpers locais funcionaram no Windows para render sem legenda, transcript fake, `takes_packed.md` e legenda via workaround manual. Para marcar como `tested_recommended`, ainda falta validar a transcrição ElevenLabs, um fluxo real com material falado e corrigir/contornar o bug de path Windows em `render.py --build-subtitles`.
