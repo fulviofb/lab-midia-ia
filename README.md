@@ -15,11 +15,14 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 
 - `catalog.yml`: catálogo estruturado dos repositórios e ferramentas.
 - `docs/guias/`: guias em português para iniciantes.
+- `docs/trilhas/`: caminhos práticos por objetivo e nível técnico.
+- `docs/publico/`: materiais para compartilhar com pessoas leigas, inclusive uso com LLM sem CLI.
+- `docs/estrategia/`: estratégia de formação, site Concafras IA e possíveis ofertas.
 - `docs/testes/`: relatórios de testes práticos e bloqueios encontrados.
 - `docs/workarounds/`: soluções para problemas específicos, especialmente no Windows.
 - `docs/scripts/`: documentação dos scripts de automação.
 - `workflows/`: fluxos práticos por tipo de tarefa.
-- `prompts/`: prompts reutilizáveis para vídeo, imagem, UGC, narração e thumbnails.
+- `prompts/`: prompts reutilizáveis para vídeo, imagem, UGC, narração, thumbnails e orientação com LLM.
 - `examples/`: espaço para exemplos reproduzíveis leves.
 - `scripts/`: automações do laboratório, como atualização de metadados do catálogo.
 
@@ -69,9 +72,31 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 
 1. Comece por `docs/guias/00-pre-requisitos.md`.
 2. Leia `docs/guias/01-por-onde-comecar.md` para escolher uma ferramenta.
-3. Consulte `catalog.yml` para status, licença e prioridade.
-4. Use os workflows e prompts como ponto de partida.
-5. Antes de recomendar uma ferramenta para outra pessoa, veja se há relatório em `docs/testes/`.
+3. Se você quer ajudar uma pessoa leiga, use `docs/publico/como-usar-com-llm-sem-cli.md`.
+4. Se você quer um caminho por objetivo, veja `docs/trilhas/`.
+5. Consulte `catalog.yml` para status, licença e prioridade.
+6. Use os workflows e prompts como ponto de partida.
+7. Antes de recomendar uma ferramenta para outra pessoa, veja se há relatório em `docs/testes/`.
+
+## Trilhas práticas
+
+- `docs/trilhas/01-primeiro-video-com-ia.md`
+- `docs/trilhas/02-transformar-aula-em-cortes.md`
+- `docs/trilhas/03-video-explicativo-narrado.md`
+- `docs/trilhas/04-narracao-e-voz-com-ia.md`
+- `docs/trilhas/05-video-programatico-para-devs.md`
+
+## Site Concafras IA
+
+Este repositório também serve como base viva para atualizar e sustentar o site:
+
+<https://concafras-ia.vercel.app/>
+
+Estratégia documentada em:
+
+- `docs/estrategia/site-concafras-e-formacao.md`
+- `docs/publico/como-usar-com-llm-sem-cli.md`
+- `prompts/prompt-mestre-consultor-midia-ia.md`
 
 ## Cuidados importantes
 

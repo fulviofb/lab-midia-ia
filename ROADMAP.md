@@ -42,6 +42,9 @@ Cada teste deve gerar:
 - [x] Edição com `video-use`.
 - [x] Narração com IA de forma ética.
 - [x] Ideia → roteiro → cenas → vídeo.
+- [x] Guia comparativo inicial por objetivo em `docs/01-mapa-de-ferramentas.md`.
+- [x] Trilhas práticas para pessoas leigas/intermediárias/técnicas.
+- [x] Prompt mestre para usar o repositório com ChatGPT/Claude/Gemini sem CLI.
 - [ ] Guia comparativo OpenReel vs OpenCut vs video-use após smoke test do OpenReel.
 
 ## Fase 4 — Templates e exemplos
@@ -66,6 +69,17 @@ Cada teste deve gerar:
 - [x] Modo `--dry-run` e `--write`.
 - [x] Documentação em `docs/scripts/update_github_metadata.md`.
 - [ ] Rodar periodicamente antes de compartilhar curadorias novas.
+
+## Fase 6 — Site Concafras IA e formação
+
+- [x] Diagnosticar o papel do site `concafras-ia.vercel.app` como porta de entrada pública.
+- [x] Documentar estratégia em `docs/estrategia/site-concafras-e-formacao.md`.
+- [x] Criar materiais públicos para uso com LLM sem CLI.
+- [ ] Atualizar o site com seção “Comece por aqui”.
+- [ ] Linkar trilhas práticas do `lab-midia-ia` no site.
+- [ ] Criar formulário de diagnóstico para direcionar pessoas por objetivo/nível.
+- [ ] Criar export público JSON/Markdown do catálogo para alimentar o site.
+- [ ] Testar o fluxo com 3 pessoas reais e revisar linguagem.
 
 ## Próximos testes prioritários
 
