@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T12:27:11+00:00",
+  "generated_at": "2026-07-08T13:04:50+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -124,17 +124,17 @@
       "subcategory": "agentic_video_production",
       "priority": "high",
       "priority_label": "Alta prioridade",
-      "status": "partially_tested_windows",
-      "status_label": "Parcialmente testado no Windows",
-      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
+      "status": "tested_recommended_windows",
+      "status_label": "Testado e recomendado no Windows",
+      "recommendation": "Pode ser recomendado com as observações do teste.",
       "technical_level": "technical",
       "technical_level_label": "técnico",
       "audience": "usuários técnicos, devs e agentes",
-      "public_summary": "Transformar um agente de código em estúdio de produção de vídeo com pesquisa, roteiro, geração de assets, edição e render.",
+      "public_summary": "Produzir vídeos técnicos/didáticos com fluxo agentic e artefatos auditáveis.",
       "use_cases": [
-        "Transformar um agente de código em estúdio de produção de vídeo com pesquisa, roteiro, geração de assets, edição e render.",
-        "Produzir vídeos a partir de referência, prompt ou pipeline com Remotion/HyperFrames e FFmpeg.",
-        "Experimentar workflows agentic completos para educação, divulgação e vídeos explicativos."
+        "Produzir vídeos técnicos/didáticos com fluxo agentic e artefatos auditáveis.",
+        "Criar screen-demos sintéticos com Remotion TerminalScene e narração local Piper.",
+        "Explorar pipelines de vídeo com checkpoints, Backlot e validação ffprobe."
       ],
       "license": "AGPL-3.0",
       "language": "Python",

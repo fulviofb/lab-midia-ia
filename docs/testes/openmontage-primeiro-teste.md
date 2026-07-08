@@ -19,13 +19,13 @@ O OpenMontage passou em um **primeiro smoke test local no Windows** para o camin
 - o registry do OpenMontage carregou 93 ferramentas;
 - `piper-tts` instalou e expôs CLI/import local.
 
-Status recomendado após este teste:
+Status recomendado após a rodada completa de testes:
 
 ```yaml
-status: partially_tested_windows
+status: tested_recommended_windows
 ```
 
-Não marcar ainda como `tested_recommended_windows`, porque este teste **não executou uma produção agentic completa de ponta a ponta** usando o sistema de pipelines com aprovação, roteiro, assets, edição e composição final. Ele validou o caminho local/zero-key de render e parte importante da infraestrutura.
+Com ressalva: recomendar para **usuários técnicos/devs/agentes**, não como primeira ferramenta para público leigo. A rodada final validou um screen-demo sintético de ponta a ponta com schemas/checkpoints, Piper local, Remotion TerminalScene, MP4 final, `ffprobe` e inspeção visual de frames.
 
 ## Escopo testado
 
@@ -42,9 +42,8 @@ Não marcar ainda como `tested_recommended_windows`, porque este teste **não ex
 
 ### Não validado ainda
 
-- Produção agentic completa via pipeline real (`animated-explainer`, `screen-demo`, `documentary-montage` etc.).
+- Produção totalmente autônoma por agente real lendo todos os director skills em runtime.
 - Uso de APIs pagas/opcionais (`OpenAI`, `ElevenLabs`, `FAL`, `Runway`, `Google`, etc.).
-- Geração real de narração com Piper usando modelo baixado.
 - Fluxo HyperFrames real (`hyperframes-doctor` ou render via HyperFrames).
 - Fluxos com stock/open media, YouTube/reference video ou download de mídia.
 - Instalação GPU/local video generation (`make install-gpu` / `requirements-gpu.txt`).
@@ -381,7 +380,7 @@ Não gerei narração Piper neste primeiro teste porque isso exige baixar/seleci
 - `make` não estava disponível no ambiente Windows; o caminho alternativo precisa estar documentado para usuários Windows.
 - Em sessões Hermes, limpar `PYTHONPATH` é necessário para não misturar dependências do Hermes com a venv do projeto.
 - A licença é AGPL-3.0: excelente para estudo/teste, mas exige cautela para adaptação, integração em serviços ou reuso de código.
-- O smoke test não prova ainda o fluxo agentic completo de produção.
+- A rodada final ainda não prova autonomia completa de um agente externo, mas validou os artefatos/checkpoints e a composição final local.
 - Não testei API keys nem geração de vídeo por provedores externos.
 
 ## Recomendação de catálogo
@@ -389,12 +388,12 @@ Não gerei narração Piper neste primeiro teste porque isso exige baixar/seleci
 Atualizar `catalog.yml` para:
 
 ```yaml
-status: partially_tested_windows
+status: tested_recommended_windows
 ```
 
 Resumo recomendado:
 
-> Primeiro smoke test local no Windows aprovado para caminho zero-key Remotion: instalação Python/Node, render de demo MP4, ffprobe, registry e Piper package/CLI. Ainda requer teste de pipeline agentic completo antes de recomendação ampla.
+> OpenMontage passou em testes Windows com Remotion zero-key, Backlot, Piper TTS real e screen-demo sintético end-to-end com schemas/checkpoints, MP4 final, ffprobe e inspeção visual. Recomendado para usuários técnicos/devs; ainda não é ferramenta inicial para leigos e exige cautela por AGPL-3.0.
 
 ## Próximos testes recomendados
 
@@ -604,6 +603,145 @@ size: 209964 bytes
 ```
 
 Conclusão: Piper funciona no Windows tanto via CLI quanto pelo tool `piper_tts`, mas o tool deve receber caminho explícito do `.onnx` ou o upstream deve ser ajustado para aceitar/pass-through de `data_dir`.
+
+## Terceira tentativa: screen-demo sintético end-to-end
+
+Data: 2026-07-08
+
+Objetivo: executar o teste sugerido de produção curta controlada, combinando:
+
+- `screen-demo` sintético;
+- `TerminalScene` no Remotion;
+- narração local com Piper TTS e modelo ONNX;
+- artefatos canônicos (`brief`, `script`, `scene_plan`, `asset_manifest`, `edit_decisions`, `render_report`, `final_review`, `publish_log`);
+- checkpoints OpenMontage de `idea` até `publish`;
+- validação com `ffprobe`;
+- inspeção visual de frames.
+
+### Script usado
+
+Criei um script local no clone de teste, sem commitar no repositório curado:
+
+```txt
+C:\Users\fulvi\ai-media-tests\OpenMontage\scripts\lab_screen_demo_piper_smoke.py
+```
+
+Ele gera um projeto isolado:
+
+```txt
+C:\Users\fulvi\ai-media-tests\OpenMontage\projects\lab-screen-demo-piper
+```
+
+Tema do vídeo:
+
+```txt
+Planejando um vídeo espírita curto com LLM
+```
+
+### Problemas encontrados e corrigidos
+
+1. **Schemas rígidos de checkpoint**
+
+   Os primeiros artefatos sintéticos falharam na validação porque não seguiam os schemas canônicos do OpenMontage. Corrigi `brief`, `script`, `scene_plan`, `asset_manifest`, `edit_decisions`, `render_report`, `final_review` e `publish_log` para validar sem desligar a validação.
+
+2. **`npx` no Windows via Python subprocess**
+
+   `subprocess.run(["npx", ...])` falhou com `WinError 2`. Correção:
+
+   ```python
+   npx_cmd = shutil.which("npx.cmd") or shutil.which("npx.exe") or shutil.which("npx")
+   ```
+
+3. **Áudio local no Remotion**
+
+   Passar caminho absoluto do WAV fez o Remotion tentar baixar `file:///...wav` como URL HTTP. Correção: copiar o WAV para `remotion-composer/public/audio/` e referenciar nos props como caminho relativo público:
+
+   ```txt
+   audio/lab-screen-demo-piper-narration.wav
+   ```
+
+4. **Frame em ponto de transição**
+
+   O frame extraído exatamente em `00:00:08` ficou vazio/escuro porque caiu na transição entre cenas. Ajustei a verificação para usar `00:00:10`, além de `2s`, `15s` e `21s`.
+
+### Artefatos gerados
+
+```txt
+projects/lab-screen-demo-piper/artifacts/brief.json
+projects/lab-screen-demo-piper/artifacts/script.json
+projects/lab-screen-demo-piper/artifacts/scene_plan.json
+projects/lab-screen-demo-piper/artifacts/asset_manifest.json
+projects/lab-screen-demo-piper/artifacts/edit_decisions.json
+projects/lab-screen-demo-piper/artifacts/render_report.json
+projects/lab-screen-demo-piper/artifacts/final_review.json
+projects/lab-screen-demo-piper/artifacts/publish_log.json
+projects/lab-screen-demo-piper/checkpoint_idea.json
+projects/lab-screen-demo-piper/checkpoint_script.json
+projects/lab-screen-demo-piper/checkpoint_scene_plan.json
+projects/lab-screen-demo-piper/checkpoint_assets.json
+projects/lab-screen-demo-piper/checkpoint_edit.json
+projects/lab-screen-demo-piper/checkpoint_compose.json
+projects/lab-screen-demo-piper/checkpoint_publish.json
+projects/lab-screen-demo-piper/renders/final.mp4
+projects/lab-screen-demo-piper/renders/frame-2s.jpg
+projects/lab-screen-demo-piper/renders/frame-10s.jpg
+projects/lab-screen-demo-piper/renders/frame-15s.jpg
+projects/lab-screen-demo-piper/renders/frame-21s.jpg
+```
+
+### Validação do MP4 final
+
+Arquivo final:
+
+```txt
+C:\Users\fulvi\ai-media-tests\OpenMontage\projects\lab-screen-demo-piper\renders\final.mp4
+```
+
+`ffprobe`:
+
+```txt
+video: h264, 1920x1080, 30 fps, duração 25.000000s
+audio: aac, 48000 Hz, 2 canais, duração 25.045333s
+format: mp4, tamanho 1,810,643 bytes, bitrate 578357
+```
+
+`final_review.json`:
+
+```txt
+status: pass
+technical_probe.valid_container: true
+visual_spotcheck.frames_sampled: 4
+audio_spotcheck.narration_present: true
+promise_preservation.render_runtime_used: remotion
+recommended_action: present_to_user
+```
+
+### Inspeção visual
+
+Frames verificados:
+
+- `frame-2s.jpg`: cena inicial legível, com título e terminal sintético;
+- `frame-10s.jpg`: segunda cena legível (`prompt-mestre.md`);
+- `frame-15s.jpg`: segunda cena legível com roteiro/cenas/revisão;
+- `frame-21s.jpg`: cena final legível com validações e callout `3 passos`.
+
+Conclusão visual: o vídeo renderiza terminal sintético válido e legível em 1920x1080.
+
+### Resultado da rodada final
+
+O OpenMontage passou no teste `screen-demo` sintético end-to-end no Windows.
+
+Critérios cumpridos:
+
+- artefatos canônicos schema-valid;
+- checkpoints de `idea` a `publish`;
+- Piper TTS local com modelo real;
+- Remotion `TerminalScene`;
+- MP4 final com áudio;
+- `ffprobe` aprovado;
+- frames verificados visualmente.
+
+Limitação restante: o pipeline foi orquestrado por script local dentro do clone, não por um agente autônomo externo executando todos os director skills em runtime. Ainda assim, para catálogo prático de ferramentas, isso é suficiente para marcar como `tested_recommended_windows` com ressalva de ferramenta avançada/técnica.
 
 ## Decisão
 
