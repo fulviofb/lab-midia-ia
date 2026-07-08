@@ -78,7 +78,8 @@ Cada teste deve gerar:
 - [ ] Atualizar o site com seção “Comece por aqui”.
 - [ ] Linkar trilhas práticas do `lab-midia-ia` no site.
 - [ ] Criar formulário de diagnóstico para direcionar pessoas por objetivo/nível.
-- [ ] Criar export público JSON/Markdown do catálogo para alimentar o site.
+- [x] Criar export público JSON/Markdown do catálogo para alimentar o site.
+- [ ] Integrar o export público ao build do site Concafras IA.
 - [ ] Testar o fluxo com 3 pessoas reais e revisar linguagem.
 
 ## Próximos testes prioritários

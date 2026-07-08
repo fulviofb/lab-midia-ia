@@ -23,8 +23,9 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `docs/scripts/`: documentação dos scripts de automação.
 - `workflows/`: fluxos práticos por tipo de tarefa.
 - `prompts/`: prompts reutilizáveis para vídeo, imagem, UGC, narração, thumbnails e orientação com LLM.
+- `public-data/`: exports públicos e amigáveis para sites/aulas, gerados a partir do catálogo.
 - `examples/`: espaço para exemplos reproduzíveis leves.
-- `scripts/`: automações do laboratório, como atualização de metadados do catálogo.
+- `scripts/`: automações do laboratório, como atualização de metadados e export público do catálogo.
 
 ## Categorias principais
 
@@ -115,7 +116,24 @@ python scripts/update_github_metadata.py --dry-run
 python scripts/update_github_metadata.py --write
 ```
 
-Veja `docs/scripts/update_github_metadata.md`.
+Para gerar a versão pública do catálogo usada por sites/aulas:
+
+```bash
+python scripts/export_public_catalog.py
+python scripts/export_public_catalog.py --check
+```
+
+Arquivos gerados:
+
+```txt
+public-data/catalog.public.json
+public-data/catalog.public.md
+```
+
+Veja:
+
+- `docs/scripts/update_github_metadata.md`
+- `docs/scripts/export_public_catalog.md`
 
 ## Próximos testes recomendados
 
