@@ -1,10 +1,10 @@
-# catalog.yml — atualizado por update_github_metadata.py em 2026-07-04 18:30:22
+# catalog.yml — atualizado por update_github_metadata.py em 2026-07-07 22:44:04
 metadata:
   name: lab-midia-ia
   description: Curadoria prática de ferramentas, skills, prompts e workflows para criar vídeo, voz, imagem, design e edição
     com IA.
   language: pt-BR
-  status: draft
+  status: public_lab
   curation_principles:
     - Priorizar ferramentas reproduzíveis, agent-friendly e com licença clara.
     - Separar geração, edição, voz, imagem, design e prompt engineering.
@@ -29,17 +29,18 @@ repositories:
     status: partially_tested_windows
     language: Python
     license: MIT
-    stars_observed: 14656
+    stars_observed: 15899
     agent_fit: high
     copy_policy: can_reference_and_test
     notes: Teste local no Windows validou uv sync, timeline_view.py, render.py com EDL manual, transcript fake e takes_packed.md.
-      Subtitles funcionaram via workaround manual; render.py --build-subtitles falhou por escape de path Windows. Falta testar
-      transcrição ElevenLabs e fluxo real com fala. Ver docs/testes/video-use-primeiro-teste.md.
+      Subtitles funcionaram via workaround manual; render.py --build-subtitles falhou por escape de path Windows. Transcrição
+      ElevenLabs Scribe foi testada até upload, mas bloqueada por API key sem permissão speech_to_text. Ver docs/testes/video-use-primeiro-teste.md
+      e docs/testes/elevenlabs-scribe-teste.md.
     use_cases:
       - Editar vídeos brutos com agentes de código.
       - Cortar silêncios, filler words e falsos começos.
       - Gerar legendas, color grading, fades e overlays.
-    forks_observed: 1750
+    forks_observed: 1845
     open_issues_observed: 53
     github_updated_at: '2026-07-01T00:33:52Z'
   - name: hyperframes
@@ -51,7 +52,7 @@ repositories:
     status: tested_recommended_windows
     language: TypeScript
     license: Apache-2.0
-    stars_observed: 33103
+    stars_observed: 33649
     install_hint: npx skills add heygen-com/hyperframes
     agent_fit: high
     copy_policy: can_reference_and_test
@@ -61,9 +62,9 @@ repositories:
     use_cases:
       - Renderizar HTML/CSS/animações seekable como MP4.
       - Criar vídeos com agentes a partir de HTML.
-    forks_observed: 3078
-    open_issues_observed: 88
-    github_updated_at: '2026-07-04T21:29:39Z'
+    forks_observed: 3144
+    open_issues_observed: 101
+    github_updated_at: '2026-07-08T01:43:49Z'
     topics:
       - ai
       - animation
@@ -104,17 +105,40 @@ repositories:
     status: watch_and_test
     language: TypeScript
     license: MIT
-    stars_observed: 61534
+    stars_observed: 61738
     agent_fit: medium
     copy_policy: can_reference_and_test
     notes: README indica reescrita em andamento; versão classic pode ser melhor para uso imediato.
-    forks_observed: 6623
+    forks_observed: 6650
     open_issues_observed: 332
     github_updated_at: '2026-06-21T13:15:27Z'
     topics:
       - editor
       - oss
       - videoeditor
+  - name: OpenReel Video
+    full_name: Augani/openreel-video
+    url: https://github.com/Augani/openreel-video
+    category: edicao_video
+    subcategory: browser_video_editor
+    priority: high
+    status: test_before_recommending
+    language: TypeScript
+    license: MIT
+    stars_observed: 3839
+    agent_fit: medium
+    copy_policy: can_reference_and_test
+    notes: Editor de vídeo profissional 100% browser-based, alternativa open-source ao CapCut. README promete timeline multi-track,
+      WebCodecs/WebGPU, edição local sem upload, export MP4/WebM/ProRes, legendas e keyframes. Bom candidato para uso humano/visual
+      e complementar a video-use; precisa smoke test no Windows com RTX 4060 Laptop GPU para validar performance/export real.
+    use_cases:
+      - Editar vídeos visualmente no navegador sem upload para nuvem.
+      - Alternativa open-source ao CapCut para cortes, textos, legendas, efeitos, keyframes e export.
+      - Fluxo manual/visual complementar aos workflows agent-first como video-use, HyperFrames e Remotion.
+    forks_observed: 541
+    open_issues_observed: 16
+    github_updated_at: '2026-06-01T18:08:11Z'
+    topics: []
   - name: MoneyPrinterTurbo
     full_name: harry0703/MoneyPrinterTurbo
     url: https://github.com/harry0703/MoneyPrinterTurbo
@@ -124,15 +148,15 @@ repositories:
     status: practical
     language: Python
     license: MIT
-    stars_observed: 95666
+    stars_observed: 96198
     agent_fit: medium
     copy_policy: can_reference_and_test
     use_cases:
       - Gerar short videos automaticamente a partir de tema ou palavra-chave.
       - Criar roteiro, materiais, legenda, música e vídeo final.
-    forks_observed: 13934
-    open_issues_observed: 52
-    github_updated_at: '2026-07-03T02:20:27Z'
+    forks_observed: 14035
+    open_issues_observed: 53
+    github_updated_at: '2026-07-06T02:38:10Z'
     topics:
       - ai
       - automation
@@ -150,7 +174,7 @@ repositories:
     status: documented_not_installed
     language: TypeScript
     license: MIT
-    stars_observed: 37662
+    stars_observed: 38521
     agent_fit: high
     copy_policy: can_reference_and_test
     notes: App desktop (Tauri/Rust + Python FastAPI). 7 motores TTS, 23 idiomas, clonagem zero-shot, Whisper STT, MCP server
@@ -160,9 +184,9 @@ repositories:
     use_cases:
       - Estúdio local-first de voz.
       - Clonar vozes, gerar fala, ditar em apps e dar voz a agentes via MCP.
-    forks_observed: 4521
-    open_issues_observed: 518
-    github_updated_at: '2026-07-02T23:12:35Z'
+    forks_observed: 4644
+    open_issues_observed: 524
+    github_updated_at: '2026-07-05T10:18:30Z'
     topics:
       - ai
       - cuda
@@ -181,14 +205,14 @@ repositories:
     status: mature_practical
     language: Python
     license: MIT
-    stars_observed: 59448
+    stars_observed: 59543
     agent_fit: medium
     copy_policy: can_reference_and_test
     use_cases:
       - Zero-shot e few-shot TTS.
       - Clonagem de voz com 5 segundos a 1 minuto de dados.
-    forks_observed: 6490
-    open_issues_observed: 871
+    forks_observed: 6501
+    open_issues_observed: 873
     github_updated_at: '2026-06-20T07:45:00Z'
     topics:
       - text-to-speech
@@ -206,15 +230,15 @@ repositories:
     status: advanced_reference
     language: Python
     license: MIT
-    stars_observed: 2078
+    stars_observed: 3283
     agent_fit: high
     copy_policy: can_reference_and_study
     use_cases:
       - Direção cinematográfica para Seedance 2.0.
       - Transformar intenção dramática em câmera, luz, blocking, performance e som.
-    forks_observed: 319
-    open_issues_observed: 2
-    github_updated_at: '2026-07-04T17:21:44Z'
+    forks_observed: 512
+    open_issues_observed: 1
+    github_updated_at: '2026-07-07T00:51:54Z'
   - name: higgsfield-ai-prompt-skill
     full_name: OSideMedia/higgsfield-ai-prompt-skill
     url: https://github.com/OSideMedia/higgsfield-ai-prompt-skill
@@ -224,15 +248,15 @@ repositories:
     status: practical_reference
     language: Python
     license: MIT
-    stars_observed: 181
+    stars_observed: 186
     agent_fit: high
     copy_policy: can_reference_and_study
     use_cases:
       - Prompts cinematográficos para Higgsfield, Seedance, Kling, Sora, Veo, Wan e similares.
       - 'Usar fórmula MCSLA: Model, Camera, Subject, Look, Action.'
-    forks_observed: 40
+    forks_observed: 42
     open_issues_observed: 0
-    github_updated_at: '2026-07-01T03:12:34Z'
+    github_updated_at: '2026-07-06T07:08:43Z'
     topics:
       - ai-cinema
       - ai-filmmaking
@@ -263,12 +287,12 @@ repositories:
     status: reference
     language: Shell
     license: MIT
-    stars_observed: 2043
+    stars_observed: 2068
     agent_fit: medium
     copy_policy: can_reference_and_study
-    forks_observed: 232
+    forks_observed: 236
     open_issues_observed: 3
-    github_updated_at: '2026-07-04T13:35:36Z'
+    github_updated_at: '2026-07-07T14:37:21Z'
     topics:
       - ai
       - how-to-use
@@ -289,11 +313,11 @@ repositories:
     status: technical_reference
     language: Python
     license: MIT
-    stars_observed: 4621
+    stars_observed: 4971
     agent_fit: low
     copy_policy: can_reference_and_study
-    forks_observed: 743
-    open_issues_observed: 70
+    forks_observed: 791
+    open_issues_observed: 72
     github_updated_at: '2026-05-27T02:51:41Z'
   - name: Open-Generative-AI
     full_name: Anil-matcha/Open-Generative-AI
@@ -304,13 +328,13 @@ repositories:
     status: test_before_recommending
     language: JavaScript
     license: MIT
-    stars_observed: 22372
+    stars_observed: 22698
     agent_fit: medium
     copy_policy: can_reference_and_test
     notes: Provavelmente depende de APIs/provedores como MuAPI; documentar custos e privacidade antes de recomendar.
-    forks_observed: 3800
-    open_issues_observed: 29
-    github_updated_at: '2026-07-03T17:20:57Z'
+    forks_observed: 3863
+    open_issues_observed: 13
+    github_updated_at: '2026-07-07T07:49:48Z'
     topics:
       - ai-art-generator
       - ai-image-generation
@@ -341,12 +365,12 @@ repositories:
     status: experimental_reference
     language: Python
     license: Modified-MIT
-    stars_observed: 3066
+    stars_observed: 3082
     agent_fit: low
     copy_policy: review_modified_mit_before_reuse
     notes: Licença detectada como Modified MIT no arquivo LICENSE. Inglês apenas segundo README; modelo grande; revisar termos
       modificados antes de adaptação comercial.
-    forks_observed: 312
+    forks_observed: 315
     open_issues_observed: 18
     github_updated_at: '2026-06-09T20:41:00Z'
   - name: fish-speech
@@ -362,9 +386,9 @@ repositories:
     copy_policy: link_only_review_custom_license
     notes: Licença customizada FISH AUDIO RESEARCH LICENSE; usar como referência e revisar termos antes de qualquer uso com
       pesos/modelos.
-    stars_observed: 31111
-    forks_observed: 2660
-    open_issues_observed: 14
+    stars_observed: 31173
+    forks_observed: 2669
+    open_issues_observed: 13
     github_updated_at: '2026-06-09T10:04:07Z'
     topics:
       - llama
@@ -387,8 +411,8 @@ repositories:
     copy_policy: can_test_copyleft_caution
     notes: GitHub detecta GPL-3.0 no LICENSE. README menciona LGPL em metadados; tratar como GPL-3.0 até revisão manual mais
       profunda.
-    stars_observed: 11109
-    forks_observed: 1619
+    stars_observed: 11122
+    forks_observed: 1622
     open_issues_observed: 47
     github_updated_at: '2025-12-05T17:00:08Z'
     topics:
@@ -420,12 +444,12 @@ repositories:
     status: practical_reference
     language: Python
     license: MIT
-    stars_observed: 100760
+    stars_observed: 102337
     agent_fit: high
     copy_policy: can_reference_and_study
-    forks_observed: 10619
-    open_issues_observed: 123
-    github_updated_at: '2026-07-04T02:25:13Z'
+    forks_observed: 10793
+    open_issues_observed: 127
+    github_updated_at: '2026-07-06T15:33:37Z'
     topics:
       - ai-skills
       - antigravity
@@ -455,14 +479,14 @@ repositories:
     status: reference
     language: TypeScript
     license: CC-BY-4.0
-    stars_observed: 8032
+    stars_observed: 8096
     agent_fit: medium
     copy_policy: can_adapt_with_attribution
     notes: LICENSE e README indicam Creative Commons Attribution 4.0. Atribuição é obrigatória; atenção a direitos de terceiros
       nos prompts/imagens coletados da comunidade.
-    forks_observed: 729
+    forks_observed: 735
     open_issues_observed: 2
-    github_updated_at: '2026-07-04T12:58:17Z'
+    github_updated_at: '2026-07-08T01:29:30Z'
     topics:
       - ai-image-generation
       - ai-prompts
@@ -489,14 +513,14 @@ repositories:
     status: reference
     language: TypeScript
     license: CC-BY-4.0
-    stars_observed: 12747
+    stars_observed: 12775
     agent_fit: medium
     copy_policy: can_adapt_with_attribution
     notes: LICENSE e README indicam Creative Commons Attribution 4.0. Atribuição é obrigatória; atenção a direitos de terceiros
       nos prompts/imagens coletados da comunidade.
-    forks_observed: 1385
+    forks_observed: 1387
     open_issues_observed: 0
-    github_updated_at: '2026-07-04T20:19:07Z'
+    github_updated_at: '2026-07-08T00:21:10Z'
     topics:
       - ai-image-generation
       - ai-prompts
