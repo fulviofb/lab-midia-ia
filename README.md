@@ -16,6 +16,7 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `catalog.yml`: catálogo estruturado dos repositórios e ferramentas.
 - `docs/guias/`: guias em português para iniciantes.
 - `docs/trilhas/`: caminhos práticos por objetivo e nível técnico.
+- `docs/receitas/`: receitas rápidas por resultado, para pessoas leigas — poucos passos, só ferramentas web.
 - `docs/publico/`: materiais para compartilhar com pessoas leigas, inclusive uso com LLM sem CLI.
 - `docs/estrategia/`: estratégia de formação, site Concafras IA e princípio da gratuidade.
 - `docs/testes/`: relatórios de testes práticos e bloqueios encontrados.
@@ -73,11 +74,20 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 
 1. Comece por `docs/guias/00-pre-requisitos.md`.
 2. Leia `docs/guias/01-por-onde-comecar.md` para escolher uma ferramenta.
-3. Se você quer ajudar uma pessoa leiga, use `docs/publico/como-usar-com-llm-sem-cli.md`.
-4. Se você quer um caminho por objetivo, veja `docs/trilhas/`.
-5. Consulte `catalog.yml` para status, licença e prioridade.
-6. Use os workflows e prompts como ponto de partida.
-7. Antes de recomendar uma ferramenta para outra pessoa, veja se há relatório em `docs/testes/`.
+3. Se você quer um resultado rápido sendo pessoa leiga, vá direto a `docs/receitas/`.
+4. Se você quer ajudar uma pessoa leiga, use `docs/publico/como-usar-com-llm-sem-cli.md`.
+5. Se você quer um caminho por objetivo, veja `docs/trilhas/`.
+6. Consulte `catalog.yml` para status, licença e prioridade.
+7. Use os workflows e prompts como ponto de partida.
+8. Antes de recomendar uma ferramenta para outra pessoa, veja se há relatório em `docs/testes/`.
+
+## Receitas rápidas
+
+Para pessoas leigas: resultado pronto em poucos passos, só ferramentas web ou de celular.
+
+- `docs/receitas/01-convite-de-evento.md`
+- `docs/receitas/02-cortes-de-palestra.md`
+- `docs/receitas/03-narracao-de-texto.md`
 
 ## Trilhas práticas
 
@@ -99,6 +109,7 @@ Estratégia documentada em:
 - `docs/estrategia/principio-da-gratuidade.md`
 - `docs/publico/como-usar-com-llm-sem-cli.md`
 - `prompts/prompt-mestre-consultor-midia-ia.md`
+- `prompts/assistente-midia-ia.md`
 
 ## Cuidados importantes
 
