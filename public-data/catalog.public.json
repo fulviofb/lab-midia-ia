@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T03:55:49+00:00",
+  "generated_at": "2026-07-08T04:29:28+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -124,9 +124,9 @@
       "subcategory": "agentic_video_production",
       "priority": "high",
       "priority_label": "Alta prioridade",
-      "status": "test_before_recommending",
-      "status_label": "Promissor; testar antes de recomendar",
-      "recommendation": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
       "technical_level": "technical",
       "technical_level_label": "técnico",
       "audience": "usuários técnicos, devs e agentes",
@@ -141,7 +141,7 @@
       "stars_observed": 35150,
       "agent_fit": "high",
       "cost_hint": "Verificar custos, limites gratuitos e termos antes de recomendar.",
-      "install_hint_public": "Testar em pequena escala antes de indicar para terceiros."
+      "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
     },
     {
       "id": "video-use",
