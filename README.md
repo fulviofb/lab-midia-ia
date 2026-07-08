@@ -17,7 +17,7 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `docs/guias/`: guias em português para iniciantes.
 - `docs/trilhas/`: caminhos práticos por objetivo e nível técnico.
 - `docs/publico/`: materiais para compartilhar com pessoas leigas, inclusive uso com LLM sem CLI.
-- `docs/estrategia/`: estratégia de formação, site Concafras IA e possíveis ofertas.
+- `docs/estrategia/`: estratégia de formação, site Concafras IA e princípio da gratuidade.
 - `docs/testes/`: relatórios de testes práticos e bloqueios encontrados.
 - `docs/workarounds/`: soluções para problemas específicos, especialmente no Windows.
 - `docs/scripts/`: documentação dos scripts de automação.
@@ -96,6 +96,7 @@ Este repositório também serve como base viva para atualizar e sustentar o site
 Estratégia documentada em:
 
 - `docs/estrategia/site-concafras-e-formacao.md`
+- `docs/estrategia/principio-da-gratuidade.md`
 - `docs/publico/como-usar-com-llm-sem-cli.md`
 - `prompts/prompt-mestre-consultor-midia-ia.md`
 
