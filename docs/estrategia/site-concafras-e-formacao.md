@@ -6,6 +6,8 @@ Site atual: <https://concafras-ia.vercel.app/>
 
 Repo público: <https://github.com/fulviofb/lab-midia-ia>
 
+Tudo neste projeto é gratuito. Ver `principio-da-gratuidade.md`.
+
 ## Diagnóstico do site atual
 
 O site `concafras-ia.vercel.app` já funciona bem como uma vitrine bonita e inspiradora. Ele tem:
@@ -93,7 +95,7 @@ Pode usar:
 
 ### Nível 3 — Avançado/equipe
 
-Quer pipeline, automação, treinamento de equipe ou consultoria.
+Quer pipeline, automação ou treinamento de equipe.
 
 Pode usar:
 
@@ -110,8 +112,8 @@ Pode usar:
 2. Trilhas guiadas
 3. Prompt mestre para usar com LLM
 4. Repositório técnico público
-5. Oficinas/mentorias
-6. Consultoria/pipeline personalizado
+5. Oficinas práticas gratuitas
+6. Formação de multiplicadores nas casas e regiões
 ```
 
 Não começar por LLM + CLI para todos. Isso deve ser camada avançada, não porta de entrada.
@@ -126,7 +128,7 @@ O site deve responder rapidamente:
 4. Que ferramenta usar primeiro?
 5. Onde encontro um passo a passo?
 6. Como pedir ajuda a uma LLM?
-7. Como falar com o Fúlvio para mentoria/consultoria?
+7. Como tirar dúvidas ou sugerir melhorias?
 
 ## Novo conteúdo recomendado para o site
 
@@ -167,11 +169,11 @@ Consentimento, imagem de terceiros, voz, direitos autorais, divulgação respons
 
 ### 6. Seção “Quer ajuda?”
 
-Separar claramente:
+Tudo gratuito, com caminhos claros:
 
-- material gratuito;
-- oficina/mentoria;
-- consultoria ou implantação.
+- material de estudo (trilhas, guias, prompts);
+- canal de dúvidas (formulário de diagnóstico);
+- oficinas práticas e formação de multiplicadores.
 
 ## Estratégia técnica de integração
 
@@ -221,26 +223,11 @@ Se o volume crescer, avaliar:
 - GitHub Issues/Discussions como entrada;
 - formulário de diagnóstico com respostas em planilha.
 
-## Monetização/consultoria sem perder propósito
+## Princípio da gratuidade
 
-O conteúdo aberto gera confiança e alcance. O que pode ser pago não é “o segredo”, mas:
+Todo o conteúdo deste projeto — site Concafras IA, este repositório, trilhas, prompts, oficinas e orientações ligadas ao movimento espírita — é gratuito e assim permanecerá.
 
-- diagnóstico personalizado;
-- escolha de ferramentas para o caso real;
-- instalação/configuração;
-- treinamento em grupo;
-- acompanhamento de um projeto;
-- implantação de fluxo em uma instituição;
-- criação de templates e agentes específicos.
-
-Modelo recomendado:
-
-```txt
-Gratuito: site, repo, guias, prompts, lives curtas.
-Baixo custo: workshop/oficina prática.
-Médio: mentoria em grupo com projeto final.
-Alto: consultoria de implantação para casas, escolas, equipes e projetos.
-```
+Nenhuma oferta paga deve ser divulgada, sugerida ou vinculada a este espaço. Regra completa e checklist em `principio-da-gratuidade.md`.
 
 ## Próximos passos práticos
 
