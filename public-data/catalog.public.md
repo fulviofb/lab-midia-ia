@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-07-08T04:29:28+00:00`
+Gerado em: `2026-07-08T12:27:11+00:00`
 
 ## Como usar
 

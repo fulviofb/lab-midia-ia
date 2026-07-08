@@ -150,10 +150,10 @@ repositories:
     stars_observed: 35150
     agent_fit: high
     copy_policy: can_test_copyleft_caution
-    notes: 'Primeiro smoke test local no Windows aprovado para caminho zero-key Remotion: venv isolada com PYTHONPATH limpo,
-      npm install do remotion-composer, render do demo code-to-screen para MP4 1080p/25s, validação com ffprobe, registry
-      com 93 ferramentas e piper-tts import/CLI. Ainda não validado como produção agentic completa de ponta a ponta; licença
-      AGPL-3.0 exige cautela para adaptação/reuso.'
+    notes: 'Smoke tests locais no Windows aprovados: demo zero-key Remotion gerou MP4 1080p/25s validado com ffprobe; Backlot
+      simulado carregou board local após instalar pytest; Piper TTS gerou WAV com modelo en_US-lessac-medium via CLI e via
+      tool usando caminho explícito do .onnx. Ainda falta produção agentic completa ponta a ponta; licença AGPL-3.0 exige
+      cautela para adaptação/reuso.'
     use_cases:
       - Transformar um agente de código em estúdio de produção de vídeo com pesquisa, roteiro, geração de assets, edição e
         render.
@@ -183,7 +183,7 @@ repositories:
       - video-generation
       - video-production
     test_doc: docs/testes/openmontage-primeiro-teste.md
-    test_result: zero_key_remotion_demo_rendered_windows
+    test_result: zero_key_remotion_backlot_piper_windows
   - name: MoneyPrinterTurbo
     full_name: harry0703/MoneyPrinterTurbo
     url: https://github.com/harry0703/MoneyPrinterTurbo

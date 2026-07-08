@@ -412,11 +412,212 @@ PYTHONPATH= .venv/Scripts/python.exe -m backlot open backlot-demo-run
 
 5. Avaliar se algum fluxo usa a RTX 4060 no Windows com `requirements-gpu.txt`.
 
+## Segunda tentativa: Backlot e Piper real
+
+Data: 2026-07-08
+
+Após o primeiro smoke test, executei uma segunda rodada para validar componentes mais próximos do uso real do sistema.
+
+### Backlot simulado
+
+Objetivo: testar o board/live storyboard local, sem depender de uma produção real completa.
+
+Primeira tentativa:
+
+```bash
+PYTHONPATH= .venv/Scripts/python.exe scripts/backlot_simulate_run.py
+```
+
+Falha encontrada:
+
+```txt
+ModuleNotFoundError: No module named 'pytest'
+```
+
+Causa: o simulador importa `tests.contracts.test_phase0_contracts.sample_artifact`, que depende de `pytest`, mas `pytest` não estava em `requirements.txt`.
+
+Correção local:
+
+```bash
+PYTHONPATH= .venv/Scripts/python.exe -m pip install pytest
+rm -rf projects/backlot-demo-run
+PYTHONPATH= .venv/Scripts/python.exe scripts/backlot_simulate_run.py
+```
+
+Resultado:
+
+```txt
+[sim] init_project backlot-demo-run
+[sim] checkpoint research -> in_progress
+[sim] checkpoint research -> completed
+[sim] checkpoint script -> in_progress
+[sim] checkpoint script -> awaiting_human
+[sim] checkpoint script -> completed
+[sim] checkpoint scene_plan -> in_progress
+[sim] checkpoint scene_plan -> awaiting_human
+[sim] checkpoint scene_plan -> completed
+[sim] checkpoint assets -> in_progress
+[sim] generating sc1…
+[sim] generating sc2…
+[sim] generating sc3…
+[sim] generating sc4…
+[sim] checkpoint assets -> awaiting_human
+[sim] checkpoint assets -> completed
+[sim] done — board at http://127.0.0.1:4750/p/backlot-demo-run
+```
+
+Arquivos gerados:
+
+```txt
+projects/backlot-demo-run/project.json
+projects/backlot-demo-run/artifacts/script.json
+projects/backlot-demo-run/artifacts/scene_plan.json
+projects/backlot-demo-run/artifacts/asset_manifest.json
+projects/backlot-demo-run/assets/images/sc1.png
+projects/backlot-demo-run/assets/images/sc2.png
+projects/backlot-demo-run/assets/images/sc3.png
+projects/backlot-demo-run/assets/images/sc4.png
+projects/backlot-demo-run/checkpoint_*.json
+projects/backlot-demo-run/events.jsonl
+projects/backlot-demo-run/history/*.json
+```
+
+Servidor:
+
+```bash
+PYTHONPATH= .venv/Scripts/python.exe -m backlot serve --port 4750
+```
+
+Verificação no navegador:
+
+```txt
+http://127.0.0.1:4750/p/backlot-demo-run
+Title: Backlot — The Last Lighthouse
+Board carregou com STORYBOARD, 4 SCENES, ACTIVITY e navegação.
+```
+
+Conclusão: Backlot funciona no Windows após instalar `pytest`, mas o simulador tem uma dependência implícita não documentada no setup principal.
+
+### Piper com modelo real
+
+O pacote `piper-tts` atual não baixa voz com o comando antigo do README:
+
+```bash
+PYTHONPATH= .venv/Scripts/python.exe -m piper --download-dir .piper-models --model en_US-lessac-medium
+```
+
+Falha:
+
+```txt
+ValueError: Unable to find voice: en_US-lessac-medium (use piper.download_voices)
+```
+
+Caminho correto para a versão instalada:
+
+```bash
+mkdir -p .piper-models
+PYTHONPATH= .venv/Scripts/python.exe -m piper.download_voices --download-dir .piper-models en_US-lessac-medium
+```
+
+Resultado:
+
+```txt
+INFO:__main__:Downloaded: en_US-lessac-medium
+.piper-models/en_US-lessac-medium.onnx
+.piper-models/en_US-lessac-medium.onnx.json
+```
+
+Geração via CLI:
+
+```bash
+printf 'OpenMontage can produce offline narration for draft videos.' > /tmp/openmontage_piper_text.txt
+PYTHONPATH= .venv/Scripts/python.exe -m piper \
+  --data-dir .piper-models \
+  --model en_US-lessac-medium \
+  --input-file /tmp/openmontage_piper_text.txt \
+  --output-file projects/demos/renders/piper-smoke.wav
+```
+
+Validação com `ffprobe`:
+
+```txt
+codec: pcm_s16le
+sample_rate: 22050
+channels: 1
+duration: 3.877732s
+size: 171052 bytes
+```
+
+### Piper via tool do OpenMontage
+
+Primeira tentativa com o nome curto do modelo:
+
+```python
+from tools.audio.piper_tts import PiperTTS
+PiperTTS().execute({
+    'text': 'This is OpenMontage using the Piper TTS tool directly.',
+    'model': 'en_US-lessac-medium',
+    'output_path': 'projects/demos/renders/piper-tool-smoke.wav',
+})
+```
+
+Falhou:
+
+```txt
+ValueError: Unable to find voice: en_US-lessac-medium (use piper.download_voices)
+```
+
+Causa: o tool `piper_tts.py` chama `piper --model <model>`, mas não expõe `--data-dir`. Na versão atual do Piper, o modelo baixado em `.piper-models` não é encontrado pelo nome curto.
+
+Workaround bem-sucedido: passar o caminho explícito do `.onnx` como `model`.
+
+```bash
+PATH="$PWD/.venv/Scripts:$PATH" PYTHONPATH= .venv/Scripts/python.exe - <<'PY'
+from tools.audio.piper_tts import PiperTTS
+res = PiperTTS().execute({
+    'text': 'This is OpenMontage using the Piper TTS tool directly with an explicit model path.',
+    'model': '.piper-models/en_US-lessac-medium.onnx',
+    'output_path': 'projects/demos/renders/piper-tool-smoke.wav',
+    'sentence_silence': 0.2,
+})
+print('success', res.success)
+print('data', res.data)
+PY
+```
+
+Resultado:
+
+```txt
+status ToolStatus.AVAILABLE
+success True
+data {'provider': 'piper', 'model': '.piper-models/en_US-lessac-medium.onnx', 'speaker_id': 0, 'text_length': 82, 'output': 'projects\\demos\\renders\\piper-tool-smoke.wav', 'format': 'wav'}
+```
+
+Validação:
+
+```txt
+codec: pcm_s16le
+sample_rate: 22050
+channels: 1
+duration: 4.760091s
+size: 209964 bytes
+```
+
+Conclusão: Piper funciona no Windows tanto via CLI quanto pelo tool `piper_tts`, mas o tool deve receber caminho explícito do `.onnx` ou o upstream deve ser ajustado para aceitar/pass-through de `data_dir`.
+
 ## Decisão
 
-OpenMontage merece permanecer como candidato forte no laboratório, mas com posição clara:
+OpenMontage merece permanecer como candidato forte no laboratório, agora com evidências melhores:
 
 - **para leigos:** não recomendar como primeira ferramenta;
 - **para devs/agentes:** muito promissor;
 - **para o site Concafras IA:** pode aparecer na seção técnica como ferramenta avançada, com status de teste parcial;
-- **para produção real:** aguardar teste agentic completo antes de chamar de recomendado.
+- **para produção real:** ainda aguardar teste agentic completo antes de chamar de recomendado.
+
+O status continua correto como:
+
+```yaml
+status: partially_tested_windows
+```
+
+Mas a confiança aumentou: além do render zero-key Remotion, agora também passaram Backlot simulado e Piper real com modelo ONNX.
