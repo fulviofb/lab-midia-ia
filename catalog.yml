@@ -1,4 +1,4 @@
-# catalog.yml — atualizado por update_github_metadata.py em 2026-07-07 22:44:04
+# catalog.yml — atualizado manualmente com OpenMontage em 2026-07-08
 metadata:
   name: lab-midia-ia
   description: Curadoria prática de ferramentas, skills, prompts e workflows para criar vídeo, voz, imagem, design e edição
@@ -139,6 +139,50 @@ repositories:
     open_issues_observed: 16
     github_updated_at: '2026-06-01T18:08:11Z'
     topics: []
+  - name: OpenMontage
+    full_name: calesthio/OpenMontage
+    url: https://github.com/calesthio/OpenMontage
+    category: video_programatico
+    subcategory: agentic_video_production
+    priority: high
+    status: test_before_recommending
+    language: Python
+    license: AGPL-3.0
+    stars_observed: 35150
+    agent_fit: high
+    copy_policy: can_test_copyleft_caution
+    notes: Sistema agentic open-source para produção de vídeo com 12 pipelines, 52 ferramentas e 500+ skills de agente. Integra
+      AI coding assistants, FFmpeg, Remotion, HyperFrames, TTS, provedores de imagem/vídeo, mídia livre/stock e validações.
+      Muito alinhado ao lab, mas complexo para iniciantes e licenciado AGPL-3.0; catalogar como candidato forte, porém exigir
+      smoke test local no Windows/RTX 4060 antes de recomendar publicamente.
+    use_cases:
+      - Transformar um agente de código em estúdio de produção de vídeo com pesquisa, roteiro, geração de assets, edição e
+        render.
+      - Produzir vídeos a partir de referência, prompt ou pipeline com Remotion/HyperFrames e FFmpeg.
+      - Experimentar workflows agentic completos para educação, divulgação e vídeos explicativos.
+    forks_observed: 4041
+    open_issues_observed: 140
+    github_updated_at: '2026-07-07T05:49:53Z'
+    topics:
+      - agent
+      - agentic-ai
+      - ai
+      - claude
+      - copilot
+      - cursor
+      - elevenlabs
+      - ffmpeg
+      - flux
+      - image-generation
+      - open-source
+      - openai
+      - python
+      - remotion
+      - stable-diffusion
+      - text-to-speech
+      - text-to-video
+      - video-generation
+      - video-production
   - name: MoneyPrinterTurbo
     full_name: harry0703/MoneyPrinterTurbo
     url: https://github.com/harry0703/MoneyPrinterTurbo

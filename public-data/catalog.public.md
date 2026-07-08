@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-07-08T03:43:32+00:00`
+Gerado em: `2026-07-08T03:55:49+00:00`
 
 ## Como usar
 
@@ -34,6 +34,17 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 - **Resumo:** Vídeo programático com React.
 - **Recomendação:** Pode ser recomendado com as observações do teste.
 - **Custo/requisitos:** Pode exigir API, plano pago ou atenção à licença comercial.
+
+### [OpenMontage](https://github.com/calesthio/OpenMontage)
+
+- **Status:** Promissor; testar antes de recomendar
+- **Prioridade:** Alta prioridade
+- **Nível:** técnico
+- **Licença:** AGPL-3.0
+- **Estrelas observadas:** 35150
+- **Resumo:** Transformar um agente de código em estúdio de produção de vídeo com pesquisa, roteiro, geração de assets, edição e render.
+- **Recomendação:** Não recomendar ainda como caminho principal; fazer smoke test primeiro.
+- **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
 
 ## Edição de vídeo
 

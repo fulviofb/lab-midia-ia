@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T03:43:32+00:00",
+  "generated_at": "2026-07-08T03:55:49+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -18,7 +18,7 @@
       "id": "video_programatico",
       "label": "Vídeo programático",
       "description": "Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.",
-      "item_count": 2
+      "item_count": 3
     },
     {
       "id": "edicao_video",
@@ -113,6 +113,35 @@
       "agent_fit": "high",
       "cost_hint": "Pode exigir API, plano pago ou atenção à licença comercial.",
       "install_hint_public": "npx skills add remotion-dev/skills"
+    },
+    {
+      "id": "openmontage",
+      "name": "OpenMontage",
+      "full_name": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "agentic_video_production",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "test_before_recommending",
+      "status_label": "Promissor; testar antes de recomendar",
+      "recommendation": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Transformar um agente de código em estúdio de produção de vídeo com pesquisa, roteiro, geração de assets, edição e render.",
+      "use_cases": [
+        "Transformar um agente de código em estúdio de produção de vídeo com pesquisa, roteiro, geração de assets, edição e render.",
+        "Produzir vídeos a partir de referência, prompt ou pipeline com Remotion/HyperFrames e FFmpeg.",
+        "Experimentar workflows agentic completos para educação, divulgação e vídeos explicativos."
+      ],
+      "license": "AGPL-3.0",
+      "language": "Python",
+      "stars_observed": 35150,
+      "agent_fit": "high",
+      "cost_hint": "Verificar custos, limites gratuitos e termos antes de recomendar.",
+      "install_hint_public": "Testar em pequena escala antes de indicar para terceiros."
     },
     {
       "id": "video-use",
@@ -566,7 +595,8 @@
   "groups": {
     "video_programatico": [
       "hyperframes",
-      "remotion-agent-skills"
+      "remotion-agent-skills",
+      "openmontage"
     ],
     "edicao_video": [
       "video-use",
