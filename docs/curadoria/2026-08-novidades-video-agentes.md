@@ -32,7 +32,7 @@ Organizar os artigos, posts e projetos recebidos; separar princípios duráveis 
 ### Apenas monitorar/referenciar
 
 - MiniMax H3 local completo: os pesos base somam aproximadamente 134 GiB antes de overhead; não é adequado à RTX 4060 Laptop de 8 GB.[5][7]
-- MiniMax H3 Single-Frame VAE 500K: checkpoint experimental de 9 GB, decoder-only, sem suporte a vídeo completo.[4]
+- MiniMax H3 Single-Frame VAE 500K: checkpoint experimental de 9 GB, decoder-only, sem suporte a vídeo completo e com pacote documental de licença incompleto na revisão consultada.[4]
 - Higgsfield/Seedance 2.5: úteis como referência de processo, mas dependem de plataforma/créditos e contêm marketing.
 - Bibliotecas comerciais de prompts: linkar e resumir princípios; não copiar prompts substanciais.
 
@@ -135,8 +135,11 @@ O próprio threat model afirma que o servidor não é sandbox. Um agente comprom
 
 Piloto recomendado somente com:
 
+- conta Windows sem privilégio administrativo;
 - workspace e venv isolados;
+- MCP habilitado apenas no projeto do laboratório, não globalmente;
 - servidor em loopback, nunca `--listen 0.0.0.0` sem aprovação;
+- allowlist de diretórios de entrada e saída;
 - mídia sintética;
 - sem API paga no primeiro teste;
 - confirmação humana para download, node install, update, rede e gasto;
@@ -156,6 +159,8 @@ Registro MIT de componentes Remotion instalados por shadcn. Inclui títulos, cap
 
 É o candidato de ganho mais rápido porque o laboratório já validou Remotion e OpenMontage no Windows. O teste deve instalar apenas 2–3 componentes em projeto isolado e produzir um MP4 real.
 
+Como o comando de instalação copia TSX para dentro do projeto, o piloto deve fixar versões quando possível, revisar o diff antes do render e não instalar a skill de agente globalmente.
+
 ## 6. SRT Whiteboard Animation
 
 ### Fonte
@@ -173,6 +178,8 @@ Skill MIT que transforma SRT em animação de quadro branco com:
 - render MP4 e união de cenas.
 
 Tem alto potencial para aulas, evangelização, formação e vídeos explicativos. Se o smoke test passar, pode originar uma quarta receita gratuita: “transformar narração/SRT em vídeo explicativo de quadro branco”.
+
+O teste precisa separar duas evidências: a renderização whiteboard a partir de SRT + line art já preparado e, em outra etapa, a eventual geração da ilustração. A licença MIT do código não licencia imagens, fontes ou modelos usados como insumo.
 
 ## 7. Automação diária com Hermes
 
@@ -193,7 +200,8 @@ Princípio aproveitável: Hermes pode orquestrar pesquisa, texto, imagens e prep
 | 3 | Comfy MCP local | Piloto isolado com revisão de segurança | [#19](https://github.com/fulviofb/lab-midia-ia/issues/19) |
 | 4 | H3 prompt-writing | Piloto fino, sem instalar todas as skills | [#20](https://github.com/fulviofb/lab-midia-ia/issues/20) |
 | 5 | H3 Promptor | Fase B da issue #20, após ComfyUI/MCP | [#20](https://github.com/fulviofb/lab-midia-ia/issues/20) |
-| 6 | MiniMax H3 completo / VAE | Monitorar; não baixar nesta máquina | — |
+| 6 | MiniMax H3 completo | Monitorar apenas como referência/API; não baixar nesta máquina | — |
+| — | Single-Frame VAE 500K | Fora do roadmap operacional; não baixar/copiar enquanto faltar documentação de licença | — |
 | contínuo | Direção/edição | Princípios já incorporados ao workflow próprio | — |
 
 ## Regra de publicação
