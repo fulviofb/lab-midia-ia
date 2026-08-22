@@ -99,6 +99,10 @@ Descreva ações como processos sequenciais, não apenas resultados.
 
 ## 6. Prompt base
 
+Para escolher enquadramento, câmera, lente, luz e composição com base na intenção, consulte também:
+
+- `docs/guias/07-gramatica-cinematografica-pratica.md`
+
 ```text
 Transforme esta ideia em um plano executável para vídeo generativo.
 Não use adjetivos genéricos como “cinematic” sem explicar a direção.

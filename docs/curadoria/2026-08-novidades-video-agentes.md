@@ -20,6 +20,7 @@ Organizar os artigos, posts e projetos recebidos; separar princípios duráveis 
    - checklist de montagem e continuidade.
 2. Registrar `snapcn`, `Comfy MCP`, `srt-whiteboard-animation`, MiniMax H3 e ferramentas relacionadas no catálogo.
 3. Criar pilotos separados, sem instalação global e sem publicar automaticamente.
+4. Publicar uma gramática cinematográfica própria para orientar câmera, lente, luz, composição, som e continuidade sem depender de bibliotecas comerciais.
 
 ### Testar primeiro
 
