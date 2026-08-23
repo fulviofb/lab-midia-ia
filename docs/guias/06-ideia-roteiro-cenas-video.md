@@ -1,6 +1,11 @@
 # Guia: Como transformar ideia em roteiro, cenas e vídeo
 
-Este guia mostra um fluxo completo: da ideia inicial ao vídeo final renderizado.
+Este guia mostra um fluxo completo para motion graphics e vídeos programáticos simples: da ideia inicial ao vídeo final renderizado.
+
+Para projetos narrativos com personagens recorrentes, múltiplas gerações, bible visual e montagem provisória, use também:
+
+- `docs/guias/08-planejamento-de-video-generativo.md`;
+- `workflows/video-generativo-storyboard-first.md`.
 
 ## Fluxo geral
 

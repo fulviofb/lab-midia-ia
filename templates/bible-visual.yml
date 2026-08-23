@@ -1,0 +1,70 @@
+project:
+  id: ""
+  version: ""
+  approved_by: ""
+  approved_at: ""
+
+visual_contract:
+  medium_materiality: ""
+  palette:
+    dominant: []
+    accents: []
+    avoid: []
+  lighting_rules: []
+  texture_rules: []
+  global_locks: []
+  allowed_evolution: []
+
+characters:
+  - id: "CHAR-01"
+    name: ""
+    stable_descriptor: ""
+    identity_locks: []
+    states:
+      - id: "STATE-01"
+        description: ""
+        costume: ""
+        posture_expression: ""
+        allowed_variation: []
+    references:
+      - id: "REF-01"
+        path_or_url: ""
+        function: "identity"
+        provenance: ""
+        rights: ""
+        approved: false
+
+environments:
+  - id: "ENV-01"
+    name: ""
+    stable_descriptor: ""
+    anchors: []
+    geography: ""
+    scale_relations: []
+    lighting_states: []
+    references: []
+    optional_controls:
+      location_map: ""
+      staging_diagram: ""
+      depth_map: ""
+
+props:
+  - id: "PROP-01"
+    name: ""
+    stable_descriptor: ""
+    identity_locks: []
+    state_variants: []
+    references: []
+
+continuity:
+  screen_direction: []
+  eyelines: []
+  hand_object_rules: []
+  time_weather: ""
+  audio_environment: ""
+
+rights_review:
+  approved_for_private_use: false
+  approved_for_external_upload: false
+  approved_for_publication: false
+  notes: ""

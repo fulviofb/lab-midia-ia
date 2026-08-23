@@ -1,49 +1,78 @@
 # Workflow: direção cinematográfica com Seedance/Higgsfield
 
-Fontes principais:
+Este arquivo é um adaptador para ferramentas de vídeo generativo. O método completo e independente de provedor está em:
 
-- https://github.com/Emily2040/seedance-2.0
-- https://github.com/OSideMedia/higgsfield-ai-prompt-skill
-- https://github.com/ZeroLu/awesome-seedance
+- [`video-generativo-storyboard-first.md`](video-generativo-storyboard-first.md)
+- [`docs/guias/07-gramatica-cinematografica-pratica.md`](../docs/guias/07-gramatica-cinematografica-pratica.md)
+- [`docs/guias/08-planejamento-de-video-generativo.md`](../docs/guias/08-planejamento-de-video-generativo.md)
 
-## Ideia central
+## Fontes de referência
 
-Não peça apenas "cinematic". Dirija a cena.
+- <https://github.com/Emily2040/seedance-2.0>;
+- <https://github.com/OSideMedia/higgsfield-ai-prompt-skill>;
+- <https://github.com/ZeroLu/awesome-seedance>;
+- <https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills/h3-prompt-writing>.
 
-Um bom prompt de vídeo deve definir:
+As fontes são referências de estudo. Não copie prompts de terceiros sem verificar licença e atribuição.
 
-1. intenção dramática;
-2. sujeito;
-3. ação;
-4. câmera;
-5. lente/enquadramento;
-6. luz;
-7. movimento;
-8. textura/look;
-9. som ou atmosfera;
-10. continuidade com a cena anterior.
+## Adaptação por capacidade da ferramenta
 
-## Prompt base
+Antes de gerar, confirme na interface/conta:
+
+- modelo e versão realmente disponíveis;
+- duração solicitável;
+- quantidade/tipo de referências;
+- first frame ou first/last frame;
+- áudio automático e possibilidade de desativá-lo;
+- custo/créditos antes do job;
+- confirmação real antes de gerar;
+- política de upload e direitos.
+
+Não confie apenas em marketing ou preferências de confirmação da conta.
+
+## Blocos possíveis de prompt
+
+Use somente os blocos necessários:
 
 ```text
-Transforme esta ideia em um prompt cinematográfico para vídeo generativo.
-Não use adjetivos genéricos como "cinematic" sem explicar a direção.
-Defina intenção da cena, câmera, luz, ação, blocking, look e continuidade.
-
-Ideia:
-[descrever]
-
-Formato de saída:
-- intenção da cena
-- prompt final
-- negative prompt/cuidados
-- variações
+SCENE CONTEXT
+ACTIVE REFERENCES — ID e função
+LOCATION / STAGING / EYELINES
+INITIAL STATE
+ACTION OR TIMED SEGMENTS
+CAMERA / FRAMING
+PHYSICS
+LIGHTING / LOOK
+DIALOGUE / AUDIO
+FINAL STATE
+CONTINUITY LOCKS
+ACCEPTANCE / CONSTRAINTS
 ```
 
-## Checklist
+O prompt deve ser autocontido quando o modelo não mantém contexto entre gerações.
 
-- A cena tem uma ação clara?
-- A câmera serve a emoção da cena?
-- O prompt evita listas genéricas de estilo?
-- Há continuidade entre cenas?
-- O sujeito/personagem permanece consistente?
+## Estratégias
+
+- plano atômico com ação e câmera dominantes;
+- segmento com vários cortes dirigidos;
+- first frame;
+- first/last frame;
+- múltiplas referências;
+- locks fixos + bloco `SHOT` variável;
+- layout/diagrama como input;
+- liberdade controlada para seleção na montagem.
+
+Não presuma que uma única estratégia é superior para todos os planos.
+
+## Gate de geração
+
+Antes de acionar a plataforma:
+
+- [ ] direitos de upload confirmados;
+- [ ] custo/teto aprovado;
+- [ ] referências selecionadas;
+- [ ] prompt/configuração versionados;
+- [ ] duração e áudio verificados;
+- [ ] condição de interrupção definida.
+
+Após gerar, registre a tentativa e leve-a ao rough cut. Não aprove plano isolado sem verificar sua função na montagem.

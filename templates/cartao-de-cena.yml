@@ -1,0 +1,49 @@
+scene_id: "SC01"
+title: ""
+version: ""
+source_scope: ""
+
+narrative:
+  event: ""
+  focal_character: ""
+  desire_or_need: ""
+  obstacle: ""
+  turning_point: ""
+  initial_state: ""
+  final_state: ""
+  audience_must_understand: []
+
+beats:
+  - beat_id: "B01"
+    function: ""
+    action_information_change: ""
+    emotional_change: ""
+    observable_result: ""
+
+space:
+  environment_id: "ENV-01"
+  geography: ""
+  character_positions: []
+  movement_paths: []
+  eyelines: []
+  axis_notes: ""
+
+coverage_needs:
+  establishing: false
+  action: []
+  reactions: []
+  details_inserts: []
+  transitions: []
+  audio_bridges: []
+
+continuity_from_previous: []
+continuity_to_next: []
+
+open_decisions: []
+approved_decisions: []
+
+approval:
+  approver: ""
+  status: "open"
+  date: ""
+  notes: ""

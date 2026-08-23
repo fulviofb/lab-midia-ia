@@ -1,0 +1,1 @@
+attempt_id,created_at,scene_id,shot_id,segment_id,mode,tool,model_version,strategy,reference_ids,reference_versions,prompt_or_config_path,seed,requested_duration_s,delivered_duration_s,audio_requested,audio_delivered,displayed_credits,status,decision_reason,observed_failures,next_action,approved_by

@@ -1,0 +1,66 @@
+shot_id: "SC01-P01"
+scene_id: "SC01"
+version: ""
+
+narrative:
+  purpose: ""
+  related_beats: []
+  audience_information: ""
+
+visual:
+  subject: ""
+  initial_state: ""
+  dominant_action: ""
+  reaction: ""
+  final_state: ""
+  framing: ""
+  angle: ""
+  composition: ""
+  dominant_camera_behavior: ""
+  lens_focus: ""
+  lighting_color: ""
+  staging: ""
+  screen_direction: ""
+
+audio:
+  dialogue: ""
+  ambience: ""
+  sound_effects: []
+  music_or_silence: ""
+
+references:
+  - id: "REF-01"
+    function: ""
+    version: ""
+
+continuity:
+  from_previous: []
+  to_next: []
+  locks: []
+
+conditioning_strategy:
+  type: "undecided"
+  options_considered: []
+  rationale: ""
+  risks: []
+
+segment_plan:
+  segment_id: "SEG-01"
+  may_contain_multiple_shots: false
+  requested_duration_s: 0
+  timed_segments: []
+
+experiment:
+  mode: "diagnostic"
+  hypothesis: ""
+  variable: ""
+  max_attempts: 0
+  max_displayed_credits: 0
+  acceptance: []
+  stop_conditions: []
+
+approval:
+  approver: ""
+  status: "open"
+  date: ""
+  notes: ""
