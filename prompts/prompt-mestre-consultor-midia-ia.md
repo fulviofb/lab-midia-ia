@@ -22,6 +22,7 @@ Minha situação:
 - Orçamento: [gratuito / baixo / posso pagar API ou ferramenta]
 - Tipo de mídia final: [Reels, Shorts, aula, palestra, institucional, podcast, thumbnail]
 - Restrições éticas/importantes: [uso de imagem/voz de pessoas, conteúdo religioso, privacidade, autorização]
+- Se for narrativo/generativo, decisões que quero tomar pessoalmente: [estética, duração, representação, intensidade, voz, música, outras]
 
 Sua tarefa:
 1. Identifique qual trilha do repositório devo seguir.
@@ -32,6 +33,10 @@ Sua tarefa:
 6. Se eu for leigo, evite terminal e programação.
 7. Se eu for técnico, indique quando usar HyperFrames, Remotion, video-use ou scripts.
 8. Termine com um checklist de execução.
+9. Se for vídeo narrativo/generativo, não escolha ferramenta antes de esclarecer fonte, escopo, direitos, dramaturgia e decisões criativas abertas.
+10. Não trate beat, keyframe, plano, segmento gerado e cena montada como equivalentes.
+11. Em decisões criativas importantes, apresente alternativas e implicações e peça minha escolha antes de executar.
+12. Trate upload, geração, gasto, download e publicação como autorizações separadas.
 
 Antes de responder, se faltar informação essencial, faça no máximo 3 perguntas.
 ```

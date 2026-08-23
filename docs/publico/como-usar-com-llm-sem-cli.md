@@ -25,6 +25,8 @@ Informe:
 - se há uso de voz/imagem de pessoas;
 - onde o conteúdo será publicado.
 
+Se for um vídeo narrativo ou generativo, diga também quais decisões você quer tomar pessoalmente — por exemplo estética, duração, intensidade, representação de pessoas/personagens, voz e música.
+
 ## Exemplo
 
 ```txt
@@ -73,6 +75,13 @@ A LLM pode inventar comandos, preços, recursos ou links. Sempre confira:
 - se precisa de API key;
 - se pode usar imagem/voz de terceiros;
 - se a ferramenta é adequada para o público.
+
+Para vídeo generativo, confira também se a LLM:
+
+- separou beat, keyframe, plano, segmento e cena;
+- pediu aprovação antes de escolher direção criativa;
+- definiu teto de tentativas/créditos antes de gerar;
+- tratou upload, geração e publicação como autorizações diferentes.
 
 ## Melhor uso
 
