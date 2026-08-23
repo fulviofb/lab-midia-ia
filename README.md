@@ -17,6 +17,8 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `docs/guias/`: guias em português para iniciantes.
 - `docs/trilhas/`: caminhos práticos por objetivo e nível técnico.
 - `docs/receitas/`: receitas rápidas por resultado, para pessoas leigas — poucos passos, só ferramentas web.
+- `docs/curadoria/`: triagem de novidades, candidaturas e decisões antes do catálogo.
+- `docs/precedentes/`: processos públicos comparados com disciplina de evidência.
 - `docs/publico/`: materiais para compartilhar com pessoas leigas, inclusive uso com LLM sem CLI.
 - `docs/estrategia/`: estratégia de formação, site Concafras IA e princípio da gratuidade.
 - `docs/testes/`: relatórios de testes práticos e bloqueios encontrados.
