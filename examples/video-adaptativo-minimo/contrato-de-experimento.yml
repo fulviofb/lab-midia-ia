@@ -1,0 +1,41 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: DEMO-LIVRO
+  project_version: v0.1
+  experiment_id: DEMO-LIVRO-EXP01
+  experiment_version: v0.1
+  status: completed
+scope:
+  scene_ids: [DEMO-LIVRO-SC01]
+  shot_ids: [DEMO-LIVRO-SC01-P01]
+  segment_ids: [DEMO-LIVRO-SEG01]
+  related_gap_ids: []
+contract:
+  hypothesis: os IDs e referências formam uma cadeia válida
+  mode: diagnostic
+  variable_or_direction: estrutura documental
+  fixture_asset_ids: [DEMO-LIVRO-ASSET-001]
+  prompt_or_config_uri: null
+  prompt_or_config_hash_sha256: null
+  provider: local
+  model: deterministic_svg
+  model_version: v1
+  settings: {}
+limits:
+  max_attempts: 1
+  max_displayed_credits: 0
+  credit_unit: none
+  max_monetary_cost: 0
+  currency: BRL
+acceptance:
+  criteria: [validador termina com exit 0]
+  stop_conditions: [qualquer referência ausente]
+permissions:
+  upload_authorization_id: not_applicable
+  generation_authorization_id: DEMO-LIVRO-AUTH-LOCAL
+  spending_authorization_id: not_applicable
+approval:
+  state: approved
+  decided_by: fixture-author
+  decided_at: "2026-08-23T00:00:00Z"
+  evidence_uri: README.md

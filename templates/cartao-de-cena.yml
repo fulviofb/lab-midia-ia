@@ -1,0 +1,72 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: PROJ-DEMO
+  project_version: v0.1
+  scene_id: PROJ-DEMO-SC01
+  scene_version: v0.1
+  profile: light
+  status: draft
+
+scene:
+  title: ""
+  source_scope: ""
+  function_or_event: ""
+  initial_state: ""
+  final_state: ""
+  audience_must_understand: []
+  observable_change: ""
+
+optional_dramaturgy:
+  applicable: null
+  focal_character_id: null
+  desire_or_need: null
+  obstacle: null
+  turning_point: null
+
+beats:
+  - beat_id: PROJ-DEMO-SC01-B01
+    function: ""
+    action_or_information_change: ""
+    emotional_change: null
+    observable_result: ""
+
+space:
+  environment_id: null
+  geography: ""
+  character_positions: []
+  movement_paths: []
+  eyelines: []
+  axis_notes: ""
+
+coverage_needs:
+  establishing: not_applicable
+  action: []
+  reactions: []
+  details_or_inserts: []
+  transitions: []
+  audio_bridges: []
+
+continuity:
+  from_scene_ids: []
+  to_scene_ids: []
+  notes: []
+
+decisions:
+  open_decision_ids: []
+  approved_decision_ids: []
+
+approval:
+  state: open
+  decided_by: null
+  decided_at: null
+  evidence_uri: null
+  notes: ""
+
+allowed_decision_states:
+  - open
+  - approved
+  - rejected
+  - deferred
+  - blocked
+  - not_applicable
+  - superseded

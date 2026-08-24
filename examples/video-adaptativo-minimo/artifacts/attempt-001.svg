@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#efe4d5"/>
+  <circle cx="250" cy="190" r="95" fill="#d4b48c"/>
+  <rect x="170" y="285" width="160" height="265" rx="70" fill="#5d7890"/>
+  <path d="M460 260 Q580 225 690 285 Q800 225 920 260 L895 505 Q795 470 690 520 Q585 470 485 505 Z" fill="#fffaf0" stroke="#6f563f" stroke-width="8"/>
+  <line x1="690" y1="285" x2="690" y2="520" stroke="#b79b7b" stroke-width="6"/>
+  <path d="M335 380 Q420 350 500 390" fill="none" stroke="#d4b48c" stroke-width="38" stroke-linecap="round"/>
+  <text x="640" y="650" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#3e3025">Artefato sintético determinístico — não gerado por IA</text>
+</svg>

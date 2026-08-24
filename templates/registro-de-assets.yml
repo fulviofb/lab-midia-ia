@@ -1,0 +1,46 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: PROJ-DEMO
+  project_version: v0.1
+  registry_version: v0.1
+  sensitivity: internal
+
+assets:
+  - asset_id: ASSET-001
+    type: image
+    title: ""
+    purpose: reference
+    relative_uri: "assets/reference-01.png"
+    content_hash_sha256: null
+    source:
+      creator_or_owner: ""
+      provenance: ""
+      canonical_url: null
+      license_or_terms: ""
+      attribution_required: false
+      attribution_text: null
+    subjects:
+      identifiable_people: false
+      consent_evidence_uri: null
+    permissions:
+      private_analysis: open
+      local_processing: open
+      external_upload: open
+      generation_input: open
+      publication: open
+    provider_scope: []
+    retention:
+      allowed: null
+      delete_by: null
+      deletion_evidence_uri: null
+    approved_by: null
+    approved_at: null
+    notes: ""
+
+allowed_permission_states:
+  - open
+  - approved
+  - rejected
+  - not_applicable
+  - revoked
+  - expired

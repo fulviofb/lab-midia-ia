@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f2eadf"/>
+  <rect x="330" y="210" width="620" height="330" rx="24" fill="#7a4d2b" opacity="0.18"/>
+  <path d="M380 260 Q520 220 640 285 Q760 220 900 260 L875 500 Q755 465 640 520 Q525 465 405 500 Z" fill="#fffaf0" stroke="#6f563f" stroke-width="8"/>
+  <line x1="640" y1="285" x2="640" y2="520" stroke="#b79b7b" stroke-width="6"/>
+  <text x="640" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#3e3025">Fixture sintética — livro aberto</text>
+</svg>

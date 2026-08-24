@@ -1,182 +1,267 @@
-# Guia: Como transformar ideia em roteiro, cenas e vídeo
+# Guia: da necessidade às rotas de produção de vídeo
 
-Este guia mostra um fluxo completo: da ideia inicial ao vídeo final renderizado.
+**Estado:** orientação conceitual em evolução.
 
-## Fluxo geral
+Este guia é a porta de entrada para planejar um vídeo sem pressupor uma ferramenta ou um workflow universal.
 
-```txt
-Ideia → Roteiro → Storyboard → Composição → Validação → Render → MP4
+> A melhor rota depende do objetivo, do material disponível, do nível técnico, dos direitos, do prazo, do orçamento e das decisões que a pessoa deseja tomar.
+
+Para decisões de direção, consulte [`07-gramatica-cinematografica-pratica.md`](07-gramatica-cinematografica-pratica.md). Para combinar rotas, módulos e mudanças de caminho, consulte [`08-planejamento-adaptativo-de-video.md`](08-planejamento-adaptativo-de-video.md).
+
+## 1. Comece pela necessidade
+
+Responda apenas o suficiente para escolher uma rota inicial:
+
+- O que o público deve compreender, sentir ou fazer?
+- Que material já existe?
+- O conteúdo precisa representar fatos/pessoas reais?
+- Qual é o canal, prazo e duração aproximada?
+- Qual é o nível técnico de quem vai produzir?
+- Há orçamento ou créditos? Qual é o teto?
+- Quais decisões a pessoa quer tomar pessoalmente?
+- O vídeo é peça única ou precisa gerar versões reproduzíveis?
+
+Duração, formato, estética e ferramenta podem permanecer abertos até serem realmente necessários.
+
+## 2. Famílias de rotas
+
+### Rota A — edição direta de material existente
+
+```text
+fotos/vídeos/áudio reais
+→ seleção
+→ roteiro de montagem
+→ edição
+→ revisão
+→ exportação
 ```
 
-## Passo 1: Definir a ideia
+**Pode fazer sentido quando:**
 
-Responda:
+- o material já comunica o essencial;
+- realidade documental é importante;
+- o prazo é curto;
+- a pessoa prefere editor visual.
 
-- **O que** você quer comunicar?
-- **Para quem** é o vídeo? (público)
-- **Qual** a mensagem central em uma frase?
-- **Qual** a duração? (6s, 15s, 30s, 60s)
-- **Qual** o formato? (16:9 horizontal, 9:16 vertical, 1:1 quadrado)
-- **Qual** o tom? (institucional, educativo, promocional, tech, editorial)
+**Ferramentas possíveis:** editores visuais, FFmpeg ou `video-use`, conforme o nível técnico.
 
-## Passo 2: Roteiro
+### Rota B — vídeo programático
 
-Escreva o roteiro em tópicos curtos. Exemplo:
-
-```txt
-Cena 1 (0-2s): Título aparece com fade in
-Cena 2 (2-4s): Subtítulo explicativo
-Cena 3 (4-6s): Chamada final / badge
+```text
+conteúdo e assets
+→ composição determinística
+→ animação
+→ validação
+→ render
 ```
 
-Ou em formato narrado:
+**Pode fazer sentido quando:**
 
-```txt
-"Você sabia que HTML pode virar vídeo?
-Com HyperFrames, agentes criam motion graphics diretamente em HTML/CSS.
-Renderize em MP4 com um comando."
+- textos, números e comparações são centrais;
+- haverá várias versões ou formatos;
+- identidade e repetibilidade importam;
+- HTML/CSS ou React são vantagens.
+
+**Ferramentas possíveis:** HyperFrames e Remotion.
+
+### Rota C — montagem híbrida
+
+```text
+material real
++ composição/animação
++ edição humana
+→ acabamento
 ```
 
-## Passo 3: Storyboard
+**Pode fazer sentido quando:**
 
-Para cada cena, defina:
+- o material real deve permanecer central;
+- alguns trechos precisam de explicação visual;
+- diferentes ferramentas resolvem partes distintas;
+- sensibilidade editorial importa mais que automação total.
 
-- **duração** (em segundos ou frames);
-- **elementos visuais** (texto, formas, imagens);
-- **animação** (fade, slide, scale, rotate);
-- **cor de fundo** e **cores de destaque**;
-- **posição** dos elementos.
+### Rota D — complementação generativa
 
-Exemplo:
-
-| Cena | Duração | Elemento | Animação | Cor |
-|---|---|---|---|---|
-| 1 | 0-2s | Título | fade in + slide up | cyan |
-| 2 | 2-4s | Subtítulo | fade in | branco/muted |
-| 3 | 4-6s | Badge | fade in + scale | branco com borda |
-
-## Passo 4: Escolher a ferramenta
-
-Use a árvore de decisão:
-
-```txt
-É motion graphic / peça visual?
-  → HTML/CSS é natural? → HyperFrames
-  → React é vantagem?   → Remotion
-
-É edição de vídeo bruto?
-  → video-use
-
-É short automático?
-  → MoneyPrinterTurbo (referência)
+```text
+montagem existente
+→ lacuna observada
+→ geração localizada
+→ integração
+→ nova revisão
 ```
 
-Ver: `docs/guias/01-por-onde-comecar.md`
+**Pode fazer sentido quando:**
 
-## Passo 5: Criar a composição
+- falta um plano, insert, transição ou elemento específico;
+- filmar novamente é inviável;
+- o uso de conteúdo sintético é aceitável e transparente;
+- upload, direitos, representação e custo estão autorizados.
 
-### Se HyperFrames
+### Rota E — produção narrativa generativa
 
-1. Scaffold: `npx hyperframes init meu-video --non-interactive --example blank`
-2. Editar `index.html` com a composição;
-3. Definir `data-composition-id`, `data-duration`, `data-width`, `data-height`;
-4. Criar elementos com `class="clip"`, `data-start`, `data-duration`, `data-track-index`;
-5. Animar com GSAP timeline pausada em `window.__timelines["<id>"]`.
-
-Ver guia: `docs/guias/02-primeiro-video-com-hyperframes.md`
-
-### Se Remotion
-
-1. Scaffold: `npx create-video@latest --yes --blank --no-tailwind meu-video`
-2. Editar `src/Root.tsx` com `durationInFrames`, `fps`, `width`, `height`;
-3. Editar `src/Composition.tsx` com a composição em React;
-4. Animar com `useCurrentFrame()` e `interpolate()`;
-5. Organizar cenas com `<Sequence>`.
-
-Ver guia: `docs/guias/03-primeiro-video-com-remotion.md`
-
-## Passo 6: Validar
-
-### HyperFrames
-
-```bash
-npx hyperframes lint .
-npx hyperframes validate .
-npx hyperframes inspect .
-npx hyperframes snapshot . --at 0,1.5,3,5.5
+```text
+fonte/objetivo
+→ dramaturgia
+→ referências e continuidade
+→ storyboard/cobertura
+→ geração
+→ rough cut
+→ regenerações por lacunas
+→ pós
 ```
 
-### Remotion
+**Pode fazer sentido quando:**
 
-```bash
-npm run lint
-npx remotion still MyComp --frame=45 --output=out/frame.png --scale=0.5
+- personagens, ambientes ou transformações precisam persistir;
+- há múltiplos planos e gerações;
+- continuidade e montagem são riscos centrais;
+- o projeto comporta uma pré-produção mais estruturada.
+
+A rota [`storyboard-first`](../../workflows/video-generativo-storyboard-first.md) é uma possibilidade desta família, não uma obrigação.
+
+## 3. Rotas podem ser combinadas
+
+Exemplos:
+
+```text
+edição direta
+→ acrescentar motion graphic
+→ montagem híbrida
 ```
 
-## Passo 7: Renderizar
-
-### HyperFrames
-
-```bash
-npx hyperframes render . --quality draft --strict --output renders/final.mp4
+```text
+vídeo programático
+→ inserir depoimento real
+→ montagem híbrida
 ```
 
-### Remotion
-
-```bash
-npx remotion render MyComp out/final.mp4 --codec=h264 --overwrite
+```text
+rough cut
+→ falta um plano de contexto
+→ complementação generativa
 ```
 
-## Passo 8: Validar output
+Mudar de rota não significa necessariamente recomeçar.
+
+## 4. Antes de mudar de rota
+
+Registre:
+
+- motivo da mudança;
+- o que continua válido;
+- o que precisa ser refeito;
+- novos riscos e custos;
+- novas permissões necessárias;
+- próximo ponto de revisão.
+
+## 5. Módulos opcionais
+
+Uma rota pode usar alguns destes módulos:
+
+- contrato criativo e autorizações;
+- roteiro;
+- dramaturgia;
+- registro de assets/referências;
+- bible visual;
+- storyboard;
+- cartão de cena;
+- cartão de plano;
+- cartão de segmento;
+- contrato de experimento;
+- log de tentativas;
+- revisão de montagem;
+- validação técnica.
+
+Não preencha todos automaticamente. Consulte [`templates/README.md`](../../templates/README.md) para saber quando usar ou dispensar cada um.
+
+## 6. Sondagem técnica sem deixar a ferramenta dirigir o projeto
+
+Antes de detalhar tudo, pode ser útil confirmar:
+
+- se a ferramenta aceita o formato e a duração;
+- como trata áudio;
+- quais referências suporta;
+- se o processamento é local ou remoto;
+- custo, créditos e política de retenção;
+- se um teste sintético barato resolve a dúvida crítica.
+
+Isso é uma sondagem provisória. A escolha técnica final pode ocorrer por plano ou segmento.
+
+## 7. Gates que não desaparecem
+
+Independentemente da rota:
+
+- direitos, privacidade e fluxo de dados;
+- decisões criativas-chave;
+- autorização de upload;
+- autorização de geração;
+- autorização adicional para gasto/créditos;
+- revisão do artefato;
+- autorização de publicação.
+
+Projetos complexos podem acrescentar gates de dramaturgia, bible, storyboard, rough cut e picture lock.
+
+## 8. Exemplo de vídeo programático simples
+
+Para uma peça visual curta:
+
+```text
+objetivo
+→ roteiro em blocos
+→ storyboard simples
+→ HyperFrames ou Remotion
+→ lint/snapshot
+→ render
+→ ffprobe
+```
+
+Guias específicos:
+
+- [`02-primeiro-video-com-hyperframes.md`](02-primeiro-video-com-hyperframes.md);
+- [`03-primeiro-video-com-remotion.md`](03-primeiro-video-com-remotion.md).
+
+## 9. Validação da entrega
+
+Conforme a rota, verifique:
+
+- narrativa e legibilidade;
+- áreas visuais/temporais sem função;
+- continuidade;
+- direitos e privacidade;
+- codec, resolução, FPS, duração e áudio;
+- arquivo final reaberto;
+- publicação autorizada separadamente.
+
+Exemplo técnico:
 
 ```bash
 ffprobe -v error \
   -show_entries format=duration,size \
   -show_entries stream=index,codec_type,codec_name,width,height,r_frame_rate \
-  -of json renders/final.mp4
+  -of json final.mp4
 ```
 
-## Passo 9: Adicionar narração (opcional)
+## 10. Estado da evidência
 
-Se o vídeo tiver narração:
+Ao recomendar uma prática, informe seu estado:
 
-1. Gere o áudio com TTS (ver `docs/guias/05-narracao-com-ia-etica.md`);
-2. Em Remotion, use `<Audio src={staticFile("narracao.mp3")} />`;
-3. Em HyperFrames, adicione `<audio>` na composição;
-4. Sincronize a animação com a narração.
+- observado em precedente público;
+- recorrente em múltiplos precedentes;
+- sintetizado pelo laboratório;
+- em validação no laboratório;
+- validado em piloto específico;
+- recomendado para determinado contexto.
 
-## Passo 10: Iterar
+Uma prática bem-sucedida em um caso não se torna regra universal.
 
-- Revise o vídeo;
-- Ajuste timings, cores, texto;
-- Re-renderize;
-- Repita até estar satisfeito.
+## Checklist de orientação
 
-## Checklist final
-
-```txt
-[ ] Roteiro definido
-[ ] Storyboard pronto
-[ ] Ferramenta escolhida
-[ ] Composição criada
-[ ] Lint passou
-[ ] Snapshot/still validado
-[ ] Render executado
-[ ] ffprobe confirmou formato
-[ ] Áudio sincronizado (se aplicável)
-[ ] Vídeo final pronto
-```
-
-## Prompts prontos
-
-- `prompts/video-explicativo-narrado.md`
-- `prompts/video-ugc-anuncio-produto.md`
-- `prompts/hyperframes-motion-graphic.md`
-- `prompts/hyperframes-video-site.md`
-- `prompts/remotion-video-programatico.md`
-
-## Referências
-
-- Guia de início: `docs/guias/01-por-onde-comecar.md`
-- Pré-requisitos: `docs/guias/00-pre-requisitos.md`
-- Ética e licenças: `docs/08-etica-licencas-privacidade.md`
+- [ ] A necessidade foi compreendida antes da ferramenta?
+- [ ] Mais de uma rota plausível foi considerada?
+- [ ] As implicações foram apresentadas?
+- [ ] A pessoa escolheu as decisões-chave?
+- [ ] Foram selecionados apenas os módulos úteis?
+- [ ] Há possibilidade explícita de mudança de rota?
+- [ ] O estado da evidência foi declarado?
+- [ ] Autorizações foram separadas?
+- [ ] O artefato será verificado antes de publicar?

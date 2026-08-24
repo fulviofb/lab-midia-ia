@@ -2,6 +2,8 @@
 
 Este documento ajuda a escolher a ferramenta certa conforme o objetivo.
 
+Se o objetivo ainda estiver aberto ou combinar material real, vídeo programático e geração, comece pelo [guia de rotas](guias/06-ideia-roteiro-cenas-video.md). O laboratório trata ferramentas e workflows como possibilidades por contexto, não como respostas universais.
+
 ## Quero editar vídeos brutos com agente
 
 Use primeiro:
@@ -40,6 +42,8 @@ Use primeiro:
 3. Ferramentas de produto/e-commerce/UGC, com revisão de licença e dependência de API
 
 ## Quero vídeo generativo estilo Higgsfield/Seedance
+
+Antes da plataforma, escolha a rota: complementação generativa, montagem híbrida ou produção narrativa. Veja o [planejamento adaptativo](guias/08-planejamento-adaptativo-de-video.md).
 
 Use como referência:
 
