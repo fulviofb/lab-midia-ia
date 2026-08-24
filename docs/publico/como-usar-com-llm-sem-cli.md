@@ -1,94 +1,122 @@
 # Como usar este repositório com uma LLM, sem CLI
 
-Este guia é para quem quer ajuda prática, mas não quer instalar programas, usar terminal ou entender GitHub profundamente.
+Este guia é para quem quer ajuda prática sem instalar programas, usar terminal ou dominar GitHub.
 
-Você pode usar uma LLM como ChatGPT, Claude ou Gemini como “guia de estudo” deste repositório.
+A LLM deve funcionar como orientadora: apresentar poucas possibilidades, explicar implicações e ajudar você a escolher. Ela não deve impor um workflow nem decidir criatividade, upload, gasto ou publicação sozinha.
 
 ## Caminho simples
 
 1. Abra sua LLM preferida.
-2. Copie o prompt mestre:
-   - `prompts/prompt-mestre-consultor-midia-ia.md`
-3. Preencha sua situação.
-4. Peça um passo a passo.
-5. Se ficar complexo demais, diga: “simplifique para uma pessoa leiga”.
+2. Copie o [prompt mestre](../../prompts/prompt-mestre-consultor-midia-ia.md).
+3. Descreva sua necessidade e o material que já possui.
+4. Compare as rotas sugeridas.
+5. Escolha o próximo passo; reavalie depois.
 
-## O que dizer para a LLM
+## O que informar
 
-Informe:
+- o que quer criar e para quem;
+- material já disponível;
+- se o conteúdo precisa permanecer factual/real;
+- nível técnico e ferramentas conhecidas;
+- prazo, canal e orçamento;
+- voz/imagem/obra de terceiros;
+- o que pode ou não ser enviado para serviços externos;
+- decisões que deseja tomar pessoalmente;
+- se precisa de uma peça única ou versões reproduzíveis.
 
-- o que você quer criar;
-- para quem;
-- seu nível técnico;
-- ferramentas que já usa;
-- se tem orçamento;
-- se há uso de voz/imagem de pessoas;
-- onde o conteúdo será publicado.
-
-Se for um vídeo narrativo ou generativo, diga também quais decisões você quer tomar pessoalmente — por exemplo estética, duração, intensidade, representação de pessoas/personagens, voz e música.
+Você não precisa responder tudo de uma vez. Uma boa LLM faz no máximo três perguntas por resposta e só pede o que altera a decisão.
 
 ## Exemplo
 
 ```txt
-Quero criar um vídeo curto para convidar jovens para uma atividade da casa espírita.
-Meu nível técnico é leigo.
-Uso Canva e ChatGPT.
-Não quero instalar nada.
-Orçamento: gratuito.
-Use como referência o repositório https://github.com/fulviofb/lab-midia-ia.
-Me dê um passo a passo simples e ético.
+Quero um vídeo curto para convidar jovens para uma atividade.
+Tenho fotos autorizadas, texto e identidade visual.
+Sou leigo, uso Canva e não quero instalar nada.
+Orçamento gratuito; não publique nem envie as fotos sem minha aprovação.
+Mostre poucas rotas, explique o que reaproveito e sugira um próximo passo.
 ```
 
-## Se a LLM não conseguir acessar links
+A resposta pode comparar, por exemplo:
 
-Copie e cole um destes arquivos junto com seu pedido:
+- edição direta;
+- montagem híbrida;
+- vídeo programático;
+- complementação generativa, somente se houver lacuna real.
 
-- `docs/trilhas/01-primeiro-video-com-ia.md`
-- `docs/trilhas/02-transformar-aula-em-cortes.md`
-- `docs/trilhas/03-video-explicativo-narrado.md`
-- `docs/trilhas/04-narracao-e-voz-com-ia.md`
-- `docs/trilhas/05-video-programatico-para-devs.md`
+## Rotas não são prisões
+
+Se uma rota não funcionar, diga:
+
+```txt
+Quero reavaliar a rota.
+Explique o que continua válido, o que precisa mudar, novos riscos e o próximo gate.
+```
+
+Mudar de rota não significa necessariamente começar de novo. Fotos, roteiro, identidade, decisões e partes da montagem podem continuar úteis.
+
+## Se a LLM não acessar links
+
+Copie somente os arquivos públicos necessários:
+
+- [trilhas](../trilhas/) para caminhos por objetivo;
+- [receitas](../receitas/) para tarefas simples;
+- [guia de rotas](../guias/06-ideia-roteiro-cenas-video.md);
+- [gramática cinematográfica](../guias/07-gramatica-cinematografica-pratica.md);
+- [planejamento adaptativo](../guias/08-planejamento-adaptativo-de-video.md);
+- [seleção de templates](../../templates/README.md).
+
+Os quatro últimos dependem da entrada da PR #24 no `master`.
 
 ## Como pedir simplificação
 
-Use:
-
 ```txt
 Essa resposta ficou técnica demais.
-Reescreva para uma pessoa leiga, com apenas 5 passos, usando ferramentas web e sem terminal.
+Reescreva em no máximo 5 passos, sem terminal, código ou API.
+Mostre só a rota escolhida e o próximo checkpoint.
 ```
 
 ## Como pedir aprofundamento
 
-Use:
-
 ```txt
-Agora me dê uma versão mais técnica usando ferramentas reproduzíveis e, se fizer sentido, scripts ou workflows do repositório.
+Agora detalhe os módulos e ferramentas reproduzíveis adequados à rota escolhida.
+Mantenha explícitos os gates de direitos, upload, gasto e publicação.
 ```
 
 ## Cuidados
 
-A LLM pode inventar comandos, preços, recursos ou links. Sempre confira:
+A LLM pode inventar comandos, preços, recursos, links ou alegar ações que não executou. Confira:
 
-- se a ferramenta ainda existe;
-- se há custo;
-- se precisa de API key;
-- se pode usar imagem/voz de terceiros;
-- se a ferramenta é adequada para o público.
+- existência e estado atual da ferramenta;
+- custo, créditos e API key;
+- processamento local ou remoto;
+- direitos e consentimentos;
+- retenção/exclusão no provedor;
+- adequação ao público;
+- artefato real e verificação técnica.
 
-Para vídeo generativo, confira também se a LLM:
+## Checklist da resposta
 
-- separou beat, keyframe, plano, segmento e cena;
-- pediu aprovação antes de escolher direção criativa;
-- definiu teto de tentativas/créditos antes de gerar;
-- tratou upload, geração e publicação como autorizações diferentes.
+- [ ] Entendeu a necessidade antes da ferramenta?
+- [ ] Apresentou no máximo três rotas quando havia escolha real?
+- [ ] Explicou vantagens, limites e reaproveitamento?
+- [ ] A sugestão foi contextual, não universal?
+- [ ] Pediu decisão nos pontos criativos?
+- [ ] Separou upload, geração, gasto, download e publicação?
+- [ ] Selecionou apenas módulos úteis?
+- [ ] Propôs um próximo passo pequeno?
+- [ ] Permitiu mudança de rota?
+- [ ] Não alegou execução sem evidência?
 
 ## Melhor uso
 
-Use a LLM como orientadora, não como autoridade final.
-
-O processo ideal é:
-
 ```txt
-sua necessidade → prompt mestre → trilha recomendada → execução simples → revisão → próximo passo
+necessidade
+→ poucas rotas
+→ implicações
+→ escolha
+→ próximo passo
+→ checkpoint
+→ manter ou mudar
 ```
+
+Use a LLM como orientadora, não como autoridade final.
