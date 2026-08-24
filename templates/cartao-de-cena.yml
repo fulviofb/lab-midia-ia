@@ -1,27 +1,37 @@
-scene_id: "SC01"
-title: ""
-version: ""
-source_scope: ""
+metadata:
+  evidence_status: lab_synthesis
+  project_id: PROJ-DEMO
+  project_version: v0.1
+  scene_id: PROJ-DEMO-SC01
+  scene_version: v0.1
+  profile: light
+  status: draft
 
-narrative:
-  event: ""
-  focal_character: ""
-  desire_or_need: ""
-  obstacle: ""
-  turning_point: ""
+scene:
+  title: ""
+  source_scope: ""
+  function_or_event: ""
   initial_state: ""
   final_state: ""
   audience_must_understand: []
+  observable_change: ""
+
+optional_dramaturgy:
+  applicable: null
+  focal_character_id: null
+  desire_or_need: null
+  obstacle: null
+  turning_point: null
 
 beats:
-  - beat_id: "B01"
+  - beat_id: PROJ-DEMO-SC01-B01
     function: ""
-    action_information_change: ""
-    emotional_change: ""
+    action_or_information_change: ""
+    emotional_change: null
     observable_result: ""
 
 space:
-  environment_id: "ENV-01"
+  environment_id: null
   geography: ""
   character_positions: []
   movement_paths: []
@@ -29,21 +39,34 @@ space:
   axis_notes: ""
 
 coverage_needs:
-  establishing: false
+  establishing: not_applicable
   action: []
   reactions: []
-  details_inserts: []
+  details_or_inserts: []
   transitions: []
   audio_bridges: []
 
-continuity_from_previous: []
-continuity_to_next: []
+continuity:
+  from_scene_ids: []
+  to_scene_ids: []
+  notes: []
 
-open_decisions: []
-approved_decisions: []
+decisions:
+  open_decision_ids: []
+  approved_decision_ids: []
 
 approval:
-  approver: ""
-  status: "open"
-  date: ""
+  state: open
+  decided_by: null
+  decided_at: null
+  evidence_uri: null
   notes: ""
+
+allowed_decision_states:
+  - open
+  - approved
+  - rejected
+  - deferred
+  - blocked
+  - not_applicable
+  - superseded

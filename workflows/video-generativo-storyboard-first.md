@@ -1,286 +1,281 @@
-# Workflow: vídeo generativo storyboard-first
+# Rota opcional: vídeo narrativo storyboard-first
 
-Este workflow é independente de provedor. Ele organiza decisões e artefatos para vídeo generativo narrativo sem pressupor que beat, keyframe, plano e clipe sejam equivalentes.
+**Estado de evidência:** `lab_synthesis` — sintetizado a partir de práticas observadas em precedentes públicos; em validação no laboratório.
 
-## Resultado esperado
+Este workflow é **uma rota possível**, não o método universal para produzir vídeo. Ele organiza projetos narrativos em que geografia, continuidade, cobertura e montagem justificam pré-produção estruturada.
 
-Ao final, o projeto deve possuir:
+Consulte primeiro:
 
-- contrato criativo aprovado;
-- bible visual proporcional ao risco;
-- cartões de cena e plano;
-- estratégia de condicionamento por plano/segmento;
-- log de gerações;
-- rough cut;
-- registro de lacunas e regenerações;
-- picture lock;
-- revisão de pós e publicação.
+- [`guia de rotas`](../docs/guias/06-ideia-roteiro-cenas-video.md);
+- [`planejamento adaptativo`](../docs/guias/08-planejamento-adaptativo-de-video.md).
 
-## 0. Princípios
+## Quando considerar
 
-1. roteiro e dramaturgia antecedem prompts;
-2. o projeto funciona como memória externa;
-3. decisões criativas pertencem ao responsável humano;
-4. controle pode estar em texto, imagem, mapa, layout ou locks;
-5. rigidez é seletiva;
-6. montagem começa antes do fim das gerações;
-7. regenerações respondem a lacunas observadas;
-8. publicação exige revisão humana.
+- personagens ou ambientes reaparecem;
+- há múltiplos planos/segmentos;
+- continuidade é risco central;
+- transformação precisa ser legível;
+- rough cut orientará novas gerações;
+- equipe precisa compartilhar decisões.
 
-## 1. Abrir o contrato criativo
+## Quando simplificar ou dispensar
 
-Preencha [`templates/contrato-criativo.md`](../templates/contrato-criativo.md).
+- peça abstrata/programática;
+- um único plano simples;
+- material existente já resolve o objetivo;
+- storyboard não reduz risco relevante;
+- prazo não comporta pré-produção formal.
 
-Gate obrigatório:
+## Rotas alternativas
 
-- escopo;
-- fonte e direitos;
-- público;
-- objetivo;
-- decisões que somente o usuário pode tomar;
-- orçamento/teto;
-- responsáveis por aprovação;
-- limites éticos e de privacidade.
+- edição direta;
+- vídeo programático;
+- montagem híbrida;
+- complementação generativa localizada;
+- filmagem/asset real.
 
-Não escolher duração, estética ou ferramenta quando ainda forem decisões abertas.
+## Módulos sugeridos
 
-## 2. Estruturar dramaturgia
+### Perfil leve
 
-Para cada cena:
+- contrato criativo reduzido;
+- registro de assets quando houver terceiros;
+- cartão de cena ou plano;
+- revisão de montagem/artefato.
+
+### Perfil intermediário
+
+- contrato e papéis;
+- registro de assets;
+- cartão de cena e planos;
+- bible seletiva;
+- cartão de segmento quando geração e montagem não coincidirem;
+- log de tentativas relevantes;
+- rough cut.
+
+### Perfil complexo
+
+- todos os anteriores conforme necessidade;
+- contrato de experimento;
+- mapas/staging/eyelines;
+- cadeia de versões/IDs;
+- teto global e por experimento;
+- picture lock formal;
+- QC técnico e autorização de publicação separados.
+
+Não preencha módulos automaticamente. Veja [`templates/README.md`](../templates/README.md).
+
+## 1. Contrato e autorizações
+
+Use [`contrato-criativo.md`](../templates/contrato-criativo.md).
+
+Separe:
+
+- análise local;
+- cópia para workspace;
+- processamento local;
+- upload externo;
+- geração;
+- gasto/créditos;
+- download;
+- publicação;
+- retenção/exclusão no provedor.
+
+Defina papéis. Uma pessoa pode acumulá-los, mas isso deve ser explícito.
+
+## 2. Dramaturgia proporcional
+
+Use o núcleo:
 
 ```text
-evento
-+ desejo/necessidade
-+ obstáculo
-+ virada
+função/evento
 + estado inicial
 + estado final
++ informação necessária
++ mudança observável
 ```
 
-Registre em [`templates/cartao-de-cena.yml`](../templates/cartao-de-cena.yml).
+Quando aplicável:
 
-Gate: o responsável aprova a função da cena e os beats antes de produzir assets finais.
+```text
+personagem focal
++ desejo/necessidade
++ obstáculo
++ ponto de virada
+```
 
-## 3. Construir a bible visual
+Registre em [`cartao-de-cena.yml`](../templates/cartao-de-cena.yml).
 
-Use [`templates/bible-visual.yml`](../templates/bible-visual.yml).
+## 3. Assets, referências e continuidade
 
-### Módulos básicos
+Registre fontes e permissões em [`registro-de-assets.yml`](../templates/registro-de-assets.yml). Use a [`bible-visual.yml`](../templates/bible-visual.yml) somente quando identidades/regras recorrentes justificarem.
 
-- personagens e estados;
-- roupas/objetos;
-- ambientes;
-- materialidade/estilo;
-- referências com função e direitos;
-- locks e variantes permitidas.
+Módulos possíveis:
 
-### Módulos opcionais por risco
-
-- mapa de locação;
+- personagem/estado;
+- ambiente/geografia;
+- prop;
+- áudio;
+- mapa;
 - staging;
 - eyelines;
 - relações de escala;
-- depth map;
-- paleta por estado;
-- descritor textual estável associado à imagem;
-- versões de assets.
+- locks e variações permitidas.
 
-Gate: cada referência possui ID, função, proveniência e aprovação.
+## 4. Storyboard e cobertura
 
-## 4. Planejar storyboard e cobertura
+Para cada plano relevante, use [`cartao-de-plano.yml`](../templates/cartao-de-plano.yml).
 
-Para cada plano, use [`templates/cartao-de-plano.yml`](../templates/cartao-de-plano.yml).
-
-O storyboard pode revelar decisões novas. Quando isso ocorrer:
+O storyboard pode revelar decisões. Quando ocorrer:
 
 ```text
-decisão revelada
-→ registrar alternativa/implicação
+achado
+→ alternativas/implicações
 → gate humano
-→ somente então atualizar o plano
+→ atualização
 ```
 
-Verifique cobertura:
+Verifique, conforme a cena:
 
-- situação/estabelecimento;
+- situação;
 - ação;
 - reação;
-- detalhe necessário;
-- continuidade espacial;
+- detalhe;
+- geografia;
 - transição;
-- som/ponte.
+- ponte sonora.
 
-## 5. Escolher estratégia por plano ou segmento
+## 5. Sondagem técnica
 
-Opções possíveis:
+Antes de finalizar todos os planos, teste com material sintético quando houver dúvida crítica:
 
-| Estratégia | Quando considerar |
-|---|---|
-| texto para vídeo | identidade/geografia pouco restritivas |
-| first frame | composição inicial é âncora principal |
-| first/last frame | transformação entre estados é crítica |
-| múltiplas referências | identidade, ambiente e props precisam coexistir |
-| character/prop sheet | recorrência e variações controladas |
-| layout/diagrama | posições e trajetos são críticos |
-| depth map | profundidade e relação espacial são críticas |
-| locks textuais | estilo/continuidade/direção devem persistir |
-| input transformado | física/orientação não responde ao texto |
-| liberdade controlada | seleção editorial é aceitável |
+- referências;
+- duração;
+- áudio;
+- first/last frame;
+- continuidade;
+- formato;
+- custo;
+- retenção.
 
-A escolha deve registrar benefício, risco e critério de aceite.
+A sondagem informa viabilidade; não escolhe direção criativa.
 
-## 6. Preparar contrato de experimento
+## 6. Segmentos de geração
 
-Para cada teste pago ou demorado, registre:
+Plano de montagem e arquivo gerado não são equivalentes. Um segmento pode conter vários planos, e um plano pode ser coberto por mais de um segmento.
 
-```yaml
-hypothesis: ""
-mode: diagnostic | exploration | production
-variable: ""
-fixtures: []
-model_and_version: ""
-settings: {}
-max_attempts: 0
-max_displayed_credits: 0
-acceptance: []
-stop_conditions: []
-approver: ""
-```
+Use [`cartao-de-segmento.yml`](../templates/cartao-de-segmento.yml) para registrar:
 
-### Modos
-
-- `diagnostic`: alterar uma variável;
-- `exploration`: comparar direções compostas registradas;
-- `production`: preservar locks e corrigir lacuna específica.
-
-Gate: nenhuma geração paga sem teto e autorização.
-
-## 7. Gerar e registrar
-
-Use [`templates/log-de-geracao.csv`](../templates/log-de-geracao.csv).
-
-Para cada tentativa:
-
-- ID;
-- cena/plano/segmento;
-- ferramenta/modelo;
+- planos/beats cobertos;
 - estratégia;
-- referências e versões;
-- prompt/configuração;
-- seed;
-- duração solicitada/entregue;
-- áudio solicitado/entregue;
-- créditos como exibidos;
-- resultado;
-- decisão e motivo.
+- estados inicial/final;
+- duração;
+- referências;
+- áudio;
+- critérios de aceite.
 
-Preserve falhas úteis. Não as misture aos assets aprovados.
+## 7. Experimentos
 
-## 8. Montar cedo
+Use [`contrato-de-experimento.yml`](../templates/contrato-de-experimento.yml) quando uma tentativa for cara, lenta, sensível ou comparativa.
 
-Crie:
+Modos:
+
+- diagnóstico;
+- exploração;
+- produção.
+
+Nenhuma geração sem autorização. Gasto requer autorização adicional.
+
+## 8. Tentativas e artefatos
+
+Registre tentativas relevantes em [`log-de-geracao.csv`](../templates/log-de-geracao.csv):
+
+- IDs e versões;
+- provedor/modelo/job;
+- configuração/prompt;
+- referências;
+- custo/créditos com unidade;
+- artefato/hash;
+- falhas;
+- decisão e próxima ação.
+
+Preserve falhas úteis sem misturá-las aos assets aprovados.
+
+## 9. Assembly e rough cut
+
+Monte cedo, inclusive com placeholders:
 
 ```text
-assembly
+seleções
+→ assembly
 → rough cut
 ```
 
-O rough cut deve ser assistível, mesmo com placeholders. Avalie narrativa, ritmo, geografia, transformação e som antes de buscar acabamento.
+Avalie:
 
-## 9. Registrar lacunas
+- narrativa;
+- ritmo;
+- áreas sem função;
+- geografia;
+- continuidade;
+- transformação;
+- áudio.
 
-Exemplos:
+## 10. Lacunas e mudança de rota
 
-- falta reação;
-- plano longo demais;
-- gesto ilegível;
-- direção de tela mudou;
-- identidade rompeu;
-- áudio indesejado;
-- transformação não é compreensível;
-- falta plano de situação;
-- corte exige margem adicional.
+Para cada lacuna:
 
-Cada lacuna recebe:
-
-- evidência;
+- evidência/timecode;
 - severidade;
-- plano afetado;
+- plano/segmento/tentativa relacionados;
 - opção de edição;
 - opção de regeneração;
-- decisão humana.
+- possibilidade de filmagem/asset real;
+- decisão humana;
+- novo teto, se houver.
 
-## 10. Regenerar com finalidade
-
-```text
-lacuna
-→ menor mudança suficiente
-→ nova tentativa registrada
-→ substituição no rough cut
-→ reavaliação
-```
-
-Não regenerar todo o projeto por falha localizada. Não usar preferência visual do agente como justificativa suficiente.
+É válido mudar para edição, vídeo programático, filmagem ou outra ferramenta.
 
 ## 11. Fine cut e picture lock
 
-Antes do lock:
+Congele:
 
 - ordem;
+- pontos de corte;
 - duração;
-- cortes;
-- reações;
-- continuidade;
-- compreensão da narrativa;
-- aprovação criativa.
+- estrutura temporal;
+- exceções.
 
-Após picture lock, novas gerações são exceção documentada.
+Após picture lock, novas gerações são exceções aprovadas.
 
-## 12. Pós-produção
+## 12. Pós, master e publicação
 
-Use [`templates/revisao-de-montagem.md`](../templates/revisao-de-montagem.md).
+Use [`revisao-de-montagem.md`](../templates/revisao-de-montagem.md) para registrar:
 
-- cleanup;
-- cor;
-- música;
-- sound design;
-- voz;
-- mix;
-- legendas;
-- export;
-- `ffprobe`;
-- inspeção visual;
-- direitos e privacidade.
+- revisão editorial;
+- QC técnico com valores observados;
+- direitos/privacidade;
+- arquivo/hash do master;
+- autorização de publicação separada.
 
-## 13. Publicação e aprendizado
+## Saídas desta rota
 
-Separar:
+A rota pode terminar ou migrar quando:
 
-- artefato privado;
-- documentação interna;
-- aprendizado generalizável;
-- versão pública sanitizada.
-
-Nenhum case, asset ou prompt privado entra no laboratório sem autorização específica.
-
-## Definições obrigatórias
-
-```text
-beat       = mudança narrativa/emocional
-keyframe   = decisão/referência visual
-plano      = tomada contínua na montagem
-segmento   = arquivo gerado; pode conter vários planos
-cena       = unidade narrativa montada
-```
+- material existente já resolve;
+- ferramenta não atende;
+- autenticidade exige filmagem/asset real;
+- orçamento atingiu o teto;
+- montagem revela que abordagem mais simples é suficiente;
+- decisão criativa muda.
 
 ## Critério de conclusão
 
-- [ ] gates registrados;
-- [ ] assets com proveniência;
-- [ ] planos e segmentos distintos;
-- [ ] gerações auditáveis;
-- [ ] rough cut revisado;
-- [ ] lacunas resolvidas ou aceitas;
-- [ ] picture lock aprovado;
-- [ ] pós validada;
-- [ ] publicação autorizada separadamente.
+- [ ] módulos foram escolhidos por necessidade;
+- [ ] prática observada e síntese do laboratório foram diferenciadas;
+- [ ] autorizações estão separadas;
+- [ ] IDs e versões fecham a cadeia;
+- [ ] rough cut orientou lacunas;
+- [ ] mudança de rota permaneceu possível;
+- [ ] master e publicação foram aprovados separadamente;
+- [ ] estado de validação foi declarado.

@@ -1,0 +1,63 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: PROJ-DEMO
+  project_version: v0.1
+  segment_id: PROJ-DEMO-SEG01
+  segment_version: v0.1
+  status: draft
+
+coverage:
+  scene_ids: []
+  beat_ids: []
+  shot_ids: []
+  may_contain_multiple_shots: false
+
+strategy:
+  conditioning_type: undecided
+  rationale: ""
+  risks: []
+  reference_asset_ids: []
+  initial_state: ""
+  final_state: ""
+  timed_sections: []
+
+technical_request:
+  provider: null
+  model: null
+  model_version: null
+  requested_duration_s: null
+  aspect_ratio: null
+  resolution: null
+  audio_requested: null
+  settings: {}
+
+acceptance:
+  criteria: []
+  rejection_conditions: []
+
+approval:
+  state: open
+  decided_by: null
+  decided_at: null
+  evidence_uri: null
+  notes: ""
+
+allowed_conditioning_types:
+  - undecided
+  - text_to_video
+  - first_frame
+  - first_last_frame
+  - multiple_references
+  - sheets
+  - layout_or_diagram
+  - depth_map
+  - textual_locks
+  - transformed_input
+  - controlled_freedom
+
+allowed_statuses:
+  - draft
+  - approved
+  - rejected
+  - blocked
+  - superseded

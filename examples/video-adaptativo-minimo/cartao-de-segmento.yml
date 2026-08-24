@@ -1,0 +1,38 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: DEMO-LIVRO
+  project_version: v0.1
+  segment_id: DEMO-LIVRO-SEG01
+  segment_version: v0.1
+  status: approved
+coverage:
+  scene_ids: [DEMO-LIVRO-SC01]
+  beat_ids: [DEMO-LIVRO-SC01-B01]
+  shot_ids: [DEMO-LIVRO-SC01-P01]
+  may_contain_multiple_shots: false
+strategy:
+  conditioning_type: first_frame
+  rationale: preservar composição inicial
+  risks: [mão, texto da página]
+  reference_asset_ids: [DEMO-LIVRO-ASSET-001]
+  initial_state: livro aberto sem gesto
+  final_state: mão aponta a anotação
+  timed_sections: ["0-3s: observação", "3-6s: gesto"]
+technical_request:
+  provider: synthetic_fixture
+  model: deterministic_svg
+  model_version: v1
+  requested_duration_s: 6
+  aspect_ratio: "16:9"
+  resolution: 1280x720
+  audio_requested: false
+  settings: {}
+acceptance:
+  criteria: [ação compreensível]
+  rejection_conditions: [artefato estrutural inválido]
+approval:
+  state: approved
+  decided_by: fixture-author
+  decided_at: "2026-08-23T00:00:00Z"
+  evidence_uri: README.md
+  notes: não valida plataforma generativa

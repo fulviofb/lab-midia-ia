@@ -1,8 +1,12 @@
-project:
-  id: ""
-  version: ""
-  approved_by: ""
-  approved_at: ""
+metadata:
+  evidence_status: lab_synthesis
+  project_id: PROJ-DEMO
+  project_version: v0.1
+  bible_version: v0.1
+  profile: intermediate
+  status: draft
+  approved_by: null
+  approved_at: null
 
 visual_contract:
   medium_materiality: ""
@@ -16,55 +20,57 @@ visual_contract:
   allowed_evolution: []
 
 characters:
-  - id: "CHAR-01"
+  - character_id: CHAR-001
     name: ""
     stable_descriptor: ""
     identity_locks: []
     states:
-      - id: "STATE-01"
+      - state_id: CHAR-001-STATE-01
         description: ""
-        costume: ""
+        costume_asset_ids: []
         posture_expression: ""
         allowed_variation: []
-    references:
-      - id: "REF-01"
-        path_or_url: ""
-        function: "identity"
-        provenance: ""
-        rights: ""
-        approved: false
+    reference_asset_ids: []
 
 environments:
-  - id: "ENV-01"
+  - environment_id: ENV-001
     name: ""
     stable_descriptor: ""
     anchors: []
     geography: ""
     scale_relations: []
     lighting_states: []
-    references: []
+    reference_asset_ids: []
     optional_controls:
-      location_map: ""
-      staging_diagram: ""
-      depth_map: ""
+      location_map_asset_id: null
+      staging_diagram_asset_id: null
+      depth_map_asset_id: null
 
 props:
-  - id: "PROP-01"
+  - prop_id: PROP-001
     name: ""
     stable_descriptor: ""
     identity_locks: []
     state_variants: []
-    references: []
+    reference_asset_ids: []
+
+audio_environments:
+  - audio_environment_id: AUDIOENV-001
+    description: ""
+    reference_asset_ids: []
+    continuity_locks: []
 
 continuity:
-  screen_direction: []
-  eyelines: []
+  screen_direction_rules: []
+  eyeline_rules: []
   hand_object_rules: []
-  time_weather: ""
-  audio_environment: ""
+  time_weather_rules: []
+  audio_rules: []
 
-rights_review:
-  approved_for_private_use: false
-  approved_for_external_upload: false
-  approved_for_publication: false
-  notes: ""
+open_decisions: []
+
+allowed_statuses:
+  - draft
+  - approved
+  - superseded
+  - not_applicable

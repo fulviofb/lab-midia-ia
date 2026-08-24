@@ -1,0 +1,55 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: DEMO-LIVRO
+  project_version: v0.1
+  scene_id: DEMO-LIVRO-SC01
+  scene_version: v0.1
+  profile: light
+  status: approved
+scene:
+  title: descoberta no livro
+  source_scope: fixture sintética
+  function_or_event: tornar uma descoberta legível
+  initial_state: educadora observa o livro
+  final_state: educadora aponta a anotação
+  audience_must_understand: [uma informação foi encontrada]
+  observable_change: olhar e mão convergem para a anotação
+optional_dramaturgy:
+  applicable: false
+  focal_character_id: null
+  desire_or_need: null
+  obstacle: null
+  turning_point: null
+beats:
+  - beat_id: DEMO-LIVRO-SC01-B01
+    function: reveal
+    action_or_information_change: a anotação é localizada
+    emotional_change: null
+    observable_result: mão aponta para a página
+space:
+  environment_id: null
+  geography: mesa, educadora à esquerda, livro ao centro
+  character_positions: [educadora à esquerda]
+  movement_paths: [mão da esquerda para o centro]
+  eyelines: [olhar para o livro]
+  axis_notes: manter livro no centro/direita
+coverage_needs:
+  establishing: not_applicable
+  action: [abrir/observar]
+  reactions: []
+  details_or_inserts: [anotação]
+  transitions: []
+  audio_bridges: []
+continuity:
+  from_scene_ids: []
+  to_scene_ids: []
+  notes: []
+decisions:
+  open_decision_ids: []
+  approved_decision_ids: [DEMO-LIVRO-DEC-001]
+approval:
+  state: approved
+  decided_by: fixture-author
+  decided_at: "2026-08-23T00:00:00Z"
+  evidence_uri: README.md
+  notes: fixture estrutural

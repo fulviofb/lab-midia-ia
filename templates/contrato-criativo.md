@@ -1,30 +1,45 @@
-# Contrato criativo
+# Contrato criativo e de autorização
+
+**Estado de evidência:** `lab_synthesis`
+
+Use a versão proporcional ao risco. Campos não aplicáveis devem ser marcados `not_applicable`, não deixados como aprovação implícita.
 
 ## Identificação
 
-- Projeto:
+- Project ID:
 - Versão:
 - Data:
-- Responsável:
-- Aprovadores:
+- Rota atual:
+- Perfil: `light | intermediate | complex`
+- Estado: `draft | active | superseded | closed`
 
-## Fonte e direitos
+## Papéis
 
-- Fonte/origem:
-- Direitos conhecidos:
-- Permissão para análise:
-- Permissão para upload:
-- Permissão para publicação:
-- Restrições:
+| Papel | Pessoa/equipe | Escopo |
+|---|---|---|
+| creative_decision_owner | | |
+| technical_operator | | |
+| rights_privacy_owner | | |
+| budget_owner | | |
+| upload_authorizer | | |
+| publication_authorizer | | |
+
+Uma pessoa pode acumular papéis.
 
 ## Objetivo
 
 - Público:
-- Mensagem central:
-- Resultado esperado:
+- Mensagem/efeito esperado:
+- Resultado:
 - Canal/destino:
+- Material existente:
+- Prazo:
 
-## Escopo narrativo
+## Fonte e adaptação
+
+### Fontes/fatos
+
+-
 
 ### Incluído
 
@@ -34,57 +49,71 @@
 
 -
 
-### Fatos da fonte
-
--
-
 ### Decisões de adaptação aprovadas
 
 -
 
-### Alternativas ainda abertas
+### Alternativas abertas
 
 -
 
 ## Decisões criativas
 
-| Decisão | Estado | Responsável | Data |
-|---|---|---|---|
-| estética | aberta | | |
-| duração | aberta | | |
-| formato | aberta | | |
-| intensidade | aberta | | |
-| áudio | aberta | | |
-| ferramenta | aberta | | |
+| Decision ID | Tema | Estado | Opções/implicações | Decisor | Data | Evidência/versão |
+|---|---|---|---|---|---|---|
+| DEC-001 | | open | | | | |
 
-Estados sugeridos: `aberta`, `aprovada`, `rejeitada`, `adiada`.
+## Matriz de autorização
+
+| Ação | Estado | Escopo/provedor | Autorizador | Data | Expiração/revogação | Evidência |
+|---|---|---|---|---|---|---|
+| análise local | open | | | | | |
+| cópia para workspace | open | | | | | |
+| processamento local | open | | | | | |
+| upload externo | open | | | | | |
+| geração | open | | | | | |
+| gasto/créditos | open | | | | | |
+| download | open | | | | | |
+| retenção no provedor | open | | | | | |
+| exclusão no provedor | open | | | | | |
+| publicação | open | | | | | |
+
+Estados: `open`, `approved`, `rejected`, `not_applicable`, `revoked`, `expired`.
 
 ## Limites
 
-- Éticos:
-- Religiosos/culturais:
+- Éticos/culturais:
 - Privacidade:
-- Licença:
+- Licença/direitos:
 - Técnicos:
-- Orçamento/créditos:
-- Número máximo de tentativas:
+- Teto monetário global e moeda:
+- Teto global de créditos e unidade:
+- Teto global de tentativas:
+- Condições de interrupção:
 
-## Gates
+`null` significa não definido. Zero significa nenhum gasto/tentativa autorizado.
 
-| Gate | Evidência necessária | Aprovador | Estado |
-|---|---|---|---|
-| fonte/adaptação | | | aberto |
-| dramaturgia | | | aberto |
-| direção | | | aberto |
-| storyboard | | | aberto |
-| estratégia técnica | | | aberto |
-| geração | | | aberto |
-| rough cut | | | aberto |
-| picture lock | | | aberto |
-| publicação | | | aberto |
+## Gates selecionados
 
-## Registro de mudanças
+| Gate ID | Gate | Obrigatório neste projeto? | Evidência necessária | Decisor | Estado | Data | Artefato/versão |
+|---|---|---|---|---|---|---|---|
+| G-RIGHTS | direitos/dados | yes | | | open | | |
+| G-CREATIVE | decisões criativas | yes | | | open | | |
+| G-UPLOAD | upload | conditional | | | open | | |
+| G-GENERATE | geração | conditional | | | open | | |
+| G-BUDGET | gasto/créditos | conditional | | | open | | |
+| G-CUT | revisão do corte | conditional | | | open | | |
+| G-MASTER | aceitação do master | conditional | | | open | | |
+| G-PUBLISH | publicação | conditional | | | open | | |
 
-| Data | Mudança | Motivo | Aprovador |
-|---|---|---|---|
-| | | | |
+## Mudanças de rota
+
+| Data | De | Para | Motivo | Preservado | Invalidado | Novos riscos/permissões | Decisor |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+
+## Registro de versões
+
+| Versão | Data | Mudança | Motivo | Aprovador | Substitui |
+|---|---|---|---|---|---|
+| | | | | | |

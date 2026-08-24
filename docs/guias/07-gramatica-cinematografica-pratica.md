@@ -1,6 +1,8 @@
 # Gramática cinematográfica prática para vídeo com IA
 
-Este guia ajuda a transformar intenção em direção observável. Serve para storyboard, filmagem, vídeo generativo, Remotion e workflows técnicos.
+**Estado:** repertório conceitual sintetizado pelo laboratório; não prescreve uma estética.
+
+Este guia ajuda a transformar intenção em direção observável. Pode apoiar filmagem, edição, vídeo programático, complementação generativa e produção narrativa.
 
 > Não comece por “qual efeito usar?”. Comece por: **o que o público deve perceber, sentir ou compreender neste plano?**
 
@@ -17,20 +19,20 @@ Exemplo neutro:
 ```text
 Uma educadora abre um livro sobre a mesa.
 Plano médio, câmera na altura dos olhos.
-Push-in lento quando ela encontra uma anotação.
-Luz suave de janela, cores quentes, páginas e ambiente silencioso.
+Aproximação lenta quando ela encontra uma anotação.
+Luz suave de janela, cores quentes e ambiente silencioso.
 O plano termina com a mão indicando a frase.
 ```
 
-## Modo avançado
+## Modo detalhado
 
-Use o template [`templates/cartao-de-plano.yml`](../../templates/cartao-de-plano.yml).
+Use apenas os campos necessários do [`cartao-de-plano.yml`](../../templates/cartao-de-plano.yml).
 
 ---
 
 ## 1. Função narrativa
 
-Escolha a função dominante do plano:
+Possibilidades:
 
 - **situar:** apresentar lugar, tempo ou escala;
 - **explicar:** tornar informação ou ação legível;
@@ -41,7 +43,7 @@ Escolha a função dominante do plano:
 - **desorientar:** causar instabilidade intencional;
 - **contemplar:** dar tempo para observar e sentir.
 
-Um plano pode contribuir para várias funções, mas deve ter uma intenção dominante verificável.
+Um plano pode contribuir para várias funções, mas uma intenção dominante facilita avaliação e montagem.
 
 ## 2. Enquadramento e ângulo
 
@@ -54,8 +56,8 @@ Um plano pode contribuir para várias funções, mas deve ter uma intenção dom
 | Plano médio | conversa, gesto, ação cotidiana |
 | Close-up | emoção, reação, decisão |
 | Detalhe/extremo close | informação, textura, objeto narrativo |
-| OTS | relação, diálogo, ponto de vista parcial |
-| POV | percepção do personagem |
+| Sobre o ombro (OTS) | relação e ponto de vista parcial |
+| Ponto de vista (POV) | percepção do personagem |
 
 ### Ângulo
 
@@ -81,51 +83,49 @@ Defina quando necessário:
 - área livre para texto;
 - direção de tela para o corte seguinte;
 - relações de escala;
-- elementos que funcionam como âncoras espaciais.
+- âncoras espaciais.
 
-A composição serve à informação e à emoção, não apenas à aparência.
+A composição serve à informação e à emoção, não apenas à aparência. Áreas grandes sem função podem enfraquecer a peça mesmo quando o render está tecnicamente correto.
 
 ## 4. Movimento de câmera
-
-### Movimentos físicos
 
 | Movimento | Operação | Uso possível |
 |---|---|---|
 | Estática | não se desloca | clareza, observação, solenidade |
-| Pan | gira horizontalmente | seguir ou revelar lateralmente |
-| Tilt | gira verticalmente | revelar altura |
-| Dolly in/out | aproxima ou afasta fisicamente | intensificar ou contextualizar |
-| Truck lateral | desloca lateralmente | acompanhar e criar paralaxe |
-| Pedestal | sobe/desce sem inclinar | reenquadrar verticalmente |
-| Tracking | acompanha sujeito | jornada e continuidade |
-| Orbit | circula o sujeito | ênfase e mudança de perspectiva |
-| Crane/jib | move em arco/altura | escala e revelação espacial |
-| Handheld | movimento orgânico | urgência ou presença documental |
-| Whip pan | giro muito rápido | transição energética |
+| Panorâmica horizontal (pan) | gira horizontalmente | seguir ou revelar lateralmente |
+| Panorâmica vertical (tilt) | gira verticalmente | revelar altura |
+| Aproximação/afastamento físico (dolly) | desloca em profundidade | intensificar ou contextualizar |
+| Deslocamento lateral (truck) | move lateralmente | acompanhar e criar paralaxe |
+| Elevação (pedestal) | sobe/desce sem inclinar | reenquadrar verticalmente |
+| Acompanhamento (tracking) | segue o sujeito | jornada e continuidade |
+| Órbita (orbit) | circula o sujeito | ênfase e mudança de perspectiva |
+| Grua (crane/jib) | move em arco/altura | escala e revelação espacial |
+| Câmera na mão (handheld) | movimento orgânico | urgência ou presença documental |
+| Panorâmica rápida (whip pan) | giro muito rápido | transição energética |
 
 ### Lente e foco
 
-- **zoom:** altera campo de visão sem mover a câmera;
-- **rack focus:** transfere foco entre planos;
-- **dolly zoom:** combina dolly e zoom opostos;
+- **zoom:** altera o campo de visão sem mover a câmera;
+- **mudança de foco (rack focus):** transfere foco entre planos;
+- **dolly zoom:** combina dolly e zoom em sentidos opostos;
 - **profundidade rasa:** isola sujeito;
 - **foco profundo:** mantém camadas legíveis.
 
-Regra diagnóstica: **um movimento dominante por plano atômico** aumenta a capacidade de identificar o que funcionou. Não é proibição universal de movimentos compostos nem regra para segmentos gerados que contenham vários planos.
+Como regra de diagnóstico, um movimento dominante por plano atômico facilita identificar o que funcionou. Não é proibição universal nem regra para segmentos que contenham vários planos.
 
 ## 5. Escolha pela intenção
 
 | Intenção | Ponto de partida possível |
 |---|---|
 | apresentar lugar | geral + estática ou movimento lento |
-| aproximar emocionalmente | close + push-in lento |
-| mostrar descoberta | médio/detalhe + reveal ou rack focus |
+| aproximar emocionalmente | close + aproximação lenta |
+| mostrar descoberta | médio/detalhe + revelação ou mudança de foco |
 | acompanhar jornada | tracking |
-| evidenciar escala | geral/ângulo baixo + crane |
-| criar isolamento | aberto + pull-out |
-| transmitir urgência | handheld controlado + cobertura curta |
+| evidenciar escala | geral/ângulo baixo + grua |
+| criar isolamento | aberto + afastamento |
+| transmitir urgência | câmera na mão controlada + cobertura curta |
 | contemplar | estática + plano longo |
-| desorientar | ângulo inclinado ou dolly zoom justificado |
+| desorientar | inclinação ou dolly zoom justificado |
 
 São possibilidades, não fórmulas.
 
@@ -191,40 +191,52 @@ Verifique:
 - texto e marcas;
 - ambiente e som.
 
-O storyboard não deve alterar silenciosamente decisões aprovadas. Quando revelar uma decisão nova de staging, cobertura, câmera ou transição, registre-a e leve-a ao gate correspondente.
+O storyboard não deve alterar silenciosamente decisões aprovadas. Quando revelar decisão nova de posicionamento, cobertura, câmera ou transição, registre alternativas e leve-as ao gate correspondente.
 
 ## 10. Relação entre unidades
 
 ```text
 beat narrativo
-≠ keyframe
+≠ quadro-chave de storyboard
+≠ imagem de condicionamento
 ≠ plano
 ≠ segmento gerado
 ≠ cena montada
 ```
 
 - **beat:** mudança de informação, ação, emoção ou estado;
-- **keyframe:** imagem de referência/decisão visual;
-- **plano:** unidade contínua de câmera na montagem;
+- **quadro-chave de storyboard:** imagem que representa uma decisão visual do plano/cena;
+- **imagem de condicionamento:** input usado para orientar uma geração;
+- **plano (shot):** unidade contínua de câmera na montagem;
 - **segmento gerado:** arquivo produzido pelo modelo, contendo um ou mais planos;
-- **cena montada:** combinação editorial de planos/segmentos.
+- **cena montada:** unidade narrativa composta por planos/segmentos.
 
-Não use a equivalência rígida `1 beat = 1 keyframe = 1 clipe`.
+Não use a equivalência rígida `1 beat = 1 quadro-chave = 1 clipe`.
 
-## 11. Como o MCP pode entrar
+## 11. Uso conforme a rota
 
-```text
-pedido humano
-→ brief/cartão estruturado
-→ aprovação
-→ operador/agente técnico
-→ MCP em ambiente isolado
-→ workflow conhecido
-→ artefato
-→ revisão humana
-```
+- **edição direta:** ajuda a selecionar enquadramentos e cortes existentes;
+- **vídeo programático:** orienta composição, hierarquia, ritmo e movimento;
+- **montagem híbrida:** cria linguagem comum entre materiais diferentes;
+- **complementação generativa:** define o plano ausente sem regenerar o projeto inteiro;
+- **narrativa generativa:** apoia storyboard, cobertura, continuidade e avaliação.
 
-MCP reduz atrito operacional; não elimina direitos, gates, segurança ou conhecimento técnico.
+## 12. Glossário híbrido
+
+| Termo | Sentido neste laboratório |
+|---|---|
+| Bible visual | memória externa de identidades, ambientes, regras e variações |
+| Prop | objeto de cena com função/continuidade |
+| Staging | posicionamento e deslocamento em cena |
+| Eyeline | direção coerente do olhar |
+| Lock | aspecto aprovado que deve permanecer estável |
+| Assembly | primeira montagem das seleções |
+| Rough cut | corte provisório usado para avaliar e descobrir lacunas |
+| Fine cut | corte refinado antes do travamento |
+| Picture lock | ordem, duração e pontos de corte congelados |
+| Cleanup | reparo/limpeza visual posterior |
+| Sound design | construção de ambientes e efeitos sonoros |
+| First/last frame | imagens usadas para condicionar estados inicial/final |
 
 ## Checklist
 
@@ -235,6 +247,6 @@ MCP reduz atrito operacional; não elimina direitos, gates, segurança ou conhec
 - [ ] Luz, cor e som são concretos?
 - [ ] Referências têm função e direitos conhecidos?
 - [ ] A continuidade foi conferida?
-- [ ] Beat, keyframe, plano e segmento não foram confundidos?
-- [ ] Decisões novas foram levadas ao gate?
-- [ ] O resultado será revisado antes da publicação?
+- [ ] Quadro-chave, condicionamento, plano e segmento não foram confundidos?
+- [ ] Decisões novas foram submetidas ao gate?
+- [ ] A escolha continua sendo possibilidade, não fórmula automática?

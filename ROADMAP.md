@@ -42,6 +42,9 @@ Cada teste deve gerar:
 - [x] Edição com `video-use`.
 - [x] Narração com IA de forma ética.
 - [x] Ideia → roteiro → cenas → vídeo.
+- [x] Mapa adaptativo de rotas: edição, vídeo programático, montagem híbrida, complementação e narrativa generativa.
+- [x] Gramática cinematográfica como repertório transversal, sem estética prescrita.
+- [ ] Validar em pilotos os módulos/templates de produção antes de recomendá-los como padrão para contextos específicos.
 - [x] Guia comparativo inicial por objetivo em `docs/01-mapa-de-ferramentas.md`.
 - [x] Trilhas práticas para pessoas leigas/intermediárias/técnicas.
 - [x] Prompt mestre para usar o repositório com ChatGPT/Claude/Gemini sem CLI.
@@ -53,6 +56,9 @@ Cada teste deve gerar:
 - [x] Prompt UGC/anúncio de produto.
 - [x] Prompt de vídeo programático com Remotion.
 - [x] Prompts HyperFrames para site/motion graphic.
+- [x] Templates modulares de cena, plano, segmento, experimento, assets, tentativas e revisão — estado `lab_synthesis`.
+- [x] Fixture sintética mínima e validador de relações estruturais.
+- [ ] Aplicar os templates em piloto controlado e revisar campos, perfis e gates.
 - [ ] Exemplo leve de projeto OpenReel exportado/importável, se o formato for adequado para versionamento.
 - [ ] Exemplo reproduzível de narração local após teste de Voicebox/GPT-SoVITS.
 

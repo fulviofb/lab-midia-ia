@@ -1,0 +1,53 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: DEMO-LIVRO
+  project_version: v0.1
+  scene_id: DEMO-LIVRO-SC01
+  shot_id: DEMO-LIVRO-SC01-P01
+  shot_version: v0.1
+  profile: light
+  status: approved
+narrative:
+  purpose: mostrar descoberta e indicação
+  related_beat_ids: [DEMO-LIVRO-SC01-B01]
+  audience_information: anotação é o foco
+visual:
+  subjects:
+    character_ids: []
+    prop_ids: []
+    environment_ids: []
+    asset_ids: [DEMO-LIVRO-ASSET-001]
+  initial_state: livro aberto; mão fora da página
+  dominant_action: mão entra e aponta
+  reaction: null
+  final_state: dedo permanece sobre a anotação
+  framing: plano médio com livro legível
+  angle: altura dos olhos levemente superior
+  composition: educadora à esquerda; livro no centro/direita
+  dominant_camera_behavior: aproximação lenta
+  lens_and_focus: foco no livro ao final
+  lighting_and_color: luz suave e quente
+  staging: gesto converge para o centro
+  screen_direction: esquerda para direita
+audio:
+  dialogue: null
+  ambience: sala silenciosa
+  sound_effect_asset_ids: []
+  music_asset_ids: []
+  silence_intent: preservar contemplação
+references:
+  asset_ids: [DEMO-LIVRO-ASSET-001]
+continuity:
+  from_shot_ids: []
+  to_shot_ids: []
+  lock_ids: []
+  notes: []
+acceptance:
+  criteria: [gesto legível, livro permanece estável]
+  rejection_conditions: [mãos deformadas, texto inventado em destaque]
+approval:
+  state: approved
+  decided_by: fixture-author
+  decided_at: "2026-08-23T00:00:00Z"
+  evidence_uri: README.md
+  notes: fixture estrutural

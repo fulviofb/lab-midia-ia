@@ -1,98 +1,141 @@
-# Revisão de montagem
+# Revisão de montagem, master e publicação
+
+**Estado de evidência:** `lab_synthesis`
+
+Use somente as seções aplicáveis. Registre valores observados; checkboxes sozinhos não constituem evidência.
 
 ## Identificação
 
-- Projeto:
-- Versão do corte:
+- Project ID:
+- Project version:
+- Cut ID:
+- Cut version:
+- Estado atual: `assembly | rough_cut | fine_cut | picture_lock | master`
+- Arquivo relativo revisado:
+- SHA-256:
 - Data:
-- Duração:
 - Revisor(es):
 
-## Estado
+## Revisão editorial
 
-- [ ] assembly
-- [ ] rough cut
-- [ ] fine cut
-- [ ] picture lock
-- [ ] master de publicação
+- [ ] Objetivo compreensível
+- [ ] Ordem dos beats funciona
+- [ ] Mudança de estado observável
+- [ ] Redundâncias avaliadas
+- [ ] Reações/contexto/detalhes suficientes
+- [ ] Áreas visuais ou temporais sem função avaliadas
 
-## Narrativa
+### Evidências/timecodes
 
-- [ ] O objetivo é compreensível?
-- [ ] A ordem dos beats funciona?
-- [ ] A mudança de estado é observável?
-- [ ] Há informação redundante?
-- [ ] Falta reação, contexto ou detalhe?
+-
 
 ## Geografia e continuidade
 
-- [ ] Direção de tela consistente?
-- [ ] Eyelines coerentes?
-- [ ] Objetos/mãos/figurinos preservados?
-- [ ] Luz/horário coerentes?
-- [ ] Transições compreensíveis?
+- [ ] Direção de tela
+- [ ] Eyelines
+- [ ] Objetos/mãos/figurinos
+- [ ] Luz/horário
+- [ ] Transições
+- [ ] Não aplicável registrado quando necessário
 
-## Ritmo
+### Evidências/timecodes
 
-- [ ] Planos permanecem pelo tempo necessário?
-- [ ] Há áreas temporais ou visuais sem função?
-- [ ] Cortes revelam informação, emoção ou avanço?
-- [ ] A ação pode ser resolvida em edição sem regenerar?
+-
 
-## Imagem
+## Imagem e conteúdo sintético
 
-- [ ] Identidade consistente?
-- [ ] Mãos, rostos, texto e marcas revisados?
-- [ ] Cor/materialidade coerentes?
-- [ ] Artefatos ou morphing inaceitáveis?
-- [ ] Resolução e enquadramento adequados?
+- [ ] Identidade
+- [ ] Mãos/rostos/textos/marcas
+- [ ] Cor/materialidade
+- [ ] Artefatos/morphing
+- [ ] Enquadramento/áreas sem função
+- [ ] Sinalização de conteúdo sintético, quando necessária
+
+### Evidências/timecodes
+
+-
 
 ## Som
 
-- [ ] Diálogo inteligível?
-- [ ] Ambiente coerente?
-- [ ] Áudio indesejado removido?
-- [ ] Música e efeitos possuem direitos?
-- [ ] Mixagem e picos verificados?
+- [ ] Diálogo inteligível
+- [ ] Ambiente coerente
+- [ ] Áudio indesejado removido
+- [ ] Música/efeitos/vozes com direitos e consentimentos
+- [ ] Mixagem e picos verificados
+
+### Evidências/timecodes
+
+-
 
 ## Lacunas
 
-| ID | Evidência/timecode | Severidade | Opção de edição | Opção de regeneração | Decisão | Responsável |
-|---|---|---|---|---|---|---|
-| | | | | | | |
+| Gap ID | Evidência/timecode | Severidade | Shot/segment/attempt IDs | Opção de edição | Opção de regeneração | Outra rota | Decisão | Responsável | Estado |
+|---|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | | open |
+
+Estados: `open`, `accepted`, `editing`, `regeneration_authorized`, `resolved`, `not_applicable`.
+
+## Gate do rough cut
+
+- Lacunas priorizadas:
+- Lacunas aceitas:
+- Correções por edição:
+- Regenerações autorizadas:
+- Novo teto autorizado:
+- Apto a avançar: `yes | no | blocked`
+- Decisor/data:
 
 ## Picture lock
 
-- Ordem aprovada por:
-- Duração aprovada por:
+- Ordem dos planos congelada: `yes | no | not_applicable`
+- Pontos de corte congelados: `yes | no | not_applicable`
+- Estrutura temporal congelada: `yes | no | not_applicable`
+- Duração congelada: `yes | no | not_applicable`
+- Exceções:
+- Aprovador:
 - Data:
-- Exceções pendentes:
+- Cut version/hash:
 
-## Validação técnica
+## QC técnico — valores observados
 
-- [ ] `ffprobe` executado
-- [ ] codec/container
-- [ ] resolução/proporção
-- [ ] fps
-- [ ] duração
-- [ ] áudio/canais/sample rate
-- [ ] frames internos inspecionados
-- [ ] arquivo de entrega reaberto
+| Campo | Valor | Evidência/comando |
+|---|---|---|
+| container | | |
+| video codec/profile | | |
+| resolução/proporção | | |
+| FPS | | |
+| duração | | |
+| bitrate/tamanho | | |
+| audio codec | | |
+| canais/sample rate | | |
+| frames internos inspecionados | | |
+| arquivo reaberto | | |
 
-## Direitos, privacidade e publicação
+## Direitos e privacidade
 
-- [ ] assets e referências revisados
-- [ ] consentimentos revisados
-- [ ] dados pessoais revisados
-- [ ] conteúdo sintético sinalizado quando necessário
-- [ ] publicação autorizada separadamente
+- Asset registry version:
+- Consentimentos revisados por:
+- Dados pessoais revisados por:
+- Retenção/exclusão verificada:
+- Restrições remanescentes:
+- Estado: `approved | blocked | not_applicable`
 
-## Veredito
+## Aceitação do master
 
-- [ ] aprovado
-- [ ] aprovado com ressalvas
-- [ ] requer edição
-- [ ] requer regeneração localizada
-- [ ] reprovado
+- Master artifact ID:
+- Arquivo relativo:
+- SHA-256:
+- Veredito: `approved | approved_with_reservations | requires_edit | requires_regeneration | rejected`
+- Aprovador:
+- Data:
+- Observações:
 
-Observações:
+## Autorização de publicação — separada
+
+- Estado: `open | approved | rejected | revoked | not_applicable`
+- Canal/escopo:
+- Versão/hash autorizados:
+- Autorizador:
+- Data:
+- Expiração/revogação:
+- Evidência:

@@ -1,66 +1,68 @@
-shot_id: "SC01-P01"
-scene_id: "SC01"
-version: ""
+metadata:
+  evidence_status: lab_synthesis
+  project_id: PROJ-DEMO
+  project_version: v0.1
+  scene_id: PROJ-DEMO-SC01
+  shot_id: PROJ-DEMO-SC01-P01
+  shot_version: v0.1
+  profile: light
+  status: draft
 
 narrative:
   purpose: ""
-  related_beats: []
+  related_beat_ids: []
   audience_information: ""
 
 visual:
-  subject: ""
+  subjects:
+    character_ids: []
+    prop_ids: []
+    environment_ids: []
+    asset_ids: []
   initial_state: ""
   dominant_action: ""
-  reaction: ""
+  reaction: null
   final_state: ""
   framing: ""
   angle: ""
   composition: ""
   dominant_camera_behavior: ""
-  lens_focus: ""
-  lighting_color: ""
+  lens_and_focus: ""
+  lighting_and_color: ""
   staging: ""
   screen_direction: ""
 
 audio:
-  dialogue: ""
+  dialogue: null
   ambience: ""
-  sound_effects: []
-  music_or_silence: ""
+  sound_effect_asset_ids: []
+  music_asset_ids: []
+  silence_intent: null
 
 references:
-  - id: "REF-01"
-    function: ""
-    version: ""
+  asset_ids: []
 
 continuity:
-  from_previous: []
-  to_next: []
-  locks: []
+  from_shot_ids: []
+  to_shot_ids: []
+  lock_ids: []
+  notes: []
 
-conditioning_strategy:
-  type: "undecided"
-  options_considered: []
-  rationale: ""
-  risks: []
-
-segment_plan:
-  segment_id: "SEG-01"
-  may_contain_multiple_shots: false
-  requested_duration_s: 0
-  timed_segments: []
-
-experiment:
-  mode: "diagnostic"
-  hypothesis: ""
-  variable: ""
-  max_attempts: 0
-  max_displayed_credits: 0
-  acceptance: []
-  stop_conditions: []
+acceptance:
+  criteria: []
+  rejection_conditions: []
 
 approval:
-  approver: ""
-  status: "open"
-  date: ""
+  state: open
+  decided_by: null
+  decided_at: null
+  evidence_uri: null
   notes: ""
+
+allowed_statuses:
+  - draft
+  - approved
+  - rejected
+  - blocked
+  - not_applicable
+  - superseded
