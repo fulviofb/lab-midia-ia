@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-09-16T02:42:56+00:00`
+Gerado em: `2026-09-16T03:02:40+00:00`
 
 ## Como usar
 
@@ -248,13 +248,13 @@ Premissa, estrutura, personagens, diálogo, adaptação e consistência de séri
 
 ### [screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills)
 
-- **Status:** Promissor; testar antes de recomendar
+- **Status:** Parcialmente testado
 - **Prioridade:** Alta prioridade
 - **Nível:** avançado
 - **Licença:** MIT
 - **Estrelas observadas:** 1160
 - **Resumo:** Transformar uma ideia em premissa, tema e logline.
-- **Recomendação:** Não recomendar ainda como caminho principal; fazer smoke test primeiro.
+- **Recomendação:** O recorte testado vale; o restante do fluxo ainda exige validação.
 - **Custo/requisitos:** Código aberto ou referência pública; verificar custos de serviços externos.
 
 ## Modelos e referências técnicas

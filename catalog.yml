@@ -610,7 +610,7 @@ repositories:
   category: roteiro_dramaturgia
   subcategory: agent_screenwriting_skills
   priority: high
-  status: test_before_recommending
+  status: partially_tested
   language: Markdown
   license: MIT
   stars_observed: 1160
@@ -620,7 +620,9 @@ repositories:
     o trabalho original das citações de livros, roteiros e traduções, que não
     são relicenciadas. 26 skills textuais, validador local sem hooks/rede. Não
     instalar o plugin globalmente nem copiar o conjunto. Ver
-    docs/testes/screenwriting-skills-avaliacao.md. Piloto comparativo na issue 26.
+    docs/testes/screenwriting-skills-avaliacao.md e
+    docs/testes/screenwriting-skills-piloto.md. Núcleo útil para short narrativo;
+    não substitui o guia 06 nem justifica instalar o plugin.
   use_cases:
   - Transformar uma ideia em premissa, tema e logline.
   - Organizar um projeto de roteiro com story bible e etapas.
