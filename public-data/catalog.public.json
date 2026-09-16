@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T13:04:50+00:00",
+  "generated_at": "2026-09-16T02:42:56+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -49,6 +49,12 @@
       "label": "Imagem, design e prompts",
       "description": "Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visual.",
       "item_count": 3
+    },
+    {
+      "id": "roteiro_dramaturgia",
+      "label": "Roteiro e dramaturgia",
+      "description": "Premissa, estrutura, personagens, diálogo, adaptação e consistência de série para roteiros de vídeo.",
+      "item_count": 1
     },
     {
       "id": "modelos_referencia",
@@ -567,6 +573,35 @@
       "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
     },
     {
+      "id": "screenwriting-skills",
+      "name": "screenwriting-skills",
+      "full_name": "jtydhr88/screenwriting-skills",
+      "url": "https://github.com/jtydhr88/screenwriting-skills",
+      "category": "roteiro_dramaturgia",
+      "category_label": "Roteiro e dramaturgia",
+      "subcategory": "agent_screenwriting_skills",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "test_before_recommending",
+      "status_label": "Promissor; testar antes de recomendar",
+      "recommendation": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+      "technical_level": "advanced",
+      "technical_level_label": "avançado",
+      "audience": "roteiristas, educadores e agentes de produção narrativa",
+      "public_summary": "Transformar uma ideia em premissa, tema e logline.",
+      "use_cases": [
+        "Transformar uma ideia em premissa, tema e logline.",
+        "Organizar um projeto de roteiro com story bible e etapas.",
+        "Diagnosticar diálogo, cena, personagem e estrutura antes de renderizar."
+      ],
+      "license": "MIT",
+      "language": "Markdown",
+      "stars_observed": 1160,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto ou referência pública; verificar custos de serviços externos.",
+      "install_hint_public": "Testar em pequena escala antes de indicar para terceiros."
+    },
+    {
       "id": "longcat-video",
       "name": "LongCat-Video",
       "full_name": "meituan-longcat/LongCat-Video",
@@ -623,6 +658,9 @@
       "awesome-gpt-image-2",
       "ui-ux-pro-max-skill",
       "awesome-nano-banana-pro-prompts"
+    ],
+    "roteiro_dramaturgia": [
+      "screenwriting-skills"
     ],
     "modelos_referencia": [
       "longcat-video"
