@@ -104,7 +104,7 @@ Objetivo: validar geração de fala local, API/MCP e integração com workflows 
 
 ### 3. screenwriting-skills (roteiro)
 
-Piloto de roteiro concluído em `docs/testes/screenwriting-skills-piloto.md` (issue #26). Workflow público fino, se houver, em PR separado.
+Piloto de roteiro concluído em `docs/testes/screenwriting-skills-piloto.md` (issue #26). Workflow fino: `workflows/roteiro-curto-antes-de-produzir.md`.
 
 ### 4. TTS/clonagem local aproveitando GPU dedicada
 

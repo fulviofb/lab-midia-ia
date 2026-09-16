@@ -21,6 +21,8 @@ Responda:
 
 ## Passo 2: Roteiro
 
+Se a peça tem personagens e uma virada (não só tópicos na tela), faça antes o fluxo `workflows/roteiro-curto-antes-de-produzir.md`. Depois volte a este passo.
+
 Escreva o roteiro em tópicos curtos. Exemplo:
 
 ```txt
