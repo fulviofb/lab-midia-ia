@@ -37,6 +37,7 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 5. **Vídeo generativo/cinematográfico** — Seedance, Higgsfield, direção cinematográfica e prompts avançados.
 6. **Voz/TTS/clonagem** — Voicebox, GPT-SoVITS, Fish Speech, MisoTTS e ferramentas de narração.
 7. **Imagem/design/prompts** — GPT Image, Nano Banana, UI/UX skills, thumbnails e capas.
+8. **Roteiro e dramaturgia** — premissa, estrutura, diálogo e consistência de série (ainda em avaliação; não instalar o plugin).
 
 ## Repositórios núcleo do laboratório
 
@@ -69,6 +70,7 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `Remotion Agent Skills`: testado e recomendado no Windows; atenção à licença comercial do Remotion.
 - `Voicebox`: documentado a partir de código/release; precisa instalação manual do app desktop para teste prático.
 - `OpenReel Video`: catalogado; próximo candidato de teste prático com navegador e GPU dedicada.
+- `screenwriting-skills`: avaliado (licença MIT + NOTICE, 26 skills, sem runtime). Status `test_before_recommending` até o piloto comparativo. Ver `docs/testes/screenwriting-skills-avaliacao.md`.
 
 ## Como usar este repo
 

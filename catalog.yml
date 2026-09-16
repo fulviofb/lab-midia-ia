@@ -20,6 +20,8 @@ categories:
   voz_tts_clonagem: TTS, clonagem de voz, voice conversion, narração e ditado.
   imagem_design_prompts: Prompts de imagem, design visual, UI/UX, thumbnails, capas
     e consistência visual.
+  roteiro_dramaturgia: Premissa, estrutura, personagens, diálogo, adaptação e consistência
+    de série para roteiros de vídeo.
   modelos_referencia: Modelos e projetos técnicos relevantes para estudo.
 repositories:
 - name: video-use
@@ -602,6 +604,33 @@ repositories:
   - nanobanana-pro
   - prompt-engineering
   - prompts
+- name: screenwriting-skills
+  full_name: jtydhr88/screenwriting-skills
+  url: https://github.com/jtydhr88/screenwriting-skills
+  category: roteiro_dramaturgia
+  subcategory: agent_screenwriting_skills
+  priority: high
+  status: test_before_recommending
+  language: Markdown
+  license: MIT
+  stars_observed: 1160
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Avaliado no commit 50825325 (14 set 2026). LICENSE é MIT; NOTICE separa
+    o trabalho original das citações de livros, roteiros e traduções, que não
+    são relicenciadas. 26 skills textuais, validador local sem hooks/rede. Não
+    instalar o plugin globalmente nem copiar o conjunto. Ver
+    docs/testes/screenwriting-skills-avaliacao.md. Piloto comparativo na issue 26.
+  use_cases:
+  - Transformar uma ideia em premissa, tema e logline.
+  - Organizar um projeto de roteiro com story bible e etapas.
+  - Diagnosticar diálogo, cena, personagem e estrutura antes de renderizar.
+  forks_observed: 128
+  open_issues_observed: 0
+  github_updated_at: '2026-09-16T02:01:35Z'
+  topics:
+  - ai
+  - skills
 recommended_mvp:
 - browser-use/video-use
 - heygen-com/hyperframes

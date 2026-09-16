@@ -47,6 +47,7 @@ CATEGORY_LABELS = {
     "video_generativo_cinematico": "Vídeo generativo/cinematográfico",
     "voz_tts_clonagem": "Voz, narração e TTS",
     "imagem_design_prompts": "Imagem, design e prompts",
+    "roteiro_dramaturgia": "Roteiro e dramaturgia",
     "modelos_referencia": "Modelos e referências técnicas",
 }
 
@@ -88,6 +89,7 @@ CATEGORY_AUDIENCE = {
     "video_generativo_cinematico": "criadores visuais e direção criativa",
     "voz_tts_clonagem": "narração, áudio, voz e acessibilidade",
     "imagem_design_prompts": "design, imagem, thumbnails e posts",
+    "roteiro_dramaturgia": "roteiristas, educadores e agentes de produção narrativa",
     "modelos_referencia": "estudo técnico e pesquisa",
 }
 
@@ -123,6 +125,8 @@ def infer_technical_level(repo: dict[str, Any]) -> str:
     language = repo.get("language", "")
 
     if category == "modelos_referencia":
+        return "advanced"
+    if category == "roteiro_dramaturgia":
         return "advanced"
     if category == "video_programatico":
         return "technical"

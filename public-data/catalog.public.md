@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-07-08T13:04:50+00:00`
+Gerado em: `2026-09-16T02:42:56+00:00`
 
 ## Como usar
 
@@ -241,6 +241,21 @@ Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visua
 - **Resumo:** LICENSE e README indicam Creative Commons Attribution 4.0.
 - **Recomendação:** Use como referência, não como ferramenta principal para iniciantes.
 - **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
+
+## Roteiro e dramaturgia
+
+Premissa, estrutura, personagens, diálogo, adaptação e consistência de série para roteiros de vídeo.
+
+### [screenwriting-skills](https://github.com/jtydhr88/screenwriting-skills)
+
+- **Status:** Promissor; testar antes de recomendar
+- **Prioridade:** Alta prioridade
+- **Nível:** avançado
+- **Licença:** MIT
+- **Estrelas observadas:** 1160
+- **Resumo:** Transformar uma ideia em premissa, tema e logline.
+- **Recomendação:** Não recomendar ainda como caminho principal; fazer smoke test primeiro.
+- **Custo/requisitos:** Código aberto ou referência pública; verificar custos de serviços externos.
 
 ## Modelos e referências técnicas
 

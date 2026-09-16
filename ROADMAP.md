@@ -102,7 +102,11 @@ Critérios mínimos:
 
 Objetivo: validar geração de fala local, API/MCP e integração com workflows de vídeo.
 
-### 3. TTS/clonagem local aproveitando GPU dedicada
+### 3. screenwriting-skills (roteiro)
+
+Objetivo: comparar o guia atual ideia→roteiro→cenas com o núcleo `sw-*` numa história original curta. Não instalar o plugin globalmente nem copiar `reference.md`.
+
+### 4. TTS/clonagem local aproveitando GPU dedicada
 
 Com a RTX 4060 Laptop GPU 8 GB, vale reavaliar ferramentas que antes seriam pesadas demais, especialmente GPT-SoVITS, Fish Speech e Voicebox com backends acelerados.
 
