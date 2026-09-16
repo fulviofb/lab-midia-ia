@@ -83,7 +83,8 @@ Use primeiro:
 Use como referência, ainda sem recomendar como caminho principal:
 
 1. [`jtydhr88/screenwriting-skills`](https://github.com/jtydhr88/screenwriting-skills) — 26 skills de dramaturgia (premissa, cena, diálogo, série).
-2. O guia atual `docs/guias/06-ideia-roteiro-cenas-video.md` — caminho até o render; o núcleo `sw-*` é opcional antes, em shorts narrativos (ver piloto).
+2. O guia atual `docs/guias/06-ideia-roteiro-cenas-video.md` — caminho até o render.
+3. `workflows/roteiro-curto-antes-de-produzir.md` — opcional, só quando houver história.
 
 Não instalar o plugin no agente global. Não copiar os arquivos `reference.md` (citações de terceiros). Ver `docs/testes/screenwriting-skills-avaliacao.md` e `docs/testes/screenwriting-skills-piloto.md`.
 
