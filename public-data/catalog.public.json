@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-16T02:42:56+00:00",
+  "generated_at": "2026-09-16T03:02:40+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -582,9 +582,9 @@
       "subcategory": "agent_screenwriting_skills",
       "priority": "high",
       "priority_label": "Alta prioridade",
-      "status": "test_before_recommending",
-      "status_label": "Promissor; testar antes de recomendar",
-      "recommendation": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+      "status": "partially_tested",
+      "status_label": "Parcialmente testado",
+      "recommendation": "O recorte testado vale; o restante do fluxo ainda exige validação.",
       "technical_level": "advanced",
       "technical_level_label": "avançado",
       "audience": "roteiristas, educadores e agentes de produção narrativa",
@@ -599,7 +599,7 @@
       "stars_observed": 1160,
       "agent_fit": "high",
       "cost_hint": "Código aberto ou referência pública; verificar custos de serviços externos.",
-      "install_hint_public": "Testar em pequena escala antes de indicar para terceiros."
+      "install_hint_public": "Abrir o link oficial e verificar requisitos atuais."
     },
     {
       "id": "longcat-video",

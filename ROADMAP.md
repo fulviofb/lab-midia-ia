@@ -104,7 +104,7 @@ Objetivo: validar geração de fala local, API/MCP e integração com workflows 
 
 ### 3. screenwriting-skills (roteiro)
 
-Objetivo: comparar o guia atual ideia→roteiro→cenas com o núcleo `sw-*` numa história original curta. Não instalar o plugin globalmente nem copiar `reference.md`.
+Piloto de roteiro concluído em `docs/testes/screenwriting-skills-piloto.md` (issue #26). Workflow público fino, se houver, em PR separado.
 
 ### 4. TTS/clonagem local aproveitando GPU dedicada
 
