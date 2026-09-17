@@ -35,7 +35,7 @@ nav{position:sticky;top:0;z-index:2;background:var(--navy);border-top:1px solid 
 nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
 nav a{flex:none;color:var(--white);text-decoration:none;font-size:15px;border:1px solid var(--line);border-radius:999px;padding:5px 13px}
 nav a:hover,nav a:focus-visible{border-color:var(--gold);color:var(--gold)}
-section{padding-block:34px 6px}
+section{padding-block:34px 6px;scroll-margin-top:56px}
 h2{font-size:30px;line-height:1.15;font-weight:600;margin:0 0 6px;text-wrap:balance}
 .step{font-family:var(--ital);font-style:italic;color:var(--gold-ink);font-weight:600;font-size:22px;margin:0}
 p{margin:.5em 0}
@@ -97,7 +97,7 @@ footer .q{font-family:var(--ital);font-style:italic;color:var(--gold);font-size:
     <p class="step">Passo 1 · 8 minutos</p>
     <h2>O trecho vira texto</h2>
     <div id="trecho-box" hidden>
-      <p class="hint">Trecho da oficina:</p>
+      <p class="hint">Trecho da oficina (o Prompt 1 abaixo já vem com ele):</p>
       <p class="trecho" id="trecho-texto"></p>
       <p class="hint" id="trecho-ref"></p>
     </div>
@@ -168,7 +168,7 @@ Não inclua texto, rostos de pessoas reais nem figuras religiosas.</pre>
     <div class="links">
       <a href="https://fulviofb.github.io/art-style/"><b>Art Style</b><small>Catálogo de estilos visuais para imagem e vídeo com IA</small></a>
       <a href="https://concafras-ia.vercel.app/"><b>Concafras IA</b><small>Ferramentas, assistentes e caminhos para a comunicação espírita</small></a>
-      <a href="https://notebooklm.google.com/notebook/cf3e4adf-5026-47bd-9d98-afdd08de258b"><b>Caderno de estudo no NotebookLM</b><small>Perguntas respondidas com a fonte citada</small></a>
+      <a href="https://notebooklm.google.com/notebook/cf3e4adf-5026-47bd-9d98-afdd08de258b"><b>Caderno Mídia com IA no NotebookLM</b><small>Tire dúvidas sobre as receitas e ferramentas, com a fonte citada</small></a>
       <a href="https://github.com/fulviofb/lab-midia-ia/blob/master/docs/receitas/04-card-doutrinario-fiel-a-fonte.md"><b>Receita 04 · Card fiel à fonte</b><small>Esta oficina, passo a passo, para repetir na sua casa espírita</small></a>
       <a href="https://github.com/fulviofb/lab-midia-ia/blob/master/docs/receitas/01-convite-de-evento.md"><b>Receita 01 · Convite de evento</b><small>Arte e vídeo curto para WhatsApp e Instagram</small></a>
       <a href="https://github.com/fulviofb/lab-midia-ia/blob/master/docs/receitas/02-cortes-de-palestra.md"><b>Receita 02 · Cortes de palestra</b><small>Vídeos curtos legendados a partir de uma palestra</small></a>
@@ -187,7 +187,10 @@ Não inclua texto, rostos de pessoas reais nem figuras religiosas.</pre>
 
 <script>
 // Trecho da oficina: preencha para exibi-lo com botão de cópia no passo 1.
-var TRECHO = { texto: "", referencia: "" };
+var TRECHO = {
+  texto: "Por estas palavras: Bem-aventurados os aflitos, pois que serão consolados, Jesus aponta a compensação que hão de ter os que sofrem e a resignação que leva o padecente a bendizer do sofrimento, como prelúdio da cura.",
+  referencia: "O Evangelho segundo o Espiritismo, cap. V, item 12"
+};
 
 (function(){
   if (TRECHO.texto) {
