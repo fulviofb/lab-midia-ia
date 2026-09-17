@@ -18,7 +18,11 @@ Página de apoio com os prompts prontos para copiar: <https://fulviofb.github.io
 
 Abra a obra e escolha um trecho curto, de 3 a 5 linhas, que faça sentido sozinho. Anote a referência completa: obra, capítulo e item (ou questão).
 
-Exemplo de tema: *O Evangelho segundo o Espiritismo*, cap. V, "Bem-aventurados os aflitos".
+Exemplo usado na oficina do EFAS Goiânia 2026:
+
+> "Por estas palavras: Bem-aventurados os aflitos, pois que serão consolados, Jesus aponta a compensação que hão de ter os que sofrem e a resignação que leva o padecente a bendizer do sofrimento, como prelúdio da cura."
+>
+> *O Evangelho segundo o Espiritismo*, cap. V, item 12 (tradução de Guillon Ribeiro, FEB).
 
 ### 2. Peça o texto do card à LLM
 
