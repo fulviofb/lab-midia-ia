@@ -18,7 +18,9 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `docs/trilhas/`: caminhos práticos por objetivo e nível técnico.
 - `docs/receitas/`: receitas rápidas por resultado, para pessoas leigas — poucos passos, só ferramentas web.
 - `docs/publico/`: materiais para compartilhar com pessoas leigas, inclusive uso com LLM sem CLI.
+- `docs/aulas/`: roteiros de aulas e oficinas já ministradas, para repetir em outras casas.
 - `docs/estrategia/`: estratégia de formação, site Concafras IA e princípio da gratuidade.
+- `site/`: páginas publicadas no GitHub Pages (ex.: página de apoio de oficinas).
 - `docs/testes/`: relatórios de testes práticos e bloqueios encontrados.
 - `docs/workarounds/`: soluções para problemas específicos, especialmente no Windows.
 - `docs/scripts/`: documentação dos scripts de automação.
@@ -90,6 +92,11 @@ Para pessoas leigas: resultado pronto em poucos passos, só ferramentas web ou d
 - `docs/receitas/01-convite-de-evento.md`
 - `docs/receitas/02-cortes-de-palestra.md`
 - `docs/receitas/03-narracao-de-texto.md`
+- `docs/receitas/04-card-doutrinario-fiel-a-fonte.md`
+
+## Aulas e oficinas
+
+- `docs/aulas/efas-goiania-2026.md` — "Novas Dimensões do Conhecimento", EFAS Goiânia 2026. Página de apoio: <https://fulviofb.github.io/lab-midia-ia/efas/>
 
 ## Trilhas práticas
 

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oficina IA · EFAS Goiânia 2026</title>
+<meta name="description" content="Página de apoio da oficina Novas Dimensões do Conhecimento: prompts prontos, checklist e links gratuitos.">
+<meta name="theme-color" content="#0b1a33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{
+  --navy:#0b1a33; --deep:#071228; --card:#132a4f; --line:#2c4675;
+  --gold:#d9a441; --gold-ink:#8a6620; --cream:#f3ead8; --paper:#fbf6ea;
+  --ink:#13233f; --muted:#55607a; --white:#f6f1e6; --muted-d:#b3bdd0;
+  --serif:"Crimson Pro",Georgia,"Times New Roman",serif;
+  --ital:"Cormorant Garamond",Georgia,serif;
+  --mono:ui-monospace,"SFMono-Regular",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding-inline:18px}
+header{background:radial-gradient(ellipse at 90% 0%,#7a5530 0%,var(--navy) 55%,var(--deep) 100%);color:var(--white);padding-block:calc(36px + env(safe-area-inset-top,0px)) 40px}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0}
+h1{font-size:clamp(34px,8vw,48px);line-height:1.05;font-weight:600;margin:.3em 0 .25em;text-wrap:balance}
+.sub{font-family:var(--ital);font-style:italic;font-weight:600;color:var(--gold);font-size:clamp(23px,5.4vw,29px);line-height:1.2;margin:0 0 18px}
+.orn{display:flex;align-items:center;gap:10px;margin:14px 0}
+.orn i{height:1.5px;width:56px;background:var(--gold)}
+.orn b{width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+.meta{color:var(--muted-d);font-size:16px;margin:0}
+nav{position:sticky;top:0;z-index:2;background:var(--navy);border-top:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:10px;scrollbar-width:none}
+nav a{flex:none;color:var(--white);text-decoration:none;font-size:15px;border:1px solid var(--line);border-radius:999px;padding:5px 13px}
+nav a:hover,nav a:focus-visible{border-color:var(--gold);color:var(--gold)}
+section{padding-block:34px 6px}
+h2{font-size:30px;line-height:1.15;font-weight:600;margin:0 0 6px;text-wrap:balance}
+.step{font-family:var(--ital);font-style:italic;color:var(--gold-ink);font-weight:600;font-size:22px;margin:0}
+p{margin:.5em 0}
+.lead{color:var(--muted)}
+.rule{background:var(--navy);color:var(--white);border-radius:14px;padding:18px 20px;margin-top:28px}
+.rule p{margin:0}
+.rule strong{color:var(--gold)}
+.prompt{background:var(--paper);border:1.5px solid #d8c9a6;border-radius:14px;margin:16px 0 8px;overflow:hidden}
+.prompt-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px 10px 16px;border-bottom:1px solid #e3d7bc}
+.prompt-head span{font-weight:600;font-size:17px}
+pre{margin:0;padding:14px 16px 16px;font-family:var(--mono);font-size:14.5px;line-height:1.55;white-space:pre-wrap;word-wrap:break-word;color:var(--ink)}
+button.copy{font:600 15px var(--serif);background:var(--navy);color:var(--gold);border:0;border-radius:999px;padding:9px 16px;min-height:40px;cursor:pointer;flex:none}
+button.copy:active{transform:translateY(1px)}
+button.copy.done{background:var(--gold);color:var(--navy)}
+:focus-visible{outline:2.5px solid var(--gold-ink);outline-offset:2px}
+.hint{font-size:16px;color:var(--muted)}
+.trecho{border-left:3px solid var(--gold-ink);padding:4px 0 4px 16px;font-family:var(--ital);font-style:italic;font-weight:500;font-size:22px;line-height:1.35}
+ol.how{padding-left:1.3em}
+ol.how li{margin:.35em 0}
+.check label{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #dccfb2;cursor:pointer}
+.check input{width:22px;height:22px;margin-top:3px;accent-color:var(--gold-ink);flex:none}
+.check input:checked+span{color:var(--muted);text-decoration:line-through}
+.crit{display:grid;gap:0}
+.crit div{padding:12px 0;border-bottom:1px solid #dccfb2}
+.crit b{display:block;color:var(--gold-ink);font-size:20px}
+.links a{display:block;text-decoration:none;padding:13px 0;border-bottom:1px solid #dccfb2}
+.links a b{display:block;font-size:19px}
+.links a small{display:block;color:var(--muted);font-size:15.5px;line-height:1.4}
+.links a:hover b{color:var(--gold-ink)}
+footer{margin-top:40px;background:var(--navy);color:var(--muted-d);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));font-size:15.5px}
+footer .q{font-family:var(--ital);font-style:italic;color:var(--gold);font-size:22px;font-weight:600;margin:0 0 6px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">5861º Encontro Fraterno Auta de Souza · Goiânia-GO</p>
+    <h1>Novas Dimensões do Conhecimento</h1>
+    <p class="sub">Oficina: do tema ao post</p>
+    <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
+    <p class="meta">Fúlvio Borges · 19 e 20 de setembro de 2026 · Tudo aqui é gratuito</p>
+  </div>
+</header>
+
+<nav aria-label="Passos da oficina">
+  <div class="wrap">
+    <a href="#texto">1 · Texto</a><a href="#imagem">2 · Imagem</a><a href="#revisar">3 · Revisar</a><a href="#criterios">Critérios</a><a href="#continuar">Continuar</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="rule">
+    <p><strong>Primeiro a fonte, depois a IA.</strong> A IA responde de memória e pode inventar citações. O texto do card sai só do trecho do livro.</p>
+  </div>
+
+  <section id="texto">
+    <p class="step">Passo 1 · 8 minutos</p>
+    <h2>O trecho vira texto</h2>
+    <div id="trecho-box" hidden>
+      <p class="hint">Trecho da oficina:</p>
+      <p class="trecho" id="trecho-texto"></p>
+      <p class="hint" id="trecho-ref"></p>
+    </div>
+    <p class="lead" id="trecho-vazio">Use o trecho de <i>O Evangelho segundo o Espiritismo</i>, cap. V, indicado na oficina, ou outro da sua edição.</p>
+    <div class="prompt">
+      <div class="prompt-head"><span>Prompt 1 · Card fiel à fonte</span><button class="copy" type="button" data-copy="p1">Copiar</button></div>
+<pre id="p1">Você vai me ajudar a divulgar o Espiritismo com fidelidade.
+Use APENAS o trecho abaixo. Não acrescente citações, autores nem ideias que não estejam nele.
+
+Trecho: [cole aqui o trecho do livro]
+Referência: [obra, capítulo, item]
+
+Crie 3 opções de texto para um card de rede social:
+- título de até 6 palavras;
+- 2 frases simples, serenas e acolhedoras;
+- sem sensacionalismo, sem promessa de cura, sem apelo ao medo;
+- termine com a referência exata que eu informei.
+Público: [ex.: pessoas que estão passando por um momento difícil].</pre>
+    </div>
+    <p class="hint">Cole no ChatGPT ou no Gemini, troque o que está entre colchetes e escolha a opção mais natural.</p>
+  </section>
+
+  <section id="imagem">
+    <p class="step">Passo 2 · 10 minutos</p>
+    <h2>Um estilo vira imagem</h2>
+    <ol class="how">
+      <li>Abra o <a href="https://fulviofb.github.io/art-style/">catálogo Art Style</a> e escolha um estilo.</li>
+      <li>Toque e segure na imagem de referência e escolha <b>Copiar imagem</b>.</li>
+      <li>Cole a imagem no ChatGPT ou no Gemini, junto com o texto abaixo.</li>
+    </ol>
+    <div class="prompt">
+      <div class="prompt-head"><span>Prompt 2 · Imagem com estilo</span><button class="copy" type="button" data-copy="p2">Copiar</button></div>
+<pre id="p2">Crie uma imagem nova no mesmo estilo visual da referência (cores, traço, luz e textura), mas com outro tema:
+[ex.: mãos que amparam outra mão, amanhecer depois de uma tempestade no mar, uma luz suave entrando por uma janela]
+
+Formato: quadrado 1:1, com espaço livre na parte de cima para um título.
+Não inclua texto, rostos de pessoas reais nem figuras religiosas.</pre>
+    </div>
+    <p class="hint">Prefira símbolos: luz, mãos, caminho, amanhecer.</p>
+  </section>
+
+  <section id="revisar">
+    <p class="step">Passo 3 · 7 minutos</p>
+    <h2>Monte e revise</h2>
+    <p>Coloque o título e o texto sobre a imagem (Canva ou editor do celular). Depois, a outra pessoa da dupla lê em voz alta:</p>
+    <div class="check">
+      <label><input type="checkbox" id="c1"><span>A citação confere com o livro, palavra por palavra?</span></label>
+      <label><input type="checkbox" id="c2"><span>A referência (obra, capítulo, item) está no card?</span></label>
+      <label><input type="checkbox" id="c3"><span>O texto está sereno, sem promessa de cura?</span></label>
+      <label><input type="checkbox" id="c4"><span>A imagem evita figuras sagradas e rostos reais?</span></label>
+      <label><input type="checkbox" id="c5"><span>Vou avisar que a imagem foi feita com IA?</span></label>
+    </div>
+  </section>
+
+  <section id="criterios">
+    <h2>Cinco critérios antes de publicar</h2>
+    <div class="crit">
+      <div><b>Fidelidade</b>Toda citação é conferida na obra, com capítulo e item.</div>
+      <div><b>Transparência</b>Imagem, voz ou vídeo feitos com IA são sinalizados.</div>
+      <div><b>Respeito</b>Nada de mensagens simuladas de Espíritos ou médiuns. Nada de voz ou rosto sem autorização.</div>
+      <div><b>Serenidade</b>Sem sensacionalismo, sem medo, sem promessa de cura.</div>
+      <div><b>Gratuidade</b>Ferramentas gratuitas. Nada é vendido.</div>
+    </div>
+  </section>
+
+  <section id="continuar">
+    <h2>Para continuar estudando</h2>
+    <div class="links">
+      <a href="https://fulviofb.github.io/art-style/"><b>Art Style</b><small>Catálogo de estilos visuais para imagem e vídeo com IA</small></a>
+      <a href="https://concafras-ia.vercel.app/"><b>Concafras IA</b><small>Ferramentas, assistentes e caminhos para a comunicação espírita</small></a>
+      <a href="https://notebooklm.google.com/notebook/cf3e4adf-5026-47bd-9d98-afdd08de258b"><b>Caderno de estudo no NotebookLM</b><small>Perguntas respondidas com a fonte citada</small></a>
+      <a href="https://github.com/fulviofb/lab-midia-ia/blob/master/docs/receitas/04-card-doutrinario-fiel-a-fonte.md"><b>Receita 04 · Card fiel à fonte</b><small>Esta oficina, passo a passo, para repetir na sua casa espírita</small></a>
+      <a href="https://github.com/fulviofb/lab-midia-ia/blob/master/docs/receitas/01-convite-de-evento.md"><b>Receita 01 · Convite de evento</b><small>Arte e vídeo curto para WhatsApp e Instagram</small></a>
+      <a href="https://github.com/fulviofb/lab-midia-ia/blob/master/docs/receitas/02-cortes-de-palestra.md"><b>Receita 02 · Cortes de palestra</b><small>Vídeos curtos legendados a partir de uma palestra</small></a>
+      <a href="https://github.com/fulviofb/lab-midia-ia/blob/master/docs/receitas/03-narracao-de-texto.md"><b>Receita 03 · Narração ética</b><small>Sua voz ou uma voz sintética genérica</small></a>
+      <a href="https://github.com/fulviofb/lab-midia-ia/blob/master/prompts/prompt-mestre-consultor-midia-ia.md"><b>Prompt mestre</b><small>Peça a uma IA o caminho certo para o que você quer criar</small></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="q">1 pessoa, 1 receita, 1 mês.</p>
+    <p>Leve uma receita para a sua casa espírita e ensine uma pessoa. Todo este material é gratuito: “Dai gratuitamente o que gratuitamente recebestes” (Mateus 10:8).</p>
+  </div>
+</footer>
+
+<script>
+// Trecho da oficina: preencha para exibi-lo com botão de cópia no passo 1.
+var TRECHO = { texto: "", referencia: "" };
+
+(function(){
+  if (TRECHO.texto) {
+    document.getElementById('trecho-texto').textContent = TRECHO.texto;
+    document.getElementById('trecho-ref').textContent = TRECHO.referencia;
+    document.getElementById('trecho-box').hidden = false;
+    document.getElementById('trecho-vazio').hidden = true;
+    var p1 = document.getElementById('p1');
+    p1.textContent = p1.textContent
+      .replace('[cole aqui o trecho do livro]', TRECHO.texto)
+      .replace('[obra, capítulo, item]', TRECHO.referencia);
+  }
+
+  function selectText(el){
+    var r = document.createRange(); r.selectNodeContents(el);
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  }
+  document.querySelectorAll('button.copy').forEach(function(b){
+    b.addEventListener('click', function(){
+      var el = document.getElementById(b.getAttribute('data-copy'));
+      var done = function(){ b.textContent = 'Copiado'; b.classList.add('done');
+        setTimeout(function(){ b.textContent = 'Copiar'; b.classList.remove('done'); }, 1800); };
+      var fallback = function(){ selectText(el);
+        try { document.execCommand('copy') ? done() : (b.textContent = 'Selecionado'); }
+        catch(e){ b.textContent = 'Selecionado'; } };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(el.textContent).then(done, fallback);
+      } else { fallback(); }
+    });
+  });
+
+  var KEY = 'efas2026-oficina';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e) {}
+  document.querySelectorAll('.check input').forEach(function(i){
+    i.checked = !!saved[i.id];
+    i.addEventListener('change', function(){
+      saved[i.id] = i.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch(e) {}
+    });
+  });
+})();
+</script>
+</body>
+</html>
