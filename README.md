@@ -85,6 +85,11 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 7. Use os workflows e prompts como ponto de partida.
 8. Antes de recomendar uma ferramenta para outra pessoa, veja se há relatório em `docs/testes/`.
 
+## Estudos de método
+
+- [Machina — narrativa musical orientada por referências](docs/precedentes/video-generativo/machina-narrativa-musical.md): análise crítica de relato patrocinado, não testado pelo laboratório.
+- [Comparação com o acervo e piloto proposto](docs/curadoria/machina-lacunas-e-piloto.md): reaproveitamento dos módulos em revisão e lacunas a validar; piloto ainda não autorizado.
+
 ## Receitas rápidas
 
 Para pessoas leigas: resultado pronto em poucos passos, só ferramentas web ou de celular.
