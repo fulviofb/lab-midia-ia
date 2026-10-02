@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-09-16T03:02:40+00:00",
+  "generated_at": "2026-10-02T20:55:09+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -18,7 +18,7 @@
       "id": "video_programatico",
       "label": "Vídeo programático",
       "description": "Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.",
-      "item_count": 3
+      "item_count": 7
     },
     {
       "id": "edicao_video",
@@ -36,7 +36,7 @@
       "id": "video_generativo_cinematico",
       "label": "Vídeo generativo/cinematográfico",
       "description": "Modelos, prompts e direção para geração de vídeo em Seedance, Higgsfield, Kling, Sora, Veo e similares.",
-      "item_count": 4
+      "item_count": 5
     },
     {
       "id": "voz_tts_clonagem",
@@ -121,6 +121,35 @@
       "install_hint_public": "npx skills add remotion-dev/skills"
     },
     {
+      "id": "lemo-opuscar",
+      "name": "lemo-opuscar",
+      "full_name": "lemomo-ai/lemo-opuscar",
+      "url": "https://github.com/lemomo-ai/lemo-opuscar",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "code_film_styles",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Usar o guia de direção como checklist de som, ritmo e câmera antes de renderizar.",
+      "use_cases": [
+        "Usar o guia de direção como checklist de som, ritmo e câmera antes de renderizar.",
+        "Pintar elementos pincelada a pincelada e criar transições de pincel em vídeo programático.",
+        "Estudar 43 estilos visuais com prompt de estilo e curta de exemplo."
+      ],
+      "license": "MIT",
+      "language": "JavaScript",
+      "stars_observed": 831,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
+      "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
+    },
+    {
       "id": "openmontage",
       "name": "OpenMontage",
       "full_name": "calesthio/OpenMontage",
@@ -146,6 +175,89 @@
       "language": "Python",
       "stars_observed": 35150,
       "agent_fit": "high",
+      "cost_hint": "Verificar custos, limites gratuitos e termos antes de recomendar.",
+      "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
+    },
+    {
+      "id": "opus-video-skills",
+      "name": "opus-video-skills",
+      "full_name": "tuzhechen2005/opus-video-skills",
+      "url": "https://github.com/tuzhechen2005/opus-video-skills",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "painted_animation_code",
+      "priority": "medium",
+      "priority_label": "Prioridade média",
+      "status": "documented_not_installed",
+      "status_label": "Documentado; instalação prática pendente",
+      "recommendation": "Bom candidato, mas precisa teste prático local antes de indicar para leigos.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Fazer curtas e clipes em aquarela pintada inteiramente em código.",
+      "use_cases": [
+        "Fazer curtas e clipes em aquarela pintada inteiramente em código.",
+        "Adicionar karaokê por palavra a vídeos de música.",
+        "Revisar animação por folhas de contato antes do render final."
+      ],
+      "license": "MIT",
+      "language": "JavaScript",
+      "stars_observed": 82,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
+      "install_hint_public": "Ler o teste documentado e instalar manualmente antes de usar com público."
+    },
+    {
+      "id": "awesome-opus5-5-videos",
+      "name": "awesome-opus5-5-videos",
+      "full_name": "yihui-dev/awesome-opus5-5-videos",
+      "url": "https://github.com/yihui-dev/awesome-opus5-5-videos",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "prompt_library",
+      "priority": "low",
+      "priority_label": "Baixa prioridade",
+      "status": "reference",
+      "status_label": "Referência",
+      "recommendation": "Use como referência, não como ferramenta principal para iniciantes.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Buscar prompts de referência para vídeo programático por categoria.",
+      "use_cases": [
+        "Buscar prompts de referência para vídeo programático por categoria."
+      ],
+      "license": "MIT",
+      "language": "Markdown",
+      "stars_observed": 1401,
+      "agent_fit": "medium",
+      "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
+      "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
+    },
+    {
+      "id": "shipvideo",
+      "name": "shipvideo",
+      "full_name": "diggerhq/shipvideo",
+      "url": "https://github.com/diggerhq/shipvideo",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "url_to_launch_video",
+      "priority": "low",
+      "priority_label": "Baixa prioridade",
+      "status": "reference",
+      "status_label": "Referência",
+      "recommendation": "Use como referência, não como ferramenta principal para iniciantes.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Ver como empacotar um gerador de vídeo HTML como serviço web.",
+      "use_cases": [
+        "Ver como empacotar um gerador de vídeo HTML como serviço web."
+      ],
+      "license": "none",
+      "language": "TypeScript",
+      "stars_observed": 258,
+      "agent_fit": "medium",
       "cost_hint": "Verificar custos, limites gratuitos e termos antes de recomendar.",
       "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
     },
@@ -311,6 +423,35 @@
       "stars_observed": 186,
       "agent_fit": "high",
       "cost_hint": "Código aberto ou referência pública; verificar custos de serviços externos.",
+      "install_hint_public": "Abrir o link oficial e verificar requisitos atuais."
+    },
+    {
+      "id": "motion-graphics-music-video-skill",
+      "name": "motion-graphics-music-video-skill",
+      "full_name": "makevoid/motion-graphics-music-video-skill",
+      "url": "https://github.com/makevoid/motion-graphics-music-video-skill",
+      "category": "video_generativo_cinematico",
+      "category_label": "Vídeo generativo/cinematográfico",
+      "subcategory": "chroma_character_compositing",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "criadores visuais e direção criativa",
+      "public_summary": "Animar personagem com image-to-video sem o modelo redesenhar cenário e objetos.",
+      "use_cases": [
+        "Animar personagem com image-to-video sem o modelo redesenhar cenário e objetos.",
+        "Compor personagens gerados separadamente sobre cenário e props canônicos.",
+        "Produzir em ondas com revisão e orçamento aprovado antes de chamadas pagas."
+      ],
+      "license": "MIT",
+      "language": "Ruby",
+      "stars_observed": 113,
+      "agent_fit": "high",
+      "cost_hint": "Pode exigir API, plano pago ou atenção à licença comercial.",
       "install_hint_public": "Abrir o link oficial e verificar requisitos atuais."
     },
     {
@@ -631,7 +772,11 @@
     "video_programatico": [
       "hyperframes",
       "remotion-agent-skills",
-      "openmontage"
+      "lemo-opuscar",
+      "openmontage",
+      "opus-video-skills",
+      "awesome-opus5-5-videos",
+      "shipvideo"
     ],
     "edicao_video": [
       "video-use",
@@ -644,6 +789,7 @@
     "video_generativo_cinematico": [
       "awesome-seedance",
       "higgsfield-ai-prompt-skill",
+      "motion-graphics-music-video-skill",
       "seedance-2-0-skill-os",
       "open-generative-ai"
     ],
