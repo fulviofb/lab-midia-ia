@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-09-16T03:02:40+00:00`
+Gerado em: `2026-10-02T20:55:09+00:00`
 
 ## Como usar
 
@@ -35,6 +35,17 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 - **Recomendação:** Pode ser recomendado com as observações do teste.
 - **Custo/requisitos:** Pode exigir API, plano pago ou atenção à licença comercial.
 
+### [lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar)
+
+- **Status:** Parcialmente testado no Windows
+- **Prioridade:** Alta prioridade
+- **Nível:** técnico
+- **Licença:** MIT
+- **Estrelas observadas:** 831
+- **Resumo:** Usar o guia de direção como checklist de som, ritmo e câmera antes de renderizar.
+- **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
+- **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
+
 ### [OpenMontage](https://github.com/calesthio/OpenMontage)
 
 - **Status:** Testado e recomendado no Windows
@@ -44,6 +55,39 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 - **Estrelas observadas:** 35150
 - **Resumo:** Produzir vídeos técnicos/didáticos com fluxo agentic e artefatos auditáveis.
 - **Recomendação:** Pode ser recomendado com as observações do teste.
+- **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
+
+### [opus-video-skills](https://github.com/tuzhechen2005/opus-video-skills)
+
+- **Status:** Documentado; instalação prática pendente
+- **Prioridade:** Prioridade média
+- **Nível:** técnico
+- **Licença:** MIT
+- **Estrelas observadas:** 82
+- **Resumo:** Fazer curtas e clipes em aquarela pintada inteiramente em código.
+- **Recomendação:** Bom candidato, mas precisa teste prático local antes de indicar para leigos.
+- **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
+
+### [awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos)
+
+- **Status:** Referência
+- **Prioridade:** Baixa prioridade
+- **Nível:** técnico
+- **Licença:** MIT
+- **Estrelas observadas:** 1401
+- **Resumo:** Buscar prompts de referência para vídeo programático por categoria.
+- **Recomendação:** Use como referência, não como ferramenta principal para iniciantes.
+- **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
+
+### [shipvideo](https://github.com/diggerhq/shipvideo)
+
+- **Status:** Referência
+- **Prioridade:** Baixa prioridade
+- **Nível:** técnico
+- **Licença:** none
+- **Estrelas observadas:** 258
+- **Resumo:** Ver como empacotar um gerador de vídeo HTML como serviço web.
+- **Recomendação:** Use como referência, não como ferramenta principal para iniciantes.
 - **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
 
 ## Edição de vídeo
@@ -123,6 +167,17 @@ Modelos, prompts e direção para geração de vídeo em Seedance, Higgsfield, K
 - **Resumo:** Prompts cinematográficos para Higgsfield, Seedance, Kling, Sora, Veo, Wan e similares.
 - **Recomendação:** Avaliar antes de recomendar.
 - **Custo/requisitos:** Código aberto ou referência pública; verificar custos de serviços externos.
+
+### [motion-graphics-music-video-skill](https://github.com/makevoid/motion-graphics-music-video-skill)
+
+- **Status:** Parcialmente testado no Windows
+- **Prioridade:** Alta prioridade
+- **Nível:** técnico
+- **Licença:** MIT
+- **Estrelas observadas:** 113
+- **Resumo:** Animar personagem com image-to-video sem o modelo redesenhar cenário e objetos.
+- **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
+- **Custo/requisitos:** Pode exigir API, plano pago ou atenção à licença comercial.
 
 ### [seedance-2.0-skill-os](https://github.com/Emily2040/seedance-2.0)
 

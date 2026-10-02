@@ -633,6 +633,156 @@ repositories:
   topics:
   - ai
   - skills
+- name: lemo-opuscar
+  full_name: lemomo-ai/lemo-opuscar
+  url: https://github.com/lemomo-ai/lemo-opuscar
+  category: video_programatico
+  subcategory: code_film_styles
+  priority: high
+  status: partially_tested_windows
+  language: JavaScript
+  license: MIT
+  stars_observed: 831
+  agent_fit: high
+  copy_policy: can_adapt_with_attribution
+  notes: Biblioteca de 43 estilos de filme feitos só com código (Canvas/WebGL renderizado
+    quadro a quadro, trilha por samples, TTS), com guias DIRECTOR.md e TECHNIQUE.md.
+    O GitHub mostra NOASSERTION, mas o LICENSE é MIT (LemoLab). Testado no Windows
+    só o motor de pincelada do estilo watercolor (engine.js, 142 linhas, sem dependências),
+    portado para TypeScript e rodando dentro do Remotion. O pipeline completo pede WSL
+    no Windows e não foi instalado. DIRECTOR.md vale como checklist de direção (som em
+    três camadas, silêncios antes da virada, J/L-cut, tempo mínimo de legenda, um movimento
+    nativo do meio no pico). Ver docs/testes/chroma-composite-aquarela-teste.md.
+  use_cases:
+  - Usar o guia de direção como checklist de som, ritmo e câmera antes de renderizar.
+  - Pintar elementos pincelada a pincelada e criar transições de pincel em vídeo programático.
+  - Estudar 43 estilos visuais com prompt de estilo e curta de exemplo.
+  forks_observed: 96
+  open_issues_observed: 0
+  github_updated_at: '2026-10-01T23:47:08Z'
+  test_doc: docs/testes/chroma-composite-aquarela-teste.md
+  topics:
+  - ai-video
+  - animation
+  - canvas
+  - claude-code
+  - creative-coding
+  - ffmpeg
+  - motion-graphics
+  - prompt-library
+  - threejs
+  - video-production
+- name: motion-graphics-music-video-skill
+  full_name: makevoid/motion-graphics-music-video-skill
+  url: https://github.com/makevoid/motion-graphics-music-video-skill
+  category: video_generativo_cinematico
+  subcategory: chroma_character_compositing
+  priority: high
+  status: partially_tested_windows
+  language: Ruby
+  license: MIT
+  stars_observed: 113
+  agent_fit: high
+  copy_policy: can_reference_and_study
+  notes: Plugin de clipe musical que separa personagem e mundo. O image-to-video anima
+    só o personagem, sobre chroma liso e câmera travada. Cenário, objetos, câmera e
+    transições ficam em still e código. Depende de Mac, Ruby e API paga da FAL, e os
+    efeitos em Swift só rodam no macOS, então não foi instalado. A técnica foi testada
+    no Windows com MiniMax H3 Max (via Magnific, 480 créditos por 6 s em 768p) e recorte
+    no ffmpeg. Fundo verde uniforme, identidade mantida, recorte limpo. O modelo fez
+    push-in de ~7% apesar de câmera travada, corrigido na composição. Ver
+    docs/testes/chroma-composite-aquarela-teste.md.
+  use_cases:
+  - Animar personagem com image-to-video sem o modelo redesenhar cenário e objetos.
+  - Compor personagens gerados separadamente sobre cenário e props canônicos.
+  - Produzir em ondas com revisão e orçamento aprovado antes de chamadas pagas.
+  forks_observed: 18
+  open_issues_observed: 1
+  github_updated_at: '2026-10-02T15:58:13Z'
+  test_doc: docs/testes/chroma-composite-aquarela-teste.md
+- name: opus-video-skills
+  full_name: tuzhechen2005/opus-video-skills
+  url: https://github.com/tuzhechen2005/opus-video-skills
+  category: video_programatico
+  subcategory: painted_animation_code
+  priority: medium
+  status: documented_not_installed
+  language: JavaScript
+  license: MIT
+  stars_observed: 82
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Duas skills de vídeo feito só com código. painted-animation desenha aquarela
+    e nanquim com p5.brush, com karaokê por palavra. kinetic-reel faz tipografia cinética
+    com camadas WebGL. O GitHub mostra NOASSERTION, mas o LICENSE é MIT. O render.mjs
+    já detecta o Chrome do Windows e usa ANGLE d3d11. Não instalado. Os personagens
+    desenhados em código não reproduzem folhas de personagem feitas com IA, então
+    o uso indicado é transição, overlay e karaokê. O método de revisão (leituras por
+    plano, folhas de contato, tiras de 0,2 s) vale para qualquer pipeline.
+  use_cases:
+  - Fazer curtas e clipes em aquarela pintada inteiramente em código.
+  - Adicionar karaokê por palavra a vídeos de música.
+  - Revisar animação por folhas de contato antes do render final.
+  forks_observed: 5
+  open_issues_observed: 0
+  github_updated_at: '2026-09-27T01:17:18Z'
+  topics:
+  - animation
+  - claude-code-plugin
+  - claude-skill
+  - kinetic-typography
+  - lyric-video
+  - motion-graphics
+  - p5js
+  - threejs
+- name: shipvideo
+  full_name: diggerhq/shipvideo
+  url: https://github.com/diggerhq/shipvideo
+  category: video_programatico
+  subcategory: url_to_launch_video
+  priority: low
+  status: reference
+  language: TypeScript
+  license: none
+  stars_observed: 258
+  agent_fit: medium
+  copy_policy: link_only_no_license
+  notes: Recebe uma URL ou um prompt e devolve um vídeo de lançamento de 20 a 40 s.
+    O Opus escreve um HTML e um agente serverless na OpenComputer renderiza no Chromium
+    e codifica com ffmpeg. Sem licença declarada, então fica só como link. Redundante
+    com a skill product-launch-video do HyperFrames, que faz o mesmo localmente.
+  use_cases:
+  - Ver como empacotar um gerador de vídeo HTML como serviço web.
+  forks_observed: 28
+  open_issues_observed: 1
+  github_updated_at: '2026-10-01T16:32:53Z'
+- name: awesome-opus5-5-videos
+  full_name: yihui-dev/awesome-opus5-5-videos
+  url: https://github.com/yihui-dev/awesome-opus5-5-videos
+  category: video_programatico
+  subcategory: prompt_library
+  priority: low
+  status: reference
+  language: Markdown
+  license: MIT
+  stars_observed: 1401
+  agent_fit: medium
+  copy_policy: can_reference_and_study
+  notes: Coleção de 475 vídeos virais feitos com Opus 5.5 escrevendo a animação em código,
+    cada um com o prompt do autor (às vezes parcial) e data/videos.json filtrável.
+    A maior parte é motion graphics técnico, explicadores e jogos. Os prompts pertencem
+    aos autores, então fica para estudo e não para cópia.
+  use_cases:
+  - Buscar prompts de referência para vídeo programático por categoria.
+  forks_observed: 146
+  open_issues_observed: 0
+  github_updated_at: '2026-09-30T02:09:22Z'
+  topics:
+  - ai-video
+  - awesome-list
+  - creative-coding
+  - motion-graphics
+  - prompts
 recommended_mvp:
 - browser-use/video-use
 - heygen-com/hyperframes
