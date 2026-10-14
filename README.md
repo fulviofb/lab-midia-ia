@@ -29,6 +29,7 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `public-data/`: exports públicos e amigáveis para sites/aulas, gerados a partir do catálogo.
 - `examples/`: espaço para exemplos reproduzíveis leves.
 - `scripts/`: automações do laboratório, como atualização de metadados e export público do catálogo.
+- `skills/`: skills para agentes (Claude Code), como [`direcao-de-video`](skills/direcao-de-video/SKILL.md): direção e produção de vídeo do briefing ao MP4 (HyperFrames, ComfyUI, vídeo gravado).
 
 ## Categorias principais
 
