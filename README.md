@@ -24,8 +24,8 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `docs/testes/`: relatórios de testes práticos e bloqueios encontrados.
 - `docs/workarounds/`: soluções para problemas específicos, especialmente no Windows.
 - `docs/scripts/`: documentação dos scripts de automação.
-- `workflows/`: fluxos práticos por tipo de tarefa.
-- `prompts/`: prompts reutilizáveis para vídeo, imagem, UGC, narração, thumbnails e orientação com LLM.
+- `workflows/`: fluxos práticos por tipo de tarefa, incluindo `direcao-cinematografica-por-referencia.md`.
+- `prompts/`: prompts reutilizáveis para vídeo, imagem, UGC, narração, thumbnails e orientação com LLM, incluindo `direcao-cinematografica-por-referencia.md`.
 - `public-data/`: exports públicos e amigáveis para sites/aulas, gerados a partir do catálogo.
 - `examples/`: espaço para exemplos reproduzíveis leves.
 - `scripts/`: automações do laboratório, como atualização de metadados e export público do catálogo.
