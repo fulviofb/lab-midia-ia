@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-10T18:07:20+00:00",
+  "generated_at": "2026-11-10T19:53:03+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -188,9 +188,9 @@
       "subcategory": "brush_engine",
       "priority": "high",
       "priority_label": "Alta prioridade",
-      "status": "partially_tested",
-      "status_label": "Parcialmente testado",
-      "recommendation": "O recorte testado vale; o restante do fluxo ainda exige validação.",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
       "technical_level": "technical",
       "technical_level_label": "técnico",
       "audience": "usuários técnicos, devs e agentes",

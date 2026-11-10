@@ -12,6 +12,8 @@ A mesma cena de 5 s (morro, árvore, sol, sombra hachurada), com a mesma geometr
 | `still.mjs` | Salva quadros soltos e confere se o mesmo tempo gera o mesmo quadro |
 | `render.mjs` | Renderiza 150 quadros (5 s a 30 fps) e codifica direto em MP4 |
 | `flicker.py` | Mede quanto as áreas já prontas mudam de um quadro para o outro |
+| `gpu.mjs` | Mostra qual renderizador o WebGL2 usou (GPU ou SwiftShader) |
+| `rodar-gpu.cmd` | Windows: roda tudo com d3d11 e com SwiftShader e grava `out\resultado-gpu.txt` |
 
 ## Preparar
 
@@ -39,7 +41,9 @@ python flicker.py out/lemo.mp4 out/p5brush.mp4
 Variáveis opcionais:
 
 - `CHROME_PATH`: caminho do Chrome do sistema, se não quiser o Chromium do Playwright.
-- `ANGLE`: `swiftshader` (padrão; nuvem ou Linux sem GPU) ou `d3d11` (Windows com GPU). Não testado no Windows ainda.
+- `ANGLE`: `swiftshader` (padrão; nuvem ou Linux sem GPU) ou `d3d11` (Windows com GPU).
+
+No Windows, basta dar dois cliques em `rodar-gpu.cmd` depois do `npm i`. Com `npm i -D playwright` e `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1`, ele usa o Chrome do sistema.
 
 Lado a lado com rótulos:
 

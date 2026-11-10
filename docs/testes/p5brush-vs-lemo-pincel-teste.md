@@ -8,7 +8,8 @@ Comparar o `acamposuribe/p5.brush` com o motor de pincelada do `lemomo-ai/lemo-o
 
 ## Ambiente
 
-- Linux na nuvem, sem GPU
+- Linux na nuvem, sem GPU (rodada principal)
+- Windows no notebook, com GPU Intel integrada (ver "Rodada no Windows")
 - Google Chrome headless via Playwright 1.63, WebGL2 por software (`--use-angle=swiftshader --enable-unsafe-swiftshader`)
 - FFmpeg com libx264
 - p5.brush 3.0.0, build standalone `dist/brush.js`, commit `d56350a`
@@ -43,7 +44,23 @@ Os traços parciais do p5.brush são a polilinha cortada no comprimento do progr
 
 **Visual.** O p5.brush entrega aquarela de verdade: borda irregular, anel de pigmento, granulação e manchas. O grafite tem grão de papel e a hachura sai a lápis. O lemo-opuscar parece guache em pinceladas, mais gráfico e legível; o sol vira listras e a copa vira tufos de folhas.
 
-**Tempo.** O desenho em si é rápido nos dois. A diferença está em ler o quadro de volta do WebGL por software: ~1 s por quadro, contra ~0,07 s do Canvas 2D. Com GPU (ANGLE d3d11 no Windows, como faz o `opus-video-skills`), a expectativa é cair bastante, mas isso não foi medido.
+**Tempo na nuvem.** O desenho em si é rápido nos dois. A diferença está em ler o quadro de volta do WebGL por software: ~1 s por quadro, contra ~0,07 s do Canvas 2D.
+
+## Rodada no Windows
+
+Mesmos arquivos, no notebook (Windows, Node 24.16, FFmpeg 8.1.2, Chrome do sistema via `CHROME_PATH`), com o script `rodar-gpu.cmd`. O `gpu.mjs` confirmou o renderizador do WebGL2 em cada modo.
+
+| Render (150 quadros) | Renderizador | Tempo total |
+|---|---|---|
+| p5.brush, `ANGLE=d3d11` | Intel UHD Graphics (D3D11) | 14,2 s |
+| p5.brush, `ANGLE=swiftshader` | SwiftShader (CPU) | 30,9 s |
+| lemo-opuscar, `ANGLE=d3d11` | Canvas 2D | 7,2 s |
+| p5.brush na nuvem (referência) | SwiftShader (CPU) | ~157 s |
+
+- Mesmo tempo, mesmo quadro também no Windows (hash igual em 2,5 s e 4,6 s).
+- Os três renders do p5.brush (GPU no PC, CPU no PC, nuvem) são praticamente iguais: diferença média de 0,33 a 0,48 numa escala de 0 a 255, invisível a olho.
+- Mesmo com GPU integrada, o p5.brush fica a ~2× do tempo do lemo-opuscar, o que é aceitável para peças curtas. A lentidão na nuvem vinha mais da máquina do que do SwiftShader.
+- O Chrome escolheu a GPU Intel integrada. Não testei forçar a NVIDIA.
 
 ## Pontos de atenção do p5.brush
 
@@ -58,11 +75,11 @@ Os traços parciais do p5.brush são a polilinha cortada no comprimento do progr
 
 - Para explicativos ilustrados com cara de aquarela, grafite ou nanquim, **o p5.brush é a melhor escolha**. A textura do lemo-opuscar continua boa para um estilo mais gráfico e para renders rápidos.
 - O p5.brush cumpre as regras de render quadro a quadro (mesmo quadro para o mesmo tempo, sem tremor), desde que haja seed por elemento.
-- O custo é o tempo de render sem GPU. Para prévias rápidas, renderize em resolução menor ou a cada 2 quadros.
+- No Windows com GPU, o tempo é aceitável (~0,1 s por quadro em 960×540). Na nuvem sem GPU, para prévias rápidas, renderize em resolução menor ou a cada 2 quadros.
 
 ## Não feito
 
-- Rodar no Windows com ANGLE d3d11 e medir o tempo com GPU.
+- Forçar a GPU NVIDIA no Chrome e comparar com a Intel integrada.
 - Embutir o p5.brush numa composição do Remotion ou do HyperFrames.
 - Testar resolução 1920×1080 e `pixelDensity` maior.
 - Testar campos vetoriais (`refreshField(t)`) para traço "vivo".

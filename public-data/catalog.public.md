@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-11-10T18:07:20+00:00`
+Gerado em: `2026-11-10T19:53:03+00:00`
 
 ## Como usar
 
@@ -59,13 +59,13 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 
 ### [p5.brush](https://github.com/acamposuribe/p5.brush)
 
-- **Status:** Parcialmente testado
+- **Status:** Parcialmente testado no Windows
 - **Prioridade:** Alta prioridade
 - **Nível:** técnico
 - **Licença:** MIT
 - **Estrelas observadas:** 1100
 - **Resumo:** Pintar explicativos ilustrados em aquarela, grafite ou nanquim inteiramente em código.
-- **Recomendação:** O recorte testado vale; o restante do fluxo ainda exige validação.
+- **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
 - **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
 
 ### [opus-video-skills](https://github.com/tuzhechen2005/opus-video-skills)
