@@ -735,6 +735,41 @@ repositories:
   - motion-graphics
   - p5js
   - threejs
+- name: p5.brush
+  full_name: acamposuribe/p5.brush
+  url: https://github.com/acamposuribe/p5.brush
+  category: video_programatico
+  subcategory: brush_engine
+  priority: high
+  status: partially_tested
+  language: JavaScript
+  license: MIT
+  stars_observed: 1100
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Biblioteca de desenho natural (lápis, carvão, marcador, preenchimento em aquarela
+    com bordas e granulação, hachura e campos vetoriais). É o motor que a skill painted-animation
+    do opus-video-skills usa. Tem dois builds — um para p5.js 2.x e um standalone que
+    só precisa de WebGL2 — e traz um llms.txt para agentes. Testado na nuvem (Linux,
+    Chrome headless com SwiftShader) contra o motor de pincelada do lemo-opuscar, na
+    mesma cena de 5 s. Com brush.seed() fixo por elemento, o mesmo tempo gera o mesmo
+    quadro e as áreas prontas não tremem. A aquarela e a hachura são bem mais ricas;
+    em troca, cada quadro levou ~1 s para sair do WebGL por software, contra ~0,07 s
+    do Canvas 2D. Ainda não testado no Windows. Ver docs/testes/p5brush-vs-lemo-pincel-teste.md.
+  use_cases:
+  - Pintar explicativos ilustrados em aquarela, grafite ou nanquim inteiramente em código.
+  - Revelar traços, preenchimentos e hachuras ao longo do tempo em vídeo programático.
+  - Fazer peças estáticas em alta resolução para impressão com o mesmo estilo do vídeo.
+  forks_observed: 60
+  github_updated_at: '2026-10-28T00:39:09Z'
+  test_doc: docs/testes/p5brush-vs-lemo-pincel-teste.md
+  topics:
+  - brush
+  - flowfield
+  - hatching
+  - p5js
+  - p5-library
+  - watercolor
 - name: shipvideo
   full_name: diggerhq/shipvideo
   url: https://github.com/diggerhq/shipvideo
