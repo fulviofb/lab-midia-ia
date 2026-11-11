@@ -1,0 +1,37 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: DEMO-LIVRO
+  project_version: v0.1
+  registry_version: v0.1
+  sensitivity: public_synthetic
+assets:
+  - asset_id: DEMO-LIVRO-ASSET-001
+    type: image
+    title: fixture sintética de livro aberto
+    purpose: visual_reference
+    relative_uri: assets/reference-book.svg
+    content_hash_sha256: 2e5a00168894a8ce496e9bb5ee836a60788893081073d27b046f045238837aab
+    source:
+      creator_or_owner: lab-midia-ia
+      provenance: SVG determinístico criado para esta fixture
+      canonical_url: null
+      license_or_terms: sem licença detectada no repositório; não reutilizar fora da fixture sem permissão
+      attribution_required: false
+      attribution_text: null
+    subjects:
+      identifiable_people: false
+      consent_evidence_uri: null
+    permissions:
+      private_analysis: approved
+      local_processing: approved
+      external_upload: approved
+      generation_input: approved
+      publication: approved
+    provider_scope: [synthetic_test_only]
+    retention:
+      allowed: true
+      delete_by: null
+      deletion_evidence_uri: null
+    approved_by: fixture-author
+    approved_at: "2026-08-23T00:00:00Z"
+    notes: nenhuma mídia de terceiros

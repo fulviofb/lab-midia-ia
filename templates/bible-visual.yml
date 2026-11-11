@@ -1,0 +1,76 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: PROJ-DEMO
+  project_version: v0.1
+  bible_version: v0.1
+  profile: intermediate
+  status: draft
+  approved_by: null
+  approved_at: null
+
+visual_contract:
+  medium_materiality: ""
+  palette:
+    dominant: []
+    accents: []
+    avoid: []
+  lighting_rules: []
+  texture_rules: []
+  global_locks: []
+  allowed_evolution: []
+
+characters:
+  - character_id: CHAR-001
+    name: ""
+    stable_descriptor: ""
+    identity_locks: []
+    states:
+      - state_id: CHAR-001-STATE-01
+        description: ""
+        costume_asset_ids: []
+        posture_expression: ""
+        allowed_variation: []
+    reference_asset_ids: []
+
+environments:
+  - environment_id: ENV-001
+    name: ""
+    stable_descriptor: ""
+    anchors: []
+    geography: ""
+    scale_relations: []
+    lighting_states: []
+    reference_asset_ids: []
+    optional_controls:
+      location_map_asset_id: null
+      staging_diagram_asset_id: null
+      depth_map_asset_id: null
+
+props:
+  - prop_id: PROP-001
+    name: ""
+    stable_descriptor: ""
+    identity_locks: []
+    state_variants: []
+    reference_asset_ids: []
+
+audio_environments:
+  - audio_environment_id: AUDIOENV-001
+    description: ""
+    reference_asset_ids: []
+    continuity_locks: []
+
+continuity:
+  screen_direction_rules: []
+  eyeline_rules: []
+  hand_object_rules: []
+  time_weather_rules: []
+  audio_rules: []
+
+open_decisions: []
+
+allowed_statuses:
+  - draft
+  - approved
+  - superseded
+  - not_applicable

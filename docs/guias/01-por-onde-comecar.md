@@ -51,16 +51,24 @@ Você quer dar um tema e gerar um vídeo curto automático (estilo "faceless cha
 
 Ainda não testado localmente. Linkar e estudar antes de adaptar.
 
-### D) "Quero vídeo generativo estilo Sora/Higgsfield"
+### D) "Quero criar ou complementar um vídeo com geração"
 
-Você quer gerar vídeo a partir de texto (text-to-video cinematográfico).
+Antes de escolher plataforma, diferencie:
 
-**Ferramentas de referência:**
+- complementação localizada de uma montagem;
+- montagem híbrida com material real;
+- produção narrativa generativa;
+- vídeo programático, quando geração não é necessária.
 
-- `seedance-2.0`
-- `higgsfield-ai-prompt-skill`
+Comece pelo [`guia de rotas`](06-ideia-roteiro-cenas-video.md) e pelo [`planejamento adaptativo`](08-planejamento-adaptativo-de-video.md). Eles apresentam possibilidades, implicações, módulos opcionais e mudança de rota.
 
-Atenção: este não é o foco principal do `lab-midia-ia`. O foco aqui é vídeo **programável e editável por agentes**, não vídeo generativo puro.
+**Ferramentas/referências possíveis, não automáticas:**
+
+- `seedance-2.0`;
+- `higgsfield-ai-prompt-skill`;
+- outras plataformas compatíveis com a necessidade e as autorizações.
+
+Práticas e templates podem ser úteis em contextos específicos sem constituir um workflow universal.
 
 ### E) "Quero voz/narração"
 
@@ -90,7 +98,7 @@ Tenho vídeo bruto → editar      → video-use
 Quero animar do zero com HTML   → HyperFrames
 Quero animar do zero com React  → Remotion
 Quero short automático          → MoneyPrinterTurbo (referência)
-Quero text-to-video cinematográfico → Seedance/Higgsfield (referência)
+Quero usar geração no vídeo       → escolher rota → plataforma compatível
 Quero voz/narração              → Voicebox / GPT-SoVITS / ElevenLabs
 Quero thumbnail/design          → ui-ux-pro-max / gpt-image-2
 ```
