@@ -735,6 +735,51 @@ repositories:
   - motion-graphics
   - p5js
   - threejs
+- name: reelmimic
+  full_name: edenfunf/reelmimic
+  url: https://github.com/edenfunf/reelmimic
+  category: video_programatico
+  subcategory: style_transfer_por_referencia
+  priority: high
+  status: partially_tested_windows
+  language: JavaScript
+  license: MIT
+  stars_observed: 1885
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: App local (localhost:4318) que decompõe um vídeo de referência (ritmo, duração
+    dos planos, BPM, transições, cor, enquadramento, câmera), propõe um plano para aprovação
+    (storyboard, personagens, quadros de estilo) e produz um vídeo 2D novo no mesmo estilo
+    com até 6 agentes Claude Code ou Codex, cada plano revisado por outro agente com
+    prints de antes/depois. Aprende a técnica, não reaproveita o material da referência.
+    Orquestra skills já catalogadas (HyperFrames, Apache-2.0; painted-animation, MIT)
+    e traz cinco motores novos (giz de cera, pixel art, recorte de papel, quadro branco,
+    anime). Código MIT; Remotion não vem incluído. Contagem de estrelas zerada em 20/10/2026
+    (repo ficou privado por engano). CUSTO - exige assinatura paga de Claude Code ou Codex; roda na cota do
+    usuário (1 a 3,5 h para 30 a 60 s); não apresentar como gratuito ao público. TTS
+    padrão é taiwanês (Yating); em PT-BR, importar narração própria. Agentes rodam com
+    acceptEdits (Claude) e danger-full-access (Codex) - instalar em pasta isolada, fora
+    do OneDrive. Traz cópias próprias das skills HyperFrames; não misturar com as globais.
+    Piloto 2026-11-10 (só fase de plano) - bom diretor de ritmo e decomposição da
+    referência; reprovado em fidelidade a folha de personagem (motor em código desenha
+    boneco genérico). Não usar para personagens com folha própria (como o Pietro).
+  use_cases:
+  - Refazer o estilo de um vídeo de referência com conteúdo e personagens originais.
+  - Clipes de música e livros ilustrados animados (giz de cera, aquarela).
+  - Automatizar o workflow de direção cinematográfica por referência.
+  forks_observed: 86
+  open_issues_observed: 43
+  github_updated_at: '2026-11-08T15:58:29Z'
+  test_doc: docs/testes/reelmimic-primeiro-teste.md
+  topics:
+  - 2d-animation
+  - ai-agents
+  - ai-video
+  - claude-code
+  - codex
+  - multi-agent
+  - style-transfer
+  - video-generation
 - name: shipvideo
   full_name: diggerhq/shipvideo
   url: https://github.com/diggerhq/shipvideo
