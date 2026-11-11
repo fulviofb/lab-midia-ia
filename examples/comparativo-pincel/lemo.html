@@ -1,0 +1,69 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body>
+<canvas id="c" width="960" height="540"></canvas>
+<!-- engine.js: lemomo-ai/lemo-opuscar, styles/watercolor/demo (MIT, LemoLab) -->
+<script src="vendor/engine.js"></script>
+<script src="scene.js"></script>
+<script>
+const c = document.getElementById('c').getContext('2d');
+
+// Catmull-Rom para engrossar as polilinhas da cena (o motor pinta por vértice)
+function dense(pts, per = 10) {
+  const out = [];
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(pts.length - 1, i + 2)];
+    for (let k = 0; k < per; k++) {
+      const t = k / per, t2 = t * t, t3 = t2 * t;
+      out.push([0, 1].map(j => .5 * (2 * p1[j] + (-p0[j] + p2[j]) * t + (2 * p0[j] - 5 * p1[j] + 4 * p2[j] - p3[j]) * t2 + (-p0[j] + 3 * p1[j] - 3 * p2[j] + p3[j]) * t3)));
+    }
+  }
+  out.push(pts[pts.length - 1].slice());
+  return out;
+}
+
+// pinceladas construídas uma vez, com seed fixa
+const S = withSeed(7, () => {
+  const hillLine = mk(dense(HILL), 5, COL.ink, { prof: 'even', nb: 0 });
+  const trunk = mk(dense(TRUNK), 16, COL.ink, { prof: 'trunk' });
+  const branches = BRANCHES.map(b => mk(dense(b), 6, COL.ink, { prof: 'tip' }));
+  // sol: cordas horizontais dentro do círculo
+  const sun = [];
+  for (let y = -SUN[2] + 8; y < SUN[2]; y += 11) {
+    const hw = Math.sqrt(SUN[2] * SUN[2] - y * y);
+    sun.push(mk(qcurve(SUN[0] - hw, SUN[1] + y + rnd(-2, 2), SUN[0] + hw, SUN[1] + y + rnd(-2, 2), rnd(-4, 4), 10), 14, COL.sun, { a: rnd(.55, .8), rough: .3 }));
+  }
+  // copa: tufos de folhas
+  const crown = []; clump(crown, CROWN[0], CROWN[1], CROWN[2] * .85, 90, [COL.leaf, COL.hill, COL.shade], { sx: 1.1, sy: .95, l0: 14, l1: 26, w0: 8, w1: 14 });
+  // morro: faixas largas (base) e hachura diagonal
+  const base = [];
+  for (let y = 350; y < 545; y += 22) base.push(mk(qcurve(-20, y + rnd(-4, 4), 980, y + rnd(-4, 4), rnd(-10, 10), 16), 30, COL.hill, { a: rnd(.35, .5), rough: .25, nb: 4 }));
+  const hatch = [];
+  for (let x = -200; x < 980; x += 14) hatch.push(mk(polar(x, 545, -35 * Math.PI / 180, 260, rnd(-6, 6), 8), 2.2, COL.shade, { prof: 'even', nb: 0, a: .7 }));
+  return { hillLine, trunk, branches, sun, crown, base, hatch };
+});
+
+function hillClip() {
+  c.beginPath(); HILL_POLY.forEach((p, i) => i ? c.lineTo(p[0], p[1]) : c.moveTo(p[0], p[1])); c.closePath(); c.clip();
+}
+
+window.renderAt = function (t) {
+  c.fillStyle = COL.paper; c.fillRect(0, 0, SW, SH);
+
+  const ps = prog(t, 'shade');
+  if (ps > 0) {
+    c.save(); hillClip();
+    drawList(c, S.base, ease(ps));
+    drawList(c, S.hatch, ease(ps));
+    c.restore();
+  }
+  drawList(c, S.sun, prog(t, 'sun'));
+  drawS(c, S.hillLine, prog(t, 'hill'));
+  drawS(c, S.trunk, prog(t, 'trunk'));
+  const pb = prog(t, 'branches');
+  S.branches.forEach((b, i) => drawS(c, b, Math.max(0, Math.min(1, pb * 1.6 - i * 0.3))));
+  drawList(c, S.crown, prog(t, 'crown'));
+  return true;
+};
+</script>
+</body></html>

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-11T03:05:21+00:00",
+  "generated_at": "2026-11-11T03:12:07+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -18,7 +18,7 @@
       "id": "video_programatico",
       "label": "Vídeo programático",
       "description": "Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.",
-      "item_count": 8
+      "item_count": 9
     },
     {
       "id": "edicao_video",
@@ -176,6 +176,35 @@
       "stars_observed": 35150,
       "agent_fit": "high",
       "cost_hint": "Verificar custos, limites gratuitos e termos antes de recomendar.",
+      "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
+    },
+    {
+      "id": "p5-brush",
+      "name": "p5.brush",
+      "full_name": "acamposuribe/p5.brush",
+      "url": "https://github.com/acamposuribe/p5.brush",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "brush_engine",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Pintar explicativos ilustrados em aquarela, grafite ou nanquim inteiramente em código.",
+      "use_cases": [
+        "Pintar explicativos ilustrados em aquarela, grafite ou nanquim inteiramente em código.",
+        "Revelar traços, preenchimentos e hachuras ao longo do tempo em vídeo programático.",
+        "Fazer peças estáticas em alta resolução para impressão com o mesmo estilo do vídeo."
+      ],
+      "license": "MIT",
+      "language": "JavaScript",
+      "stars_observed": 1100,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
       "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
     },
     {
@@ -803,6 +832,7 @@
       "remotion-agent-skills",
       "lemo-opuscar",
       "openmontage",
+      "p5-brush",
       "reelmimic",
       "opus-video-skills",
       "awesome-opus5-5-videos",
