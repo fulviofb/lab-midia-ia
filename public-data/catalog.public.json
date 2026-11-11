@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-10T19:53:03+00:00",
+  "generated_at": "2026-11-11T03:20:07+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -18,7 +18,7 @@
       "id": "video_programatico",
       "label": "Vídeo programático",
       "description": "Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.",
-      "item_count": 8
+      "item_count": 9
     },
     {
       "id": "edicao_video",
@@ -205,6 +205,35 @@
       "stars_observed": 1100,
       "agent_fit": "high",
       "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
+      "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
+    },
+    {
+      "id": "reelmimic",
+      "name": "reelmimic",
+      "full_name": "edenfunf/reelmimic",
+      "url": "https://github.com/edenfunf/reelmimic",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "style_transfer_por_referencia",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Refazer o estilo de um vídeo de referência com conteúdo e personagens originais.",
+      "use_cases": [
+        "Refazer o estilo de um vídeo de referência com conteúdo e personagens originais.",
+        "Clipes de música e livros ilustrados animados (giz de cera, aquarela).",
+        "Automatizar o workflow de direção cinematográfica por referência."
+      ],
+      "license": "MIT",
+      "language": "JavaScript",
+      "stars_observed": 1885,
+      "agent_fit": "high",
+      "cost_hint": "Pode exigir API, plano pago ou atenção à licença comercial.",
       "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
     },
     {
@@ -804,6 +833,7 @@
       "lemo-opuscar",
       "openmontage",
       "p5-brush",
+      "reelmimic",
       "opus-video-skills",
       "awesome-opus5-5-videos",
       "shipvideo"

@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-11-10T19:53:03+00:00`
+Gerado em: `2026-11-11T03:20:07+00:00`
 
 ## Como usar
 
@@ -67,6 +67,17 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 - **Resumo:** Pintar explicativos ilustrados em aquarela, grafite ou nanquim inteiramente em código.
 - **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
 - **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
+
+### [reelmimic](https://github.com/edenfunf/reelmimic)
+
+- **Status:** Parcialmente testado no Windows
+- **Prioridade:** Alta prioridade
+- **Nível:** técnico
+- **Licença:** MIT
+- **Estrelas observadas:** 1885
+- **Resumo:** Refazer o estilo de um vídeo de referência com conteúdo e personagens originais.
+- **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
+- **Custo/requisitos:** Pode exigir API, plano pago ou atenção à licença comercial.
 
 ### [opus-video-skills](https://github.com/tuzhechen2005/opus-video-skills)
 
