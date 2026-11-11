@@ -1,0 +1,60 @@
+metadata:
+  evidence_status: lab_synthesis
+  project_id: PROJ-DEMO
+  project_version: v0.1
+  experiment_id: PROJ-DEMO-EXP01
+  experiment_version: v0.1
+  status: draft
+
+scope:
+  scene_ids: []
+  shot_ids: []
+  segment_ids: []
+  related_gap_ids: []
+
+contract:
+  hypothesis: ""
+  mode: diagnostic
+  variable_or_direction: ""
+  fixture_asset_ids: []
+  prompt_or_config_uri: null
+  prompt_or_config_hash_sha256: null
+  provider: null
+  model: null
+  model_version: null
+  settings: {}
+
+limits:
+  max_attempts: null
+  max_displayed_credits: null
+  credit_unit: null
+  max_monetary_cost: null
+  currency: null
+
+acceptance:
+  criteria: []
+  stop_conditions: []
+
+permissions:
+  upload_authorization_id: null
+  generation_authorization_id: null
+  spending_authorization_id: null
+
+approval:
+  state: open
+  decided_by: null
+  decided_at: null
+  evidence_uri: null
+
+allowed_modes:
+  - diagnostic
+  - exploration
+  - production
+
+allowed_statuses:
+  - draft
+  - approved
+  - running
+  - stopped
+  - completed
+  - superseded

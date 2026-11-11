@@ -1,0 +1,2 @@
+# Fixtures com SHA-256 devem preservar bytes entre plataformas.
+examples/video-adaptativo-minimo/**/*.svg text eol=lf
