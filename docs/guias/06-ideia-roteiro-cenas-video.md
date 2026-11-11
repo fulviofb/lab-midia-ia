@@ -119,6 +119,8 @@ fonte/objetivo
 
 A rota [`storyboard-first`](../../workflows/video-generativo-storyboard-first.md) é uma possibilidade desta família, não uma obrigação.
 
+Se a peça tem personagens e uma virada (não só tópicos na tela), a dramaturgia pode seguir antes o fluxo [`roteiro-curto-antes-de-produzir`](../../workflows/roteiro-curto-antes-de-produzir.md).
+
 ## 3. Rotas podem ser combinadas
 
 Exemplos:

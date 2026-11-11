@@ -18,12 +18,14 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `docs/trilhas/`: caminhos práticos por objetivo e nível técnico.
 - `docs/receitas/`: receitas rápidas por resultado, para pessoas leigas — poucos passos, só ferramentas web.
 - `docs/publico/`: materiais para compartilhar com pessoas leigas, inclusive uso com LLM sem CLI.
+- `docs/aulas/`: roteiros de aulas e oficinas já ministradas, para repetir em outras casas.
 - `docs/estrategia/`: estratégia de formação, site Concafras IA e princípio da gratuidade.
+- `site/`: páginas publicadas no GitHub Pages (ex.: página de apoio de oficinas).
 - `docs/testes/`: relatórios de testes práticos e bloqueios encontrados.
 - `docs/workarounds/`: soluções para problemas específicos, especialmente no Windows.
 - `docs/scripts/`: documentação dos scripts de automação.
-- `workflows/`: fluxos práticos por tipo de tarefa.
-- `prompts/`: prompts reutilizáveis para vídeo, imagem, UGC, narração, thumbnails e orientação com LLM.
+- `workflows/`: fluxos práticos por tipo de tarefa, incluindo `direcao-cinematografica-por-referencia.md`.
+- `prompts/`: prompts reutilizáveis para vídeo, imagem, UGC, narração, thumbnails e orientação com LLM, incluindo `direcao-cinematografica-por-referencia.md`.
 - `public-data/`: exports públicos e amigáveis para sites/aulas, gerados a partir do catálogo.
 - `examples/`: espaço para exemplos reproduzíveis leves.
 - `scripts/`: automações do laboratório, como atualização de metadados e export público do catálogo.
@@ -37,6 +39,7 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 5. **Vídeo generativo/cinematográfico** — Seedance, Higgsfield, direção cinematográfica e prompts avançados.
 6. **Voz/TTS/clonagem** — Voicebox, GPT-SoVITS, Fish Speech, MisoTTS e ferramentas de narração.
 7. **Imagem/design/prompts** — GPT Image, Nano Banana, UI/UX skills, thumbnails e capas.
+8. **Roteiro e dramaturgia** — premissa, estrutura, diálogo e consistência de série (ainda em avaliação; não instalar o plugin).
 
 ## Repositórios núcleo do laboratório
 
@@ -69,6 +72,7 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 - `Remotion Agent Skills`: testado e recomendado no Windows; atenção à licença comercial do Remotion.
 - `Voicebox`: documentado a partir de código/release; precisa instalação manual do app desktop para teste prático.
 - `OpenReel Video`: catalogado; próximo candidato de teste prático com navegador e GPU dedicada.
+- `screenwriting-skills`: piloto de roteiro comparado ao guia 06 (`docs/testes/screenwriting-skills-piloto.md`). Status `partially_tested`. Não instalar o plugin.
 
 ## Como usar este repo
 
@@ -81,6 +85,11 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 7. Use os workflows e prompts como ponto de partida.
 8. Antes de recomendar uma ferramenta para outra pessoa, veja se há relatório em `docs/testes/`.
 
+## Estudos de método
+
+- [Machina — narrativa musical orientada por referências](docs/precedentes/video-generativo/machina-narrativa-musical.md): análise crítica de relato patrocinado, não testado pelo laboratório.
+- [Comparação com o acervo e piloto proposto](docs/curadoria/machina-lacunas-e-piloto.md): reaproveitamento dos módulos em revisão e lacunas a validar; piloto ainda não autorizado.
+
 ## Receitas rápidas
 
 Para pessoas leigas: resultado pronto em poucos passos, só ferramentas web ou de celular.
@@ -88,6 +97,11 @@ Para pessoas leigas: resultado pronto em poucos passos, só ferramentas web ou d
 - `docs/receitas/01-convite-de-evento.md`
 - `docs/receitas/02-cortes-de-palestra.md`
 - `docs/receitas/03-narracao-de-texto.md`
+- `docs/receitas/04-card-doutrinario-fiel-a-fonte.md`
+
+## Aulas e oficinas
+
+- `docs/aulas/efas-goiania-2026.md` — "Novas Dimensões do Conhecimento", EFAS Goiânia 2026. Página de apoio: <https://fulviofb.github.io/lab-midia-ia/efas/>
 
 ## Trilhas práticas
 

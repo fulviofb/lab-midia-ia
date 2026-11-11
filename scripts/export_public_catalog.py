@@ -47,6 +47,7 @@ CATEGORY_LABELS = {
     "video_generativo_cinematico": "Vídeo generativo/cinematográfico",
     "voz_tts_clonagem": "Voz, narração e TTS",
     "imagem_design_prompts": "Imagem, design e prompts",
+    "roteiro_dramaturgia": "Roteiro e dramaturgia",
     "modelos_referencia": "Modelos e referências técnicas",
 }
 
@@ -62,6 +63,7 @@ STATUS_LABELS = {
     "partially_tested_windows": "Parcialmente testado no Windows",
     "documented_not_installed": "Documentado; instalação prática pendente",
     "test_before_recommending": "Promissor; testar antes de recomendar",
+    "partially_tested": "Parcialmente testado",
     "watch_and_test": "Acompanhar e testar",
     "practical": "Prático",
     "mature_practical": "Maduro e prático",
@@ -74,6 +76,7 @@ STATUS_RECOMMENDATION = {
     "partially_tested_windows": "Use com orientação; parte do fluxo ainda exige validação.",
     "documented_not_installed": "Bom candidato, mas precisa teste prático local antes de indicar para leigos.",
     "test_before_recommending": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+    "partially_tested": "O recorte testado vale; o restante do fluxo ainda exige validação.",
     "watch_and_test": "Acompanhar maturidade e testar antes de usar em aula/produção.",
     "practical": "Pode entrar em fluxos práticos, com revisão de custo e dependências.",
     "mature_practical": "Candidato forte para teste prático e uso técnico.",
@@ -88,6 +91,7 @@ CATEGORY_AUDIENCE = {
     "video_generativo_cinematico": "criadores visuais e direção criativa",
     "voz_tts_clonagem": "narração, áudio, voz e acessibilidade",
     "imagem_design_prompts": "design, imagem, thumbnails e posts",
+    "roteiro_dramaturgia": "roteiristas, educadores e agentes de produção narrativa",
     "modelos_referencia": "estudo técnico e pesquisa",
 }
 
@@ -123,6 +127,8 @@ def infer_technical_level(repo: dict[str, Any]) -> str:
     language = repo.get("language", "")
 
     if category == "modelos_referencia":
+        return "advanced"
+    if category == "roteiro_dramaturgia":
         return "advanced"
     if category == "video_programatico":
         return "technical"
