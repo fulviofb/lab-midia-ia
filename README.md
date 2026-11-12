@@ -91,6 +91,7 @@ Este repositório é um laboratório público e reproduzível: não é só uma l
 ## Estudos de método
 
 - [Machina — narrativa musical orientada por referências](docs/precedentes/video-generativo/machina-narrativa-musical.md): análise crítica de relato patrocinado, não testado pelo laboratório.
+- [Maestros da IA — vídeo por código que se explica por dentro](docs/precedentes/video-generativo/maestros-da-ia-video-explicado-por-dentro.md): análise de vídeo promocional que demonstra o próprio processo; não testado pelo laboratório.
 - [Comparação com o acervo e piloto proposto](docs/curadoria/machina-lacunas-e-piloto.md): reaproveitamento dos módulos em revisão e lacunas a validar; piloto ainda não autorizado.
 
 ## Receitas rápidas
@@ -105,6 +106,7 @@ Para pessoas leigas: resultado pronto em poucos passos, só ferramentas web ou d
 ## Aulas e oficinas
 
 - `docs/aulas/efas-goiania-2026.md` — "Novas Dimensões do Conhecimento", EFAS Goiânia 2026. Página de apoio: <https://fulviofb.github.io/lab-midia-ia/efas/>
+- `docs/aulas/ia-para-animacao-video-de-abertura.md` — rascunho de conceito do vídeo de abertura da aula sobre IA na produção de animações (ainda não produzido).
 
 ## Trilhas práticas
 
