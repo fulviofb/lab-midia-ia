@@ -57,3 +57,56 @@ Arquivos em `teste-repos-video/`: `nina-animated-shorts-hibrido-stills.jpg` (4 q
 2. Recalibrar o `cardShade` para a folha da Nina e do Pietro (zonas de cabeça e tronco) e testar o contorno dourado.
 3. Usar o FLF do LTX (mesma pose no início e no fim) para gestos em loop enquanto a câmera do repo faz o movimento.
 4. Animatic: montar um episódio inteiro com cartões fixos (poses da folha) só para validar o ritmo e a câmera antes de gerar os clipes.
+
+## Rodada 2 (2026-11-13): passe de aquarela no mundo
+
+Objetivo: aproximar o mundo do repo da referência da série (ENV-01: aquarela quente, clara e enevoada, sem contorno preto) sem refazer as texturas uma a uma.
+
+O que foi feito, como modo opcional (`inputProps: { look: "aquarela" }`; o padrão continua `toon`):
+- **Nanquim:** marrom `#7a5638`, mais fino (1,8 a 1,1 px) e com intensidade 0,5, via `InkPass.set()`.
+- **`WatercolorPass`** (`watercolor.ts`), depois do tone map e do grade. Ele faz:
+  - bordas tremidas por ruído;
+  - Kuwahara de 4 setores, que achata a imagem em manchas de tinta;
+  - borda de pigmento acumulado;
+  - granulação e textura de papel;
+  - paleta mais clara e quente, com menos saturação nos azuis;
+  - névoa de luz somada vinda do topo do quadro.
+- **Máscara de proteção:** o cartão da Nina é desenhado num alvo à parte e fica fora da suavização, do tremido e da borda de pigmento. Ele recebe só a paleta. Sem a máscara, o Kuwahara apagava os olhos dela.
+
+Resultado (`teste-repos-video/nina-animated-shorts-aquarela-antes-depois.jpg`):
+- O mundo deixou de ser cartoon chapado e virou ilustração pintada, em guache. A família visual com a Nina melhorou, e o rosto e o cabelo dela ficaram intactos com a máscara.
+- **Ainda não chega no estilo da série.** O filtro muda o acabamento, mas não o conteúdo nem a luz: continuam a ponte, os soldados de feijão, as sombras fortes e as cores saturadas.
+- Iterações: a v1 ficou escura e barrenta (contraste em torno de 0,5 escurece as luzes). A v2 ficou acinzentada (a mistura com o papel vira véu cinza). A v3 usa luz somada (screen) e papel mais claro.
+
+Conclusão e próximo passo: para chegar ao visual do Sementes, o **conteúdo** do mundo precisa ser nosso. O caminho mais fiel é o **multiplano**: montar o cenário com pranchas pintadas da série (ENV-01 separado em fundo, plano médio e primeiro plano) como cartões em profundidade. Assim reaproveitamos do repo a câmera, o desfoque de lente, a luz nos personagens e a sombra. O passe de aquarela continua útil como acabamento leve para unificar.
+
+## Rodada 3 (2026-11-13): multiplano com a prancha ENV-01
+
+Em vez de filtrar o mundo do repo, o cenário passou a ser a **prancha pintada da série**, separada em camadas e reprojetada a partir da própria câmera da pintura. Composição `Multiplano` (1920×1080, 24 fps, 97 quadros) em `src/videos/multiplano/Multiplano.tsx`.
+
+**Camadas** (`scripts/camadas_env01.py`, rodando no venv do ComfyUI):
+- **Profundidade:** Depth Anything V2 Small (Hugging Face, Apache-2.0, ~100 MB), cerca de 10 s na GPU.
+- **Camada do meio:** profundidade maior que 0,25, acima da borda do deque (67,5 % da altura). Pega a varanda, os postes, os vasos e as trepadeiras.
+- **Fundo:** a varanda é removida e o buraco é preenchido com `cv2.inpaint` (Telea), em 1/4 da resolução. Fica borrado, mas só aparece atrás das grades e desfocado pela lente.
+
+**Câmera da pintura** (resolvida a partir da prancha, supondo o parapeito com 1 m): lente a 0,46 m do deque, borda do deque a 4,05 m, horizonte no centro, FOV horizontal de 60°.
+
+**Montagem 3D:** um shader projeta a prancha a partir dessa câmera sobre três superfícies:
+- o chão do deque;
+- um cartão vertical na borda do deque, recortado pela máscara;
+- um cartão de jardim a 12 m.
+
+Por isso, no quadro 0 a imagem é idêntica à prancha, e qualquer movimento de câmera gera paralaxe real.
+
+**O que veio do repo:** o deslizamento de câmera (smootherstep), o desfoque de lente com foco na Nina e a correção `LateAdvance`.
+
+**Nina:** usa os quadros já iluminados para o ENV-01 (`keyed-nina-ltx-lit`), num cartão sem iluminação. Ela projeta sombra num plano só de sombra (`ShadowMaterial`) sobre o deque, com o sol atrás à esquerda, e tem uma mancha de contato sob os pés.
+
+**Resultado**
+- **Este é o caminho para o Sementes.** O cenário é a nossa pintura, a Nina é ela mesma, e a câmera avança com paralaxe: a varanda desliza sobre o jardim e o fundo desfoca.
+- A sombra dela no deque cai na mesma direção das sombras pintadas do parapeito.
+- Render: cerca de 3 s por quadro em 960×540.
+
+**Limites**
+- **Movimentos amplos expõem a reprojeção.** Os postes da esquerda estão mais perto que o cartão do meio, e o preenchimento do fundo é grosseiro. Com avanço curto e deslizamento lateral de até ~30 cm não aparece.
+- A câmera precisa ser resolvida para cada prancha. É um cálculo simples, mas depende da altura suposta de algum objeto de referência.
