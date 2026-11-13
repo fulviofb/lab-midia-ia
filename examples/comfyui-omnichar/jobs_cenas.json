@@ -1,0 +1,10 @@
+[
+ {"char":"clara2.char","refs":true,"seed":601,"prefix":"omni/clara2_ref_A","w":1216,"h":832,"show_prompt":true,
+  "prompt":"clara sitting at a wooden desk in a cozy home office recording a podcast, speaking into a black microphone on a boom arm, warm window light from the left, bookshelves and plants behind her, candid documentary photo, 35mm lens."},
+ {"char":"clara2.char","refs":false,"seed":601,"prefix":"omni/clara2_base_A","w":1216,"h":832,
+  "prompt":"clara sitting at a wooden desk in a cozy home office recording a podcast, speaking into a black microphone on a boom arm, warm window light from the left, bookshelves and plants behind her, candid documentary photo, 35mm lens."},
+ {"char":"clara2.char","refs":true,"seed":602,"prefix":"omni/clara2_ref_B","w":832,"h":1216,
+  "prompt":"clara walking on a sunny city sidewalk with colonial houses, holding a coffee cup, laughing, seen from slightly below, golden hour, street photography, 50mm lens."},
+ {"char":"clara2.char","refs":true,"seed":603,"prefix":"omni/clara2_ref_C","w":1024,"h":1024,
+  "prompt":"close-up of clara in profile looking out of a rainy train window, pensive expression, cool blue light, shallow depth of field, cinematic still."}
+]
