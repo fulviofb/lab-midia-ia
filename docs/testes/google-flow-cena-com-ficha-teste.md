@@ -63,6 +63,20 @@ Três elementos (personagem, sala e fachada) e a instrução de dois planos: 3 s
 
 O que isso mostra: o gerador não acrescentou narração nem frase por conta própria. Voz e texto só aparecem quando são pedidos.
 
+### Segunda cena refeita, com o pedido completo: 30 créditos
+
+| Item | Resultado |
+|---|---|
+| Corte entre dois lugares | Funcionou de novo |
+| Personagem igual à ficha | Sim |
+| Texto no quadro | Correto, com acentos |
+| Narração | Saiu sobre os dois planos, com as mesmas palavras da primeira cena |
+| Mesma voz da primeira cena | Sim: similaridade de locutor 0,93 entre as duas narrações (controle com outra voz: 0,72), medida com um codificador de voz local; tom mediano de 124 Hz e 129 Hz |
+
+Com isso, dois planos numa geração mantiveram voz, texto e personagem, e a voz pedida só por descrição no texto saiu igual em duas gerações.
+
+**Total do teste:** 16 imagens (0 créditos) e 3 cenas de 10 s (90 créditos).
+
 ## Diferenças em relação ao tutorial
 
 - O modo de "ingredientes" aparece como **Elementos**. Há também **Frames** (primeiro e último quadro).
@@ -82,12 +96,11 @@ O que isso mostra: o gerador não acrescentou narração nem frase por conta pr�
 ## Limites deste teste
 
 - Uma cena só, com um personagem só. Não mede consistência entre várias cenas, nem cena com duas pessoas.
-- A mesma voz em todas as cenas não foi testada: sem lista de vozes, depende do texto do pedido.
+- A mesma voz saiu em duas gerações com a mesma descrição; quatro cenas seguidas ainda não foram testadas.
 - Créditos de serviços diferentes não são comparáveis entre si. Ver o [teste LTX local x Kling](ltx-local-x-kling-planos-animados-teste.md) para as outras rotas.
 - O Google Flow é serviço que pode cobrar. Ver `docs/estrategia/principio-da-gratuidade.md`.
 
 ## Próximos testes
 
 - Quatro cenas seguidas com o mesmo personagem e a mesma voz.
-- Repetir a cena com corte com o pedido completo, para saber se voz e texto se mantêm quando há dois planos.
 - Uma cena com duas pessoas.
