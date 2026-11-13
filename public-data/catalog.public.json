@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-11T03:20:07+00:00",
+  "generated_at": "2026-11-13T03:55:34+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -18,7 +18,7 @@
       "id": "video_programatico",
       "label": "Vídeo programático",
       "description": "Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.",
-      "item_count": 9
+      "item_count": 13
     },
     {
       "id": "edicao_video",
@@ -48,7 +48,7 @@
       "id": "imagem_design_prompts",
       "label": "Imagem, design e prompts",
       "description": "Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visual.",
-      "item_count": 3
+      "item_count": 6
     },
     {
       "id": "roteiro_dramaturgia",
@@ -87,7 +87,7 @@
       ],
       "license": "Apache-2.0",
       "language": "TypeScript",
-      "stars_observed": 33649,
+      "stars_observed": 83469,
       "agent_fit": "high",
       "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
       "install_hint_public": "npx skills add heygen-com/hyperframes"
@@ -150,10 +150,38 @@
       "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
     },
     {
+      "id": "motionmaxxing",
+      "name": "motionmaxxing",
+      "full_name": "Tejashmakwana/motionmaxxing",
+      "url": "https://github.com/Tejashmakwana/motionmaxxing",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "critica_motion_design",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "test_before_recommending",
+      "status_label": "Promissor; testar antes de recomendar",
+      "recommendation": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Revisar filmes de motion contra critérios medidos antes da entrega.",
+      "use_cases": [
+        "Revisar filmes de motion contra critérios medidos antes da entrega.",
+        "Enriquecer o checklist de QA da skill direcao-de-video."
+      ],
+      "license": "Apache-2.0",
+      "language": "JavaScript",
+      "stars_observed": 1569,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
+      "install_hint_public": "Testar em pequena escala antes de indicar para terceiros."
+    },
+    {
       "id": "openmontage",
       "name": "OpenMontage",
-      "full_name": "calesthio/OpenMontage",
-      "url": "https://github.com/calesthio/OpenMontage",
+      "full_name": "OpenMontageInc/OpenMontage",
+      "url": "https://github.com/OpenMontageInc/OpenMontage",
       "category": "video_programatico",
       "category_label": "Vídeo programático",
       "subcategory": "agentic_video_production",
@@ -173,7 +201,7 @@
       ],
       "license": "AGPL-3.0",
       "language": "Python",
-      "stars_observed": 35150,
+      "stars_observed": 80038,
       "agent_fit": "high",
       "cost_hint": "Verificar custos, limites gratuitos e termos antes de recomendar.",
       "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
@@ -237,6 +265,62 @@
       "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
     },
     {
+      "id": "anything2explainer",
+      "name": "anything2explainer",
+      "full_name": "Vincentwei1021/anything2explainer",
+      "url": "https://github.com/Vincentwei1021/anything2explainer",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "explicativo_narrado",
+      "priority": "medium",
+      "priority_label": "Prioridade média",
+      "status": "test_before_recommending",
+      "status_label": "Promissor; testar antes de recomendar",
+      "recommendation": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Explicativos longos narrados a partir de um tema ou documento.",
+      "use_cases": [
+        "Explicativos longos narrados a partir de um tema ou documento."
+      ],
+      "license": "NOASSERTION",
+      "language": "TypeScript",
+      "stars_observed": 3262,
+      "agent_fit": "high",
+      "cost_hint": "Verificar custos, limites gratuitos e termos antes de recomendar.",
+      "install_hint_public": "Testar em pequena escala antes de indicar para terceiros."
+    },
+    {
+      "id": "claude-animated-shorts",
+      "name": "claude-animated-shorts",
+      "full_name": "mromidev/claude-animated-shorts",
+      "url": "https://github.com/mromidev/claude-animated-shorts",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "curta_animado_3d",
+      "priority": "medium",
+      "priority_label": "Prioridade média",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Estudar como transformar referências em uma bíblia de estilo medida.",
+      "use_cases": [
+        "Estudar como transformar referências em uma bíblia de estilo medida.",
+        "Testar mundo 3D em código com personagens pintados (recorte ou clipe em chroma) como textura.",
+        "Animatic/previz de curtas de história."
+      ],
+      "license": "MIT",
+      "language": "TypeScript",
+      "stars_observed": 3116,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
+      "install_hint_public": "Exige ambiente técnico; seguir documentação do teste/workflow antes de recomendar."
+    },
+    {
       "id": "opus-video-skills",
       "name": "opus-video-skills",
       "full_name": "tuzhechen2005/opus-video-skills",
@@ -264,6 +348,34 @@
       "agent_fit": "high",
       "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
       "install_hint_public": "Ler o teste documentado e instalar manualmente antes de usar com público."
+    },
+    {
+      "id": "video-shotcraft",
+      "name": "video-shotcraft",
+      "full_name": "Vincentwei1021/video-shotcraft",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "category": "video_programatico",
+      "category_label": "Vídeo programático",
+      "subcategory": "biblioteca_de_planos",
+      "priority": "medium",
+      "priority_label": "Prioridade média",
+      "status": "test_before_recommending",
+      "status_label": "Promissor; testar antes de recomendar",
+      "recommendation": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+      "technical_level": "technical",
+      "technical_level_label": "técnico",
+      "audience": "usuários técnicos, devs e agentes",
+      "public_summary": "Consultar receitas de plano para promos de produto e site.",
+      "use_cases": [
+        "Consultar receitas de plano para promos de produto e site.",
+        "Promos editáveis feitos por código a partir de screenshots reais."
+      ],
+      "license": "Apache-2.0",
+      "language": "TypeScript",
+      "stars_observed": 19010,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto; pode exigir instalação local e máquina adequada.",
+      "install_hint_public": "Testar em pequena escala antes de indicar para terceiros."
     },
     {
       "id": "awesome-opus5-5-videos",
@@ -772,6 +884,87 @@
       "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
     },
     {
+      "id": "impeccable",
+      "name": "impeccable",
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "category": "imagem_design_prompts",
+      "category_label": "Imagem, design e prompts",
+      "subcategory": "design_anti_slop",
+      "priority": "medium",
+      "priority_label": "Prioridade média",
+      "status": "test_before_recommending",
+      "status_label": "Promissor; testar antes de recomendar",
+      "recommendation": "Não recomendar ainda como caminho principal; fazer smoke test primeiro.",
+      "technical_level": "beginner",
+      "technical_level_label": "iniciante",
+      "audience": "design, imagem, thumbnails e posts",
+      "public_summary": "Revisar e polir interfaces web geradas por agente.",
+      "use_cases": [
+        "Revisar e polir interfaces web geradas por agente."
+      ],
+      "license": "Apache-2.0",
+      "language": "Rust",
+      "stars_observed": 109047,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto ou referência pública; verificar custos de serviços externos.",
+      "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
+    },
+    {
+      "id": "architecture-diagram-generator",
+      "name": "architecture-diagram-generator",
+      "full_name": "Cocoon-AI/architecture-diagram-generator",
+      "url": "https://github.com/Cocoon-AI/architecture-diagram-generator",
+      "category": "imagem_design_prompts",
+      "category_label": "Imagem, design e prompts",
+      "subcategory": "diagramas",
+      "priority": "low",
+      "priority_label": "Baixa prioridade",
+      "status": "reference",
+      "status_label": "Referência",
+      "recommendation": "Use como referência, não como ferramenta principal para iniciantes.",
+      "technical_level": "beginner",
+      "technical_level_label": "iniciante",
+      "audience": "design, imagem, thumbnails e posts",
+      "public_summary": "Diagramas de arquitetura para docs e apresentações.",
+      "use_cases": [
+        "Diagramas de arquitetura para docs e apresentações."
+      ],
+      "license": "MIT",
+      "language": "HTML",
+      "stars_observed": 7583,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto ou referência pública; verificar custos de serviços externos.",
+      "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
+    },
+    {
+      "id": "logo-design-skill",
+      "name": "logo-design-skill",
+      "full_name": "kaankiziltug/logo-design-skill",
+      "url": "https://github.com/kaankiziltug/logo-design-skill",
+      "category": "imagem_design_prompts",
+      "category_label": "Imagem, design e prompts",
+      "subcategory": "logo_marca",
+      "priority": "low",
+      "priority_label": "Baixa prioridade",
+      "status": "reference",
+      "status_label": "Referência",
+      "recommendation": "Use como referência, não como ferramenta principal para iniciantes.",
+      "technical_level": "beginner",
+      "technical_level_label": "iniciante",
+      "audience": "design, imagem, thumbnails e posts",
+      "public_summary": "Gerar propostas de logo em SVG e um manual de marca simples.",
+      "use_cases": [
+        "Gerar propostas de logo em SVG e um manual de marca simples."
+      ],
+      "license": "MIT",
+      "language": "HTML",
+      "stars_observed": 6752,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto ou referência pública; verificar custos de serviços externos.",
+      "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
+    },
+    {
       "id": "screenwriting-skills",
       "name": "screenwriting-skills",
       "full_name": "jtydhr88/screenwriting-skills",
@@ -831,10 +1024,14 @@
       "hyperframes",
       "remotion-agent-skills",
       "lemo-opuscar",
+      "motionmaxxing",
       "openmontage",
       "p5-brush",
       "reelmimic",
+      "anything2explainer",
+      "claude-animated-shorts",
       "opus-video-skills",
+      "video-shotcraft",
       "awesome-opus5-5-videos",
       "shipvideo"
     ],
@@ -863,7 +1060,10 @@
     "imagem_design_prompts": [
       "awesome-gpt-image-2",
       "ui-ux-pro-max-skill",
-      "awesome-nano-banana-pro-prompts"
+      "awesome-nano-banana-pro-prompts",
+      "impeccable",
+      "architecture-diagram-generator",
+      "logo-design-skill"
     ],
     "roteiro_dramaturgia": [
       "screenwriting-skills"

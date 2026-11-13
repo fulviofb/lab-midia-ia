@@ -57,7 +57,7 @@ repositories:
   status: tested_recommended_windows
   language: TypeScript
   license: Apache-2.0
-  stars_observed: 33649
+  stars_observed: 83469
   install_hint: npx skills add heygen-com/hyperframes
   agent_fit: high
   copy_policy: can_reference_and_test
@@ -70,7 +70,7 @@ repositories:
   - Criar vídeos com agentes a partir de HTML.
   forks_observed: 3144
   open_issues_observed: 101
-  github_updated_at: '2026-07-08T01:43:49Z'
+  github_updated_at: '2026-11-13T02:36:46Z'
   topics:
   - ai
   - animation
@@ -152,15 +152,15 @@ repositories:
   github_updated_at: '2026-06-01T18:08:11Z'
   topics: []
 - name: OpenMontage
-  full_name: calesthio/OpenMontage
-  url: https://github.com/calesthio/OpenMontage
+  full_name: OpenMontageInc/OpenMontage
+  url: https://github.com/OpenMontageInc/OpenMontage
   category: video_programatico
   subcategory: agentic_video_production
   priority: high
   status: tested_recommended_windows
   language: Python
   license: AGPL-3.0
-  stars_observed: 35150
+  stars_observed: 80038
   agent_fit: high
   copy_policy: can_test_copyleft_caution
   notes: 'Passou em testes Windows: Remotion zero-key, Backlot, Piper TTS real e screen-demo
@@ -172,7 +172,7 @@ repositories:
   - Explorar pipelines de vídeo com checkpoints, Backlot e validação ffprobe.
   forks_observed: 4041
   open_issues_observed: 140
-  github_updated_at: '2026-07-07T05:49:53Z'
+  github_updated_at: '2026-11-09T06:23:55Z'
   topics:
   - agent
   - agentic-ai
@@ -864,6 +864,198 @@ repositories:
   - creative-coding
   - motion-graphics
   - prompts
+- name: motionmaxxing
+  full_name: Tejashmakwana/motionmaxxing
+  url: https://github.com/Tejashmakwana/motionmaxxing
+  category: video_programatico
+  subcategory: critica_motion_design
+  priority: high
+  status: test_before_recommending
+  language: JavaScript
+  license: Apache-2.0
+  stars_observed: 1569
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Skill que leva um filme de motion feito por agente de "slop" para "mid" e
+    "maxxed" com portões numerados e medidos (por exemplo, G5 reprova etiqueta no canto
+    + título à esquerda sobre card). Defende uma ideia por filme, mundo com luz e textura,
+    eases medidos e corte no movimento. Usa GSAP/HyperFrames. Lançamento inicial (out/2026).
+    Interesse principal - adotar os portões como checklist de revisão na skill direcao-de-video,
+    não necessariamente o motor. Não testado.
+  use_cases:
+  - Revisar filmes de motion contra critérios medidos antes da entrega.
+  - Enriquecer o checklist de QA da skill direcao-de-video.
+  forks_observed: 158
+  open_issues_observed: 1
+  github_updated_at: '2026-10-06T18:20:43Z'
+  topics:
+  - agent-skills
+  - gsap
+  - hyperframes
+  - motion-graphics
+- name: video-shotcraft
+  full_name: Vincentwei1021/video-shotcraft
+  url: https://github.com/Vincentwei1021/video-shotcraft
+  category: video_programatico
+  subcategory: biblioteca_de_planos
+  priority: medium
+  status: test_before_recommending
+  language: TypeScript
+  license: Apache-2.0
+  stars_observed: 19010
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Skill para promos de produto em Remotion - captura as páginas reais, escolhe
+    planos numa biblioteca de 124 receitas (150 planos, galeria online), monta o storyboard,
+    corta na batida, faz design de som e QA quadro a quadro. Entrega MP4 e um editor
+    no navegador (Motion Workbench); exportação para JianYing verificada só no Mac.
+    Sobrepõe a skill product-launch-video do HyperFrames; valor principal é a biblioteca
+    de receitas como referência para promos OSCEIA/CONCAFRAS. Irmão para vídeo narrado
+    - video-talkcraft. Não testado.
+  use_cases:
+  - Consultar receitas de plano para promos de produto e site.
+  - Promos editáveis feitos por código a partir de screenshots reais.
+  forks_observed: 1792
+  open_issues_observed: 4
+  github_updated_at: '2026-11-11T16:30:35Z'
+  topics:
+  - motion-design
+  - product-video
+  - promo-video
+  - remotion
+- name: claude-animated-shorts
+  full_name: mromidev/claude-animated-shorts
+  url: https://github.com/mromidev/claude-animated-shorts
+  category: video_programatico
+  subcategory: curta_animado_3d
+  priority: medium
+  status: partially_tested_windows
+  language: TypeScript
+  license: MIT
+  stars_observed: 3116
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Skill para curtas verticais de história (55-70 s) com personagens 2D num mundo
+    3D (three.js + @remotion/three), contorno de nanquim, lens blur, trilha e SFX sintetizados.
+    Traz STYLE_BIBLE.md e sete relatórios medidos (movimento, profundidade, textura,
+    personagens, luz, contorno, cor) extraídos de 20 curtas de referência, com 1.200
+    quadros de contact sheet. Na forma padrão, os personagens são desenhados em código
+    - foi o ponto fraco do ReelMimic e do painted-animation com a folha do Pietro, mas
+    um teste não invalida o método. Como os personagens são planos 2D dentro do mundo
+    3D, vale testar trocar o boneco em código por recortes pintados ou clipes i2v em
+    chroma (LTX) como textura, mantendo do repo o mundo, a câmera, a luz e o acabamento.
+    Também serve para animatic/previz e pelo método de medir referências antes de produzir.
+    Teste híbrido 2026-11-13 - Nina (clipe LTX em chroma) como cartão no mundo do repo -
+    identidade preservada, luz, sombra e DOF do mundo agem sobre ela; falta repintar o mundo
+    no estilo da série. No Windows exigiu correção do quadro em branco do EffectComposer
+    (r3f 9) e --concurrency=1. Ver docs/testes/claude-animated-shorts-hibrido-nina.md.
+    Cada bundle Remotion copia ~1,3 GB de public/ para o temp (definir REMOTION_TMP
+    num disco com espaço). Quadros de referência só para estudo de estilo.
+  use_cases:
+  - Estudar como transformar referências em uma bíblia de estilo medida.
+  - Testar mundo 3D em código com personagens pintados (recorte ou clipe em chroma) como textura.
+  - Animatic/previz de curtas de história.
+  forks_observed: 685
+  open_issues_observed: 15
+  github_updated_at: '2026-11-01T05:57:14Z'
+  test_doc: docs/testes/claude-animated-shorts-hibrido-nina.md
+- name: anything2explainer
+  full_name: Vincentwei1021/anything2explainer
+  url: https://github.com/Vincentwei1021/anything2explainer
+  category: video_programatico
+  subcategory: explicativo_narrado
+  priority: medium
+  status: test_before_recommending
+  language: TypeScript
+  license: NOASSERTION
+  stars_observed: 3262
+  agent_fit: high
+  copy_policy: link_only_review_license
+  notes: Tema ou artigo entra, explicativo narrado de 2 a 8 min sai (1280x720, fundo
+    preto com arte em linha branca e destaque roxo, legendas por palavra, cartões de
+    capítulo). Pesquisa com fontes, roteiro, TTS (edge-tts zh / kokoro en ou TTS próprio),
+    storyboard e agentes em paralelo escrevendo um componente Remotion por plano; 1 a
+    3 h e 2-3 GB por filme. Licença sem SPDX - só estudo até revisar. Concorre com a
+    skill faceless-explainer do HyperFrames; comparar se a Rádio Concafras precisar de
+    explicativos longos (em PT-BR, usar TTS próprio). Instalação documentada só para
+    Mac (brew, ln -s).
+  use_cases:
+  - Explicativos longos narrados a partir de um tema ou documento.
+  forks_observed: 418
+  open_issues_observed: 4
+  github_updated_at: '2026-11-09T15:26:15Z'
+  topics:
+  - explainer-video
+  - kokoro
+  - edge-tts
+  - remotion
+- name: impeccable
+  full_name: pbakaus/impeccable
+  url: https://github.com/pbakaus/impeccable
+  category: imagem_design_prompts
+  subcategory: design_anti_slop
+  priority: medium
+  status: test_before_recommending
+  language: Rust
+  license: Apache-2.0
+  stars_observed: 109047
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Vocabulário de design para agentes de código - comandos /polish, /bolder, /critique
+    e /audit para tirar a cara de "gerado por IA" de interfaces. Alternativa parecida
+    - Nutlope/hallmark (MIT, ~54 mil estrelas); escolher uma, não as duas. Mais útil
+    para os projetos web (Angular OSCEA, site de votação) do que para vídeo. Não testado.
+  use_cases:
+  - Revisar e polir interfaces web geradas por agente.
+  forks_observed: 6499
+  open_issues_observed: 74
+  github_updated_at: '2026-11-12T21:24:14Z'
+  topics:
+  - agent-skills
+  - anti-slop
+  - design
+- name: logo-design-skill
+  full_name: kaankiziltug/logo-design-skill
+  url: https://github.com/kaankiziltug/logo-design-skill
+  category: imagem_design_prompts
+  subcategory: logo_marca
+  priority: low
+  status: reference
+  language: HTML
+  license: MIT
+  stars_observed: 6752
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Skill de logotipo - princípios, processo, do briefing a SVG e manual de marca.
+    Uso ocasional. Não testado.
+  use_cases:
+  - Gerar propostas de logo em SVG e um manual de marca simples.
+  forks_observed: 531
+  open_issues_observed: 5
+  github_updated_at: '2026-11-06T07:40:27Z'
+  topics:
+  - branding
+  - logo-design
+  - svg
+- name: architecture-diagram-generator
+  full_name: Cocoon-AI/architecture-diagram-generator
+  url: https://github.com/Cocoon-AI/architecture-diagram-generator
+  category: imagem_design_prompts
+  subcategory: diagramas
+  priority: low
+  status: reference
+  language: HTML
+  license: MIT
+  stars_observed: 7583
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Descreve-se o sistema em texto e sai um diagrama de arquitetura em HTML/SVG
+    de tema escuro. Uso ocasional para documentação técnica. Não testado.
+  use_cases:
+  - Diagramas de arquitetura para docs e apresentações.
+  forks_observed: 578
+  open_issues_observed: 2
+  github_updated_at: '2026-05-13T23:04:17Z'
 recommended_mvp:
 - browser-use/video-use
 - heygen-com/hyperframes
