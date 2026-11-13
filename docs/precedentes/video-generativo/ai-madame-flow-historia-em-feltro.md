@@ -13,13 +13,13 @@
 - Política de cópia: link e síntese própria. Não reproduzir os pedidos, a skill, as artes ou a narração.
 - Data da coleta: 2026-11-13.
 
-**Como a coleta foi feita.** Leitura da descrição, dos capítulos e da transcrição automática do YouTube, mais dois quadros do tutorial vistos na página. Nenhum arquivo foi baixado. Nomes de modelos e de opções da interface vêm da fala e da tela do vídeo e podem estar desatualizados: confira no Flow antes de citar.
+**Como a coleta foi feita.** Leitura da descrição, dos capítulos e da transcrição automática do YouTube. Depois, conferência visual em folhas de quadros (um a cada 8 s) tiradas de uma cópia que o mantenedor baixou para análise privada; nada foi redistribuído e a skill da autora não foi baixada. Nomes de modelos e de opções da interface vêm da fala e da tela do vídeo e podem estar desatualizados: confira no Flow antes de citar.
 
 ## O que a fonte permite afirmar
 
 | Tipo | Registro |
 |---|---|
-| Observado | Dois filmes curtos completos (a espada na pedra; os primeiros balões, 1782–1783), narrados, com texto na tela, em estilo de feltro. Biblioteca de assets do projeto no Flow com imagem de estilo, personagens, objetos e lugares. Cenas geradas uma a uma, com os assets marcados no pedido. |
+| Observado | Dois filmes curtos completos (a espada na pedra; os primeiros balões, 1782–1783), narrados, com texto na tela, em estilo de feltro. Biblioteca de assets do projeto no Flow com imagem de estilo, personagens, objetos e lugares. Cenas geradas uma a uma, com os assets marcados no pedido. O texto na tela é gerado dentro do próprio vídeo, como letras de feltro. O projeto no Flow separa a biblioteca em imagens, personagens e cenas, e os assets têm nome próprio, escolhido numa lista na hora de montar o pedido. O pedido inicial ao modelo de linguagem é uma frase só (tema, duração, público), e a resposta traz as cenas com a fala e o texto de tela, seguidas da lista de assets a gerar depois da aprovação. |
 | Declarado pela autora | Os primeiros pedidos, escritos sem método, falhavam; cada falha foi documentada e virou regra da skill; com a skill, as cenas "funcionam de primeira". A skill serve em outros modelos de linguagem se o arquivo for descompactado e colado na conversa. |
 | Inferido pelo laboratório | O que dá consistência não é a ferramenta: é a ordem (plano → imagem de estilo → fichas → conferência → cenas) e o registro de falhas transformado em regra. |
 | Não informado | Quantas tentativas cada cena levou, custo em créditos, plano de assinatura, tempo total, quanto foi editado fora do Flow. |
