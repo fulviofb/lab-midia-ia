@@ -47,3 +47,4 @@ Cada relatório deve separar:
 ## Relatórios
 
 - [Higgsfield — comparação de processos públicos (agosto de 2026)](higgsfield-processos-publicos-2026-08.md)
+- [AI Madame — história em feltro no Google Flow, com skill de pedidos (novembro de 2026)](ai-madame-flow-historia-em-feltro.md)
