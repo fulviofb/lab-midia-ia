@@ -51,17 +51,17 @@ Conferência: folha de quadros a 1 quadro por segundo e transcrição local do �
 
 ### Segunda cena, com corte entre dois lugares: 30 créditos
 
-Mesmo pedido, com um terceiro elemento (a fachada) e a instrução de dois planos: 3 s de exterior, corte, 7 s de interior.
+Três elementos (personagem, sala e fachada) e a instrução de dois planos: 3 s de exterior, corte, 7 s de interior. Por um erro na montagem do pedido, ele foi enviado **sem** o trecho da narração e sem a frase do quadro.
 
 | Item | Resultado |
 |---|---|
 | Corte entre dois lugares numa geração | Funcionou: 3 s de fachada parada, corte seco, 7 s de sala |
 | Personagem igual à ficha | Sim |
 | Gesto completo em 7 s | Sim |
-| Texto no quadro | Falhou: virou um rabisco ilegível |
-| Narração | Não saiu: só som ambiente (volume médio de −44 dB, contra −16 dB na primeira cena) |
+| Texto no quadro | Rabisco ilegível, como esperado sem a frase no pedido |
+| Narração | Nenhuma, como esperado sem voz no pedido: só som ambiente (−44 dB de média, contra −16 dB na primeira cena) |
 
-Uma tentativa só. Não ficou confirmado se o trecho da narração estava no pedido enviado, então a perda da voz ainda não pode ser atribuída ao gerador.
+O que isso mostra: o gerador não acrescentou narração nem frase por conta própria. Voz e texto só aparecem quando são pedidos.
 
 ## Diferenças em relação ao tutorial
 
@@ -89,5 +89,5 @@ Uma tentativa só. Não ficou confirmado se o trecho da narração estava no ped
 ## Próximos testes
 
 - Quatro cenas seguidas com o mesmo personagem e a mesma voz.
-- Repetir a cena com corte, conferindo o pedido, para saber se voz e texto se perdem quando há dois planos.
+- Repetir a cena com corte com o pedido completo, para saber se voz e texto se mantêm quando há dois planos.
 - Uma cena com duas pessoas.
