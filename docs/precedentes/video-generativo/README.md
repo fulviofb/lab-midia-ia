@@ -47,4 +47,6 @@ Cada relatório deve separar:
 ## Relatórios
 
 - [Higgsfield — comparação de processos públicos (agosto de 2026)](higgsfield-processos-publicos-2026-08.md)
+- [Machina — narrativa musical orientada por referências](machina-narrativa-musical.md)
+- [Maestros da IA — vídeo por código que se explica por dentro](maestros-da-ia-video-explicado-por-dentro.md)
 - [AI Madame — história em feltro no Google Flow, com skill de pedidos (novembro de 2026)](ai-madame-flow-historia-em-feltro.md)
