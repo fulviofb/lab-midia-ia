@@ -9,7 +9,7 @@
 - Interesse comercial: canal próprio, site e ferramenta da autora. A skill é gratuita, mas está hospedada no site dela.
 - Classe de transparência: `methodological_breakdown`.
 - Estado: `observed_public_precedent`, limitado ao que o vídeo mostra e afirma.
-- Teste pelo laboratório: não realizado. A skill não foi baixada nem lida.
+- Teste pelo laboratório: uma cena, em 2026-11-13, com pedidos próprios: [resultado](../../testes/google-flow-cena-com-ficha-teste.md). A skill não foi baixada nem lida.
 - Política de cópia: link e síntese própria. Não reproduzir os pedidos, a skill, as artes ou a narração.
 - Data da coleta: 2026-11-13.
 
