@@ -23,3 +23,20 @@ python gerar.py jobs_vistas_do_rosto.json
 python -c "import json,gerar; print(gerar.submit(json.load(open('encode_character.json'))))"
 python gerar.py jobs_cenas.json
 ```
+
+## Do quadro-chave ao vídeo (LTX-2.5 local)
+
+Em `ltx/`:
+
+- `animar.py`: envia cada quadro-chave ao LTX-2.5 pelo `comfy-cli` (16:9, 0,5 MP, prompt enhance desligado). Coloque em `ltx/base/` os templates `video_ltx2_5_i2v` e `video_ltx2_5_flf2v` salvos como `ltx25_i2v.json` e `ltx25_flf2v.json`. Um job com `"last"` usa primeiro/último quadro.
+- `jobs_seq.json`: os 3 planos da sequência da cafeteria (aberto, médio, close com fala).
+- `jobs_seq_k1_flf.json`: a tentativa de aberto→close com primeiro/último quadro (resultado: fusão, não movimento).
+- `folha_quadros.py`: folha com o primeiro quadro, o do meio e o último de cada clipe, para conferir o rosto.
+
+Os quadros-chave saem de `../jobs_sequencia_cafe.json` (rode com `gerar.py` e copie as saídas para `input/` como `omni_seq_k1.png`, `omni_seq_k2.png`, `omni_seq_k3.png`).
+
+```bash
+python gerar.py jobs_sequencia_cafe.json
+python ltx/animar.py ltx/jobs_seq.json
+python ltx/folha_quadros.py folha.png <clipe1.mp4> <clipe2.mp4> <clipe3.mp4>
+```

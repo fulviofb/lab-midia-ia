@@ -1,0 +1,8 @@
+[
+ {"char":"clara2.char","refs":true,"seed":801,"prefix":"omni/seq_k1_aberto","w":1344,"h":768,
+  "prompt":"Wide shot: clara walks into a small cozy neighborhood café through its glass door, a canvas tote bag on her shoulder, warm morning sunlight, wooden tables, plants and a coffee counter in the background, a few empty chairs. Her full body is visible, centered, walking toward the camera. Photorealistic cinematic film still, 35mm lens, natural colors."},
+ {"char":"clara2.char","refs":true,"seed":802,"prefix":"omni/seq_k2_medio","w":1344,"h":768,
+  "prompt":"Medium shot in the same cozy café: clara sitting alone at a wooden table by a large window, holding a white ceramic coffee cup with both hands, smiling softly while looking out of the window, warm morning sunlight on her face, her canvas tote bag on the chair beside her. Photorealistic cinematic film still, 50mm lens, shallow depth of field."},
+ {"char":"clara2.char","refs":true,"seed":803,"prefix":"omni/seq_k3_close","w":1344,"h":768,
+  "prompt":"Close-up in the same café: clara looking straight into the camera with a warm friendly expression, about to speak, head and shoulders, the café softly blurred behind her with warm window light. Photorealistic cinematic film still, 85mm lens, natural skin texture."}
+]

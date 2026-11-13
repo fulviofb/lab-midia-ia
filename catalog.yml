@@ -1076,8 +1076,11 @@ repositories:
     LTX. Teste 2026-11-13 com FLUX.2 klein 4B fp8 numa RTX 4060 Laptop de 8 GB - aprovado
     para personagem ilustrado e para realista, desde que todas as referências venham
     do mesmo rosto (gerar as outras vistas por edição a partir de uma foto-âncora).
-    Instalar o omnichar-sdk no ambiente do próprio ComfyUI. LoRA, voz e MiniMax H3 não
-    testados.
+    Instalar o omnichar-sdk no ambiente do próprio ComfyUI. Cadeia com LTX-2.5 local
+    (quadros-chave pelo .char, depois imagem-para-vídeo) - rosto fiel em plano médio e close,
+    inclusive com fala em PT-BR; em plano aberto o LTX aproxima e inventa outro rosto, e
+    primeiro/último quadro só faz fusão. Aproximar com corte, não com movimento. LoRA,
+    voz e MiniMax H3 não testados.
   use_cases:
   - Personagem recorrente (ilustrado ou realista) em várias cenas e episódios.
   - Quadros-chave consistentes para depois animar em imagem-para-vídeo.

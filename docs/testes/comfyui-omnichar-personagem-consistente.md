@@ -76,13 +76,31 @@ Ressalva: pedir "perfil estrito" na edição rendeu algo mais perto de ¾, o que
 
 Criar o `.char` (Encode + Save) leva poucos segundos.
 
+## Da imagem ao vídeo: `.char` → LTX-2.5 local
+
+Teste complementar (2026-11-13): o `.char` não alimenta o LTX diretamente, então a cadeia foi gerar quadros-chave com o `.char` e animar cada um no LTX-2.5 local (template `video_ltx2_5_i2v`, transformer int8, 16:9, 0,5 MP, 4 s, prompt enhance desligado). Mini-sequência numa cafeteria: plano aberto (ela entra), médio (toma café na janela) e close (fala para a câmera).
+
+| Plano | Resultado |
+| --- | --- |
+| Quadros-chave (klein + `.char`) | Coerentes entre si: mesmo rosto, figurino e cenário. ~45 s cada. |
+| Médio | Rosto do quadro inicial mantido; gesto de beber natural. |
+| Close com fala | Rosto mantido (pinta, brincos). Pedida a fala "Bom dia! Que bom que você veio."; o Whisper transcreveu a frase exata em PT-BR. |
+| Aberto, rosto pequeno | **Falha.** Mesmo com "câmera travada", o LTX empurra até um close e **inventa outro rosto** (mais jovem, sem a pinta), porque o quadro inicial tinha poucos pixels de rosto. Repetido com prompt mais restritivo: mesmo resultado. |
+| Aberto com primeiro/último quadro (`video_ltx2_5_flf2v`) | Último quadro = close no mesmo cenário (gerado por edição klein do próprio quadro aberto + `.char`). Rosto certo no fim, mas **não há movimento contínuo**: o LTX faz uma fusão entre os dois quadros (~0,75 s a 1,25 s). |
+
+Tempo: ~3 min por clipe de 4 s na RTX 4060 de 8 GB.
+
+**Regra que sai do teste:** o rosto só fica fiel se já estiver grande no quadro-chave. Aproximação se resolve com **corte** para outro plano gerado com o `.char`, não com movimento dentro do clipe. Plano aberto, só curto (≤1,5 s, antes do avanço de câmera).
+
+Dica de edição: para gerar outro enquadramento do mesmo cenário, o klein precisa de pedido explícito (*"Reframe image 5 as a much tighter medium close-up…"*). Um pedido brando devolve praticamente o mesmo quadro.
+
 ## Veredito
 
 - **Usar** para personagem recorrente quando o destino final aceita referências (FLUX.2, MiniMax H3, Seedance).
 - **Regra:** todas as referências devem sair do mesmo rosto. Referências que se contradizem não dão ao modelo um rosto único para seguir.
-- **Não cobre LTX:** para vídeo local com LTX, usar o `.char` só para gerar os quadros-chave e animar depois em imagem-para-vídeo.
+- **Não cobre LTX diretamente:** para vídeo local, gerar os quadros-chave com o `.char` e animar em imagem-para-vídeo. Funciona em plano médio e close; em plano aberto o LTX troca o rosto (ver a seção acima).
 - **A testar:** klein 9B (mais fidelidade, mais memória), LoRA treinado no Omnichar Studio, voz com MiniMax H3 na nuvem.
 
 ## Arquivos de exemplo
 
-[`examples/comfyui-omnichar/`](../../examples/comfyui-omnichar/): o script de geração pela API do ComfyUI e os pedidos (jobs) da tentativa 2 do realista.
+[`examples/comfyui-omnichar/`](../../examples/comfyui-omnichar/): o script de geração pela API do ComfyUI e os pedidos (jobs) da tentativa 2 do realista. Em [`ltx/`](../../examples/comfyui-omnichar/ltx/): o script que anima os quadros-chave no LTX-2.5 (imagem-para-vídeo e primeiro/último quadro) e os pedidos da sequência da cafeteria.
