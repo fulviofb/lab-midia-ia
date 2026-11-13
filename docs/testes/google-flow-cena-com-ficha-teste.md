@@ -49,6 +49,20 @@ Medir o que o [precedente da AI Madame](../precedentes/video-generativo/ai-madam
 
 Conferência: folha de quadros a 1 quadro por segundo e transcrição local do áudio (Whisper).
 
+### Segunda cena, com corte entre dois lugares: 30 créditos
+
+Mesmo pedido, com um terceiro elemento (a fachada) e a instrução de dois planos: 3 s de exterior, corte, 7 s de interior.
+
+| Item | Resultado |
+|---|---|
+| Corte entre dois lugares numa geração | Funcionou: 3 s de fachada parada, corte seco, 7 s de sala |
+| Personagem igual à ficha | Sim |
+| Gesto completo em 7 s | Sim |
+| Texto no quadro | Falhou: virou um rabisco ilegível |
+| Narração | Não saiu: só som ambiente (volume médio de −44 dB, contra −16 dB na primeira cena) |
+
+Uma tentativa só. Não ficou confirmado se o trecho da narração estava no pedido enviado, então a perda da voz ainda não pode ser atribuída ao gerador.
+
 ## Diferenças em relação ao tutorial
 
 - O modo de "ingredientes" aparece como **Elementos**. Há também **Frames** (primeiro e último quadro).
@@ -75,5 +89,5 @@ Conferência: folha de quadros a 1 quadro por segundo e transcrição local do �
 ## Próximos testes
 
 - Quatro cenas seguidas com o mesmo personagem e a mesma voz.
-- Uma cena com corte entre dois lugares (fachada e interior) numa geração só.
+- Repetir a cena com corte, conferindo o pedido, para saber se voz e texto se perdem quando há dois planos.
 - Uma cena com duas pessoas.
