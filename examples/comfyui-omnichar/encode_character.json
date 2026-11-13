@@ -1,0 +1,6 @@
+{"1":{"class_type":"LoadImage","inputs":{"image":"exemplo_clara_face.png"}},
+ "2":{"class_type":"LoadImage","inputs":{"image":"exemplo_clara2_tq.png"}},
+ "3":{"class_type":"LoadImage","inputs":{"image":"exemplo_clara2_perfil.png"}},
+ "4":{"class_type":"LoadImage","inputs":{"image":"exemplo_clara2_corpo.png"}},
+ "5":{"class_type":"OmnicharEncodeCharacter","inputs":{"name":"clara","description":"clara, a Brazilian woman in her mid-thirties with warm light-brown skin, long wavy dark brown hair falling past her shoulders, dark brown eyes, a small beauty mark on her left cheek and thin gold hoop earrings, wearing a mustard-yellow linen blazer over a white t-shirt, dark blue jeans and white leather sneakers. Photorealistic.","resolution":0,"face":["1",0],"face_2":["2",0],"face_3":["3",0],"body":["4",0]}},
+ "6":{"class_type":"OmnicharSaveCharacter","inputs":{"char":["5",0],"filename":"clara2.char","overwrite":true}}}

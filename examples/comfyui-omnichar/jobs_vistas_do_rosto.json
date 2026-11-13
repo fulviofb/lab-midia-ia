@@ -1,0 +1,8 @@
+[
+ {"char":null,"edit_images":["exemplo_clara_face.png"],"seed":701,"prefix":"omni/clara2_tq","w":1024,"h":1024,
+  "prompt":"The same woman from image 1, same face, same hair, same skin, same beauty mark and same gold hoop earrings, now photographed in three-quarter view turned to her left, head and shoulders, neutral relaxed expression. Plain light gray background, soft even daylight, 85mm lens, photorealistic, natural skin texture."},
+ {"char":null,"edit_images":["exemplo_clara_face.png"],"seed":702,"prefix":"omni/clara2_perfil","w":1024,"h":1024,
+  "prompt":"The same woman from image 1, same face, same hair, same skin and same gold hoop earrings, now photographed in strict side profile facing left, head and shoulders, calm expression. Plain light gray background, soft even daylight, 85mm lens, photorealistic, natural skin texture."},
+ {"char":null,"edit_images":["exemplo_clara_face.png"],"seed":703,"prefix":"omni/clara2_corpo","w":832,"h":1216,
+  "prompt":"The same woman from image 1, same face, same long wavy dark brown hair, same skin and same gold hoop earrings, now in a full-body photo standing relaxed facing the camera, wearing a mustard-yellow linen blazer over a white t-shirt, straight dark blue jeans and white leather sneakers. Plain light gray background, soft even daylight, natural proportions, photorealistic."}
+]
