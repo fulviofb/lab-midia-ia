@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-13T03:55:34+00:00",
+  "generated_at": "2026-11-13T14:22:28+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -48,7 +48,7 @@
       "id": "imagem_design_prompts",
       "label": "Imagem, design e prompts",
       "description": "Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visual.",
-      "item_count": 6
+      "item_count": 7
     },
     {
       "id": "roteiro_dramaturgia",
@@ -834,6 +834,35 @@
       "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
     },
     {
+      "id": "comfyui-omnichar",
+      "name": "ComfyUI-Omnichar",
+      "full_name": "omnichar/ComfyUI-Omnichar",
+      "url": "https://github.com/omnichar/ComfyUI-Omnichar",
+      "category": "imagem_design_prompts",
+      "category_label": "Imagem, design e prompts",
+      "subcategory": "consistencia_de_personagem",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
+      "technical_level": "beginner",
+      "technical_level_label": "iniciante",
+      "audience": "design, imagem, thumbnails e posts",
+      "public_summary": "Personagem recorrente (ilustrado ou realista) em várias cenas e episódios.",
+      "use_cases": [
+        "Personagem recorrente (ilustrado ou realista) em várias cenas e episódios.",
+        "Quadros-chave consistentes para depois animar em imagem-para-vídeo.",
+        "Pacote único de referências e voz para MiniMax H3 na nuvem."
+      ],
+      "license": "GPL-3.0-or-later (omnichar-sdk em Apache-2.0)",
+      "language": "Python",
+      "stars_observed": 137,
+      "agent_fit": "high",
+      "cost_hint": "Verificar custos, limites gratuitos e termos antes de recomendar.",
+      "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
+    },
+    {
       "id": "ui-ux-pro-max-skill",
       "name": "ui-ux-pro-max-skill",
       "full_name": "nextlevelbuilder/ui-ux-pro-max-skill",
@@ -1059,6 +1088,7 @@
     ],
     "imagem_design_prompts": [
       "awesome-gpt-image-2",
+      "comfyui-omnichar",
       "ui-ux-pro-max-skill",
       "awesome-nano-banana-pro-prompts",
       "impeccable",

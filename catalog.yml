@@ -1056,6 +1056,39 @@ repositories:
   forks_observed: 578
   open_issues_observed: 2
   github_updated_at: '2026-05-13T23:04:17Z'
+- name: ComfyUI-Omnichar
+  full_name: omnichar/ComfyUI-Omnichar
+  url: https://github.com/omnichar/ComfyUI-Omnichar
+  category: imagem_design_prompts
+  subcategory: consistencia_de_personagem
+  priority: high
+  status: partially_tested_windows
+  language: Python
+  license: GPL-3.0-or-later (omnichar-sdk em Apache-2.0)
+  stars_observed: 137
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Nós de ComfyUI para o formato .char, que empacota um personagem (até 3 referências
+    de rosto, 3 de corpo e 3 de figurino, descrição travada, LoRA opcional treinado no
+    Omnichar Studio e voz opcional) e monta o prompt no endereçamento de cada modelo
+    (FLUX.2 ordinal, MiniMax H3 <Picture N>, Seedance @ImageN). Não é modelo; organiza
+    referências. Suporta FLUX.2 dev e klein 9B/4B, Krea 2 e MiniMax H3; não suporta
+    LTX. Teste 2026-11-13 com FLUX.2 klein 4B fp8 numa RTX 4060 Laptop de 8 GB - aprovado
+    para personagem ilustrado e para realista, desde que todas as referências venham
+    do mesmo rosto (gerar as outras vistas por edição a partir de uma foto-âncora).
+    Instalar o omnichar-sdk no ambiente do próprio ComfyUI. LoRA, voz e MiniMax H3 não
+    testados.
+  use_cases:
+  - Personagem recorrente (ilustrado ou realista) em várias cenas e episódios.
+  - Quadros-chave consistentes para depois animar em imagem-para-vídeo.
+  - Pacote único de referências e voz para MiniMax H3 na nuvem.
+  github_updated_at: '2026-10-09T07:22:23Z'
+  test_doc: docs/testes/comfyui-omnichar-personagem-consistente.md
+  topics:
+  - comfyui
+  - character-consistency
+  - flux2
+  - reference-images
 recommended_mvp:
 - browser-use/video-use
 - heygen-com/hyperframes

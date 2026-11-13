@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-11-13T03:55:34+00:00`
+Gerado em: `2026-11-13T14:22:28+00:00`
 
 ## Como usar
 
@@ -339,6 +339,17 @@ Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visua
 - **Estrelas observadas:** 8096
 - **Resumo:** LICENSE e README indicam Creative Commons Attribution 4.0.
 - **Recomendação:** Use como referência, não como ferramenta principal para iniciantes.
+- **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
+
+### [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
+
+- **Status:** Parcialmente testado no Windows
+- **Prioridade:** Alta prioridade
+- **Nível:** iniciante
+- **Licença:** GPL-3.0-or-later (omnichar-sdk em Apache-2.0)
+- **Estrelas observadas:** 137
+- **Resumo:** Personagem recorrente (ilustrado ou realista) em várias cenas e episódios.
+- **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
 - **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
 
 ### [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
