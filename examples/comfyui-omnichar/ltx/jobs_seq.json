@@ -1,0 +1,8 @@
+[
+ {"id":"seq_k1_aberto","image":"omni_seq_k1.png","dur":4,"seed":11,
+  "prompt":"Use the provided start image as the first frame. The woman in the mustard-yellow blazer walks calmly into the café toward the camera, takes three relaxed steps, glances around the room with a slight smile and adjusts the strap of the tote bag on her shoulder. The camera stays still at eye level."},
+ {"id":"seq_k2_medio","image":"omni_seq_k2.png","dur":4,"seed":12,
+  "prompt":"Use the provided start image as the first frame. Sitting at the window table, the woman slowly raises the white coffee cup, takes a small sip, lowers it back toward the table and keeps smiling softly while looking out of the window; sunlight flickers gently on her face. The camera stays still."},
+ {"id":"seq_k3_close","image":"omni_seq_k3.png","dur":4,"seed":13,
+  "prompt":"Use the provided start image as the first frame. Close-up: the woman looks into the camera and says warmly in Portuguese, \"Bom dia! Que bom que você veio.\" She smiles, nods slightly and blinks naturally; small natural head movements. The camera stays still, no zoom."}
+]
