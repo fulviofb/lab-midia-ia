@@ -9,11 +9,37 @@
 - Interesse comercial: o fechamento divulga uma comunidade paga do autor. Não é patrocínio de terceiro, mas é material promocional.
 - Classe de transparência: `methodological_breakdown`.
 - Estado: `observed_public_precedent`, limitado ao que o vídeo mostra e afirma.
-- Teste pelo laboratório: não realizado.
+- Teste pelo laboratório: não realizado. Conferência visual e de narração feita em 2026-11-13 (ver abaixo).
 - Política de cópia: link e síntese própria. Não reproduzir o prompt, o roteiro, as artes, a trilha ou o avatar.
 - Data da coleta: 2026-11-12.
 
 **Como a coleta foi feita.** O vídeo foi analisado em duas passadas por um modelo multimodal (Gemini 3.5 Flash, leitura do link público), com perguntas diferentes, e as respostas foram comparadas. Nenhum arquivo foi baixado. A amostragem é de cerca de um quadro por segundo, então textos pequenos, números e versões transcritos abaixo podem conter erro de leitura. Antes de citar qualquer número em aula, confira no vídeo.
+
+## Conferência de 2026-11-13
+
+A primeira coleta foi feita só por modelo multimodal. Em 13/11 o vídeo foi conferido de outro jeito: folhas de quadros (um a cada 6 s) e transcrição local da narração com Whisper, a partir de uma cópia que o mantenedor baixou para análise privada. Nada foi redistribuído.
+
+**Confirmado na tela e na fala:**
+
+- Título do vídeo: o assunto é **como a IA edita vídeo por código**, não geração de imagem. A narração diz isso: "não é aquele tipo de inteligência artificial que inventa as imagens a partir de uma frase. Aqui o modelo trabalha como um editor: escreve, monta e confere."
+- Os números do painel conferem com a primeira coleta: 1 pedido, 3 h 48 min, 7.874 linhas, 89 arquivos, 91 cenas, 13.671 quadros, 312 deixas de som, 3.196 quadros conferidos.
+- O quadro "já existia" lista o avatar, a voz clonada, as contas dos serviços e 419 linhas de código de um vídeo anterior.
+- O crédito final declara: roteiro, voz clonada, avatar e edição feitos por IA.
+
+**Práticas que a primeira coleta não registrou:**
+
+| Prática | O que aparece | Para que serve |
+|---|---|---|
+| **Texto atrás da pessoa** | O título passa entre a apresentadora e o fundo, "sem tela verde", usando um recorte de pessoa calculado quadro a quadro | É o efeito mais forte para misturar gráfico e gente. Exige um recorte de pessoa confiável. |
+| **A máscara à vista** | O recorte aparece como silhueta branca, com a porcentagem do quadro que é pessoa | Explica o recorte mostrando o dado, não só o resultado |
+| **Pessoa dentro da cena 3D** | O vídeo da apresentadora vira um plano dentro de um espaço com câmera, luz e sombra | A câmera se move em volta de uma gravação que era fixa |
+| **Contador de termos** | No canto superior direito, "TERMOS n/12" com marcadores | O público sabe quanto vocabulário novo já passou |
+| **Glossário em cartões no fim** | Os 12 termos voltam como uma grade de cartões | Fecha o vídeo como aula |
+| **Rótulo de capítulo fixo** | Canto superior esquerdo, número e nome do capítulo | Orientação em vídeo longo |
+| **Painéis claros alternados com escuros** | A maior parte é escura com acento coral; as cenas de "exemplo" são claras | Separa "explicação" de "demonstração" sem dizer nada |
+| **Exemplo marcado como exemplo** | Selo "EXEMPLO" ou "REAL" em cima do dado mostrado | Não deixa dúvida sobre o que é ilustração e o que é dado medido |
+
+**Observação de ambiente:** os selos atribuem recorte, pontos do rosto, rastreamento e OCR a uma biblioteca de visão que só existe em computadores da Apple. No Windows, essas etapas precisam de outra rota, a testar.
 
 ## O que a fonte permite afirmar
 
