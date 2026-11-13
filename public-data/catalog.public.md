@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-11-11T03:20:07+00:00`
+Gerado em: `2026-11-13T03:55:34+00:00`
 
 ## Como usar
 
@@ -20,7 +20,7 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 - **Prioridade:** Essencial
 - **Nível:** técnico
 - **Licença:** Apache-2.0
-- **Estrelas observadas:** 33649
+- **Estrelas observadas:** 83469
 - **Resumo:** Renderizar HTML/CSS/animações seekable como MP4.
 - **Recomendação:** Pode ser recomendado com as observações do teste.
 - **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
@@ -46,13 +46,24 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 - **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
 - **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
 
-### [OpenMontage](https://github.com/calesthio/OpenMontage)
+### [motionmaxxing](https://github.com/Tejashmakwana/motionmaxxing)
+
+- **Status:** Promissor; testar antes de recomendar
+- **Prioridade:** Alta prioridade
+- **Nível:** técnico
+- **Licença:** Apache-2.0
+- **Estrelas observadas:** 1569
+- **Resumo:** Revisar filmes de motion contra critérios medidos antes da entrega.
+- **Recomendação:** Não recomendar ainda como caminho principal; fazer smoke test primeiro.
+- **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
+
+### [OpenMontage](https://github.com/OpenMontageInc/OpenMontage)
 
 - **Status:** Testado e recomendado no Windows
 - **Prioridade:** Alta prioridade
 - **Nível:** técnico
 - **Licença:** AGPL-3.0
-- **Estrelas observadas:** 35150
+- **Estrelas observadas:** 80038
 - **Resumo:** Produzir vídeos técnicos/didáticos com fluxo agentic e artefatos auditáveis.
 - **Recomendação:** Pode ser recomendado com as observações do teste.
 - **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
@@ -79,6 +90,28 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 - **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
 - **Custo/requisitos:** Pode exigir API, plano pago ou atenção à licença comercial.
 
+### [anything2explainer](https://github.com/Vincentwei1021/anything2explainer)
+
+- **Status:** Promissor; testar antes de recomendar
+- **Prioridade:** Prioridade média
+- **Nível:** técnico
+- **Licença:** NOASSERTION
+- **Estrelas observadas:** 3262
+- **Resumo:** Explicativos longos narrados a partir de um tema ou documento.
+- **Recomendação:** Não recomendar ainda como caminho principal; fazer smoke test primeiro.
+- **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
+
+### [claude-animated-shorts](https://github.com/mromidev/claude-animated-shorts)
+
+- **Status:** Parcialmente testado no Windows
+- **Prioridade:** Prioridade média
+- **Nível:** técnico
+- **Licença:** MIT
+- **Estrelas observadas:** 3116
+- **Resumo:** Estudar como transformar referências em uma bíblia de estilo medida.
+- **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
+- **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
+
 ### [opus-video-skills](https://github.com/tuzhechen2005/opus-video-skills)
 
 - **Status:** Documentado; instalação prática pendente
@@ -88,6 +121,17 @@ Criar vídeo por código, HTML, React, Remotion, HyperFrames ou agentes.
 - **Estrelas observadas:** 82
 - **Resumo:** Fazer curtas e clipes em aquarela pintada inteiramente em código.
 - **Recomendação:** Bom candidato, mas precisa teste prático local antes de indicar para leigos.
+- **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
+
+### [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft)
+
+- **Status:** Promissor; testar antes de recomendar
+- **Prioridade:** Prioridade média
+- **Nível:** técnico
+- **Licença:** Apache-2.0
+- **Estrelas observadas:** 19010
+- **Resumo:** Consultar receitas de plano para promos de produto e site.
+- **Recomendação:** Não recomendar ainda como caminho principal; fazer smoke test primeiro.
 - **Custo/requisitos:** Código aberto; pode exigir instalação local e máquina adequada.
 
 ### [awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos)
@@ -318,6 +362,39 @@ Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visua
 - **Resumo:** LICENSE e README indicam Creative Commons Attribution 4.0.
 - **Recomendação:** Use como referência, não como ferramenta principal para iniciantes.
 - **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
+
+### [impeccable](https://github.com/pbakaus/impeccable)
+
+- **Status:** Promissor; testar antes de recomendar
+- **Prioridade:** Prioridade média
+- **Nível:** iniciante
+- **Licença:** Apache-2.0
+- **Estrelas observadas:** 109047
+- **Resumo:** Revisar e polir interfaces web geradas por agente.
+- **Recomendação:** Não recomendar ainda como caminho principal; fazer smoke test primeiro.
+- **Custo/requisitos:** Código aberto ou referência pública; verificar custos de serviços externos.
+
+### [architecture-diagram-generator](https://github.com/Cocoon-AI/architecture-diagram-generator)
+
+- **Status:** Referência
+- **Prioridade:** Baixa prioridade
+- **Nível:** iniciante
+- **Licença:** MIT
+- **Estrelas observadas:** 7583
+- **Resumo:** Diagramas de arquitetura para docs e apresentações.
+- **Recomendação:** Use como referência, não como ferramenta principal para iniciantes.
+- **Custo/requisitos:** Código aberto ou referência pública; verificar custos de serviços externos.
+
+### [logo-design-skill](https://github.com/kaankiziltug/logo-design-skill)
+
+- **Status:** Referência
+- **Prioridade:** Baixa prioridade
+- **Nível:** iniciante
+- **Licença:** MIT
+- **Estrelas observadas:** 6752
+- **Resumo:** Gerar propostas de logo em SVG e um manual de marca simples.
+- **Recomendação:** Use como referência, não como ferramenta principal para iniciantes.
+- **Custo/requisitos:** Código aberto ou referência pública; verificar custos de serviços externos.
 
 ## Roteiro e dramaturgia
 
