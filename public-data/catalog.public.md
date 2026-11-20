@@ -2,7 +2,7 @@
 
 > Arquivo gerado automaticamente por `scripts/export_public_catalog.py` a partir de `catalog.yml`.
 
-Gerado em: `2026-11-13T15:57:47+00:00`
+Gerado em: `2026-11-20T02:55:31+00:00`
 
 ## Como usar
 
@@ -340,6 +340,17 @@ Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visua
 - **Resumo:** LICENSE e README indicam Creative Commons Attribution 4.0.
 - **Recomendação:** Use como referência, não como ferramenta principal para iniciantes.
 - **Custo/requisitos:** Verificar custos, limites gratuitos e termos antes de recomendar.
+
+### [ComfyArt](https://github.com/jtydhr88/ComfyArt)
+
+- **Status:** Parcialmente testado no Windows
+- **Prioridade:** Alta prioridade
+- **Nível:** iniciante
+- **Licença:** MIT
+- **Estrelas observadas:** 564
+- **Resumo:** Folhas de personagem multi-vista sem créditos de nuvem.
+- **Recomendação:** Use com orientação; parte do fluxo ainda exige validação.
+- **Custo/requisitos:** Código aberto ou referência pública; verificar custos de serviços externos.
 
 ### [ComfyUI-Omnichar](https://github.com/omnichar/ComfyUI-Omnichar)
 

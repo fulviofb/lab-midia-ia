@@ -1,0 +1,175 @@
+{
+ "unet": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "flux-2-klein-4b-fp8.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "@unet"
+  }
+ },
+ "clip": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen_3_4b.safetensors",
+   "type": "flux2",
+   "device": "default"
+  }
+ },
+ "vae": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "flux2-vae.safetensors"
+  }
+ },
+ "pos": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "",
+   "clip": [
+    "clip",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "@prompt"
+  }
+ },
+ "neg": {
+  "class_type": "ConditioningZeroOut",
+  "inputs": {
+   "conditioning": [
+    "pos",
+    0
+   ]
+  }
+ },
+ "gui": {
+  "class_type": "CFGGuider",
+  "inputs": {
+   "model": [
+    "unet",
+    0
+   ],
+   "positive": [
+    "pos",
+    0
+   ],
+   "negative": [
+    "neg",
+    0
+   ],
+   "cfg": 1
+  }
+ },
+ "smp": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "euler"
+  }
+ },
+ "sch": {
+  "class_type": "Flux2Scheduler",
+  "inputs": {
+   "steps": 4,
+   "width": [
+    "lar",
+    0
+   ],
+   "height": [
+    "alt",
+    0
+   ]
+  }
+ },
+ "lat": {
+  "class_type": "EmptyFlux2LatentImage",
+  "inputs": {
+   "width": [
+    "lar",
+    0
+   ],
+   "height": [
+    "alt",
+    0
+   ],
+   "batch_size": 1
+  }
+ },
+ "noi": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 1
+  }
+ },
+ "run": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "noi",
+    0
+   ],
+   "guider": [
+    "gui",
+    0
+   ],
+   "sampler": [
+    "smp",
+    0
+   ],
+   "sigmas": [
+    "sch",
+    0
+   ],
+   "latent_image": [
+    "lat",
+    0
+   ]
+  }
+ },
+ "dec": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "run",
+    0
+   ],
+   "vae": [
+    "vae",
+    0
+   ]
+  }
+ },
+ "out": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "images": [
+    "dec",
+    0
+   ],
+   "filename_prefix": "comfyart/klein4b"
+  },
+  "_meta": {
+   "title": "@save"
+  }
+ },
+ "lar": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 1024
+  },
+  "_meta": {
+   "title": "@width"
+  }
+ },
+ "alt": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 1024
+  },
+  "_meta": {
+   "title": "@height"
+  }
+ }
+}

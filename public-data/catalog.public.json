@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-13T15:57:47+00:00",
+  "generated_at": "2026-11-20T02:55:31+00:00",
   "source": {
     "repo": "https://github.com/fulviofb/lab-midia-ia",
     "catalog_path": "catalog.yml",
@@ -48,7 +48,7 @@
       "id": "imagem_design_prompts",
       "label": "Imagem, design e prompts",
       "description": "Prompts de imagem, design visual, UI/UX, thumbnails, capas e consistência visual.",
-      "item_count": 7
+      "item_count": 8
     },
     {
       "id": "roteiro_dramaturgia",
@@ -834,6 +834,35 @@
       "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
     },
     {
+      "id": "comfyart",
+      "name": "ComfyArt",
+      "full_name": "jtydhr88/ComfyArt",
+      "url": "https://github.com/jtydhr88/ComfyArt",
+      "category": "imagem_design_prompts",
+      "category_label": "Imagem, design e prompts",
+      "subcategory": "canvas_de_design_local",
+      "priority": "high",
+      "priority_label": "Alta prioridade",
+      "status": "partially_tested_windows",
+      "status_label": "Parcialmente testado no Windows",
+      "recommendation": "Use com orientação; parte do fluxo ainda exige validação.",
+      "technical_level": "beginner",
+      "technical_level_label": "iniciante",
+      "audience": "design, imagem, thumbnails e posts",
+      "public_summary": "Folhas de personagem multi-vista sem créditos de nuvem.",
+      "use_cases": [
+        "Folhas de personagem multi-vista sem créditos de nuvem.",
+        "Thumbnails, posts e pôsteres com camadas editáveis.",
+        "Operar o canvas por agente via MCP."
+      ],
+      "license": "MIT",
+      "language": "TypeScript",
+      "stars_observed": 564,
+      "agent_fit": "high",
+      "cost_hint": "Código aberto ou referência pública; verificar custos de serviços externos.",
+      "install_hint_public": "Comece pela versão web ou pelo guia/prompt associado."
+    },
+    {
       "id": "comfyui-omnichar",
       "name": "ComfyUI-Omnichar",
       "full_name": "omnichar/ComfyUI-Omnichar",
@@ -1088,6 +1117,7 @@
     ],
     "imagem_design_prompts": [
       "awesome-gpt-image-2",
+      "comfyart",
       "comfyui-omnichar",
       "ui-ux-pro-max-skill",
       "awesome-nano-banana-pro-prompts",
