@@ -1092,6 +1092,39 @@ repositories:
   - character-consistency
   - flux2
   - reference-images
+- name: ComfyArt
+  full_name: jtydhr88/ComfyArt
+  url: https://github.com/jtydhr88/ComfyArt
+  category: imagem_design_prompts
+  subcategory: canvas_de_design_local
+  priority: high
+  status: partially_tested_windows
+  language: TypeScript
+  license: MIT
+  stars_observed: 564
+  agent_fit: high
+  copy_policy: can_reference_and_test
+  notes: Canvas de design (tipo Canva/Figma) servido pelo próprio ComfyUI em /comfyart/,
+    com geração de imagem, vídeo, áudio e 3D por workflows do ComfyUI, ferramentas de
+    imagem (edição, ângulo, recorte, upscale, inpaint, camadas, Edit Elements), export
+    PNG/PDF/PPTX e servidor MCP para agentes. Premiado no desafio Open Source Higgsfield
+    da Comfy (nov/2026). Teste 2026-11-18/19 numa RTX 4060 de 8 GB com ComfyUI 0.34 - os
+    fluxos padrão de edição e multi-ângulo (Qwen Image 2.1) exigem ComfyUI mais novo; plugando
+    o FLUX.2 klein 4B como workflow próprio, gera personagem em 26 s e faz ¾, perfil, costas
+    e edição de expressão consistentes (84 s os quatro). Recorte 10 s, upscale 2x 21 s.
+    Z-Image Turbo (padrão) roda em 37 s com visual mais cartunesco. Instala 6 pacotes
+    sem alterar os existentes.
+  use_cases:
+  - Folhas de personagem multi-vista sem créditos de nuvem.
+  - Thumbnails, posts e pôsteres com camadas editáveis.
+  - Operar o canvas por agente via MCP.
+  github_updated_at: '2026-11-12T22:54:24Z'
+  test_doc: docs/testes/comfyart-canvas-klein4b-teste.md
+  topics:
+  - comfyui
+  - design-canvas
+  - mcp
+  - character-sheet
 recommended_mvp:
 - browser-use/video-use
 - heygen-com/hyperframes

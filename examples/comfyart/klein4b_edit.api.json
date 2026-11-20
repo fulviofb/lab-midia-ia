@@ -1,0 +1,213 @@
+{
+ "unet": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "flux-2-klein-4b-fp8.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "@unet"
+  }
+ },
+ "clip": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen_3_4b.safetensors",
+   "type": "flux2",
+   "device": "default"
+  }
+ },
+ "vae": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "flux2-vae.safetensors"
+  }
+ },
+ "img": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "example.png"
+  },
+  "_meta": {
+   "title": "@image"
+  }
+ },
+ "esc": {
+  "class_type": "ImageScaleToTotalPixels",
+  "inputs": {
+   "image": [
+    "img",
+    0
+   ],
+   "upscale_method": "lanczos",
+   "megapixels": 1.0,
+   "resolution_steps": 16
+  }
+ },
+ "tam": {
+  "class_type": "GetImageSize",
+  "inputs": {
+   "image": [
+    "esc",
+    0
+   ]
+  }
+ },
+ "enc": {
+  "class_type": "VAEEncode",
+  "inputs": {
+   "pixels": [
+    "esc",
+    0
+   ],
+   "vae": [
+    "vae",
+    0
+   ]
+  }
+ },
+ "pos": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "",
+   "clip": [
+    "clip",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "@prompt"
+  }
+ },
+ "ref": {
+  "class_type": "ReferenceLatent",
+  "inputs": {
+   "conditioning": [
+    "pos",
+    0
+   ],
+   "latent": [
+    "enc",
+    0
+   ]
+  }
+ },
+ "neg": {
+  "class_type": "ConditioningZeroOut",
+  "inputs": {
+   "conditioning": [
+    "ref",
+    0
+   ]
+  }
+ },
+ "gui": {
+  "class_type": "CFGGuider",
+  "inputs": {
+   "model": [
+    "unet",
+    0
+   ],
+   "positive": [
+    "ref",
+    0
+   ],
+   "negative": [
+    "neg",
+    0
+   ],
+   "cfg": 1
+  }
+ },
+ "smp": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "euler"
+  }
+ },
+ "sch": {
+  "class_type": "Flux2Scheduler",
+  "inputs": {
+   "steps": 4,
+   "width": [
+    "tam",
+    0
+   ],
+   "height": [
+    "tam",
+    1
+   ]
+  }
+ },
+ "lat": {
+  "class_type": "EmptyFlux2LatentImage",
+  "inputs": {
+   "width": [
+    "tam",
+    0
+   ],
+   "height": [
+    "tam",
+    1
+   ],
+   "batch_size": 1
+  }
+ },
+ "noi": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 1
+  }
+ },
+ "run": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "noi",
+    0
+   ],
+   "guider": [
+    "gui",
+    0
+   ],
+   "sampler": [
+    "smp",
+    0
+   ],
+   "sigmas": [
+    "sch",
+    0
+   ],
+   "latent_image": [
+    "lat",
+    0
+   ]
+  }
+ },
+ "dec": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "run",
+    0
+   ],
+   "vae": [
+    "vae",
+    0
+   ]
+  }
+ },
+ "out": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "images": [
+    "dec",
+    0
+   ],
+   "filename_prefix": "comfyart/klein4b"
+  },
+  "_meta": {
+   "title": "@save"
+  }
+ }
+}
